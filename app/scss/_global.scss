@@ -1,12 +1,72 @@
+
+// @import 'node_modules/slick-carousel/slick/slick.scss'
+// $primary: #fff;
+// $secondary: #63A60F;
+// $accent: #FFB800;
+
+$g900: #002d00;
+$g400: #4e8d07;
+$g300: #aacc83;
+$l: #f8f8f8;
+$d: #424242;
+
+
 body {
     min-height: 100vh;
-    background-color: #fff;
-    font-size: 14px;
+    background-color: $l;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-size: 15px;
     line-height: 1.6;
+    font-weight: 400;
+    color: $d;
+    overflow-x: hidden;
+}
+
+a, button {
+    &:focus {
+        outline: 1px solid $g400;
+        outline-offset: 5px;
+    }
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.main-title {
+    font-family: 'Unbounded', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -14px;
+    transform-origin: 0 0;
+    transform: scale(1.2, 1);
+    font-size: 120px;
+    font-weight: 300;
+    color: #000000;
+    line-height: 1;
+    margin-bottom: 20px;
+
+    &--ghost {
+        right: 0;
+        top: 15vh;
+        position: absolute;
+        font-size: 400px;
+        color: rgba($g300, 0.1);
+        pointer-events: none;
+    }
 }
