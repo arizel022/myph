@@ -8,7 +8,7 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 // const svgSprite = require('gulp-svg-sprite');
-const svgstore = require('gulp-svgstore');
+// const svgstore = require('gulp-svgstore');
 const fileinclude = require('gulp-file-include');
 
 //функции
@@ -69,11 +69,11 @@ function images() {
     .pipe(dest('dist/images'))
 }
 
-function svgSprites () {
-	return src('app/images/**/*.svg')
-    .pipe(svgstore())
-	.pipe(dest('./app/images'))
-}
+// function svgSprites () {
+// 	return src('app/images/**/*.svg')
+//     .pipe(svgstore())
+// 	.pipe(dest('./app/images'))
+// }
 
 function build() {
     return src([
@@ -115,7 +115,7 @@ exports.htmlInclude = htmlInclude;
 exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching, svgSprites, htmlInclude);
+exports.default = parallel(styles, scripts, browsersync, watching, htmlInclude);
 
 
 

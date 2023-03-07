@@ -1,6 +1,14 @@
 $(function() {
 
+    $('.partners__list').slick({
+        dots: false,
+        infinite: true,
+        arrows: false,
+        autoplaySpeed: 1000,
+        slidesToShow: 4,
 
+        autoplay: true
+    });
 
     $('.hero__slider').slick({
         dots: false,

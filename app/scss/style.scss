@@ -1,4 +1,17 @@
+
+// https://color.romanuke.com/tsvetovaya-palitra-2139/
+
 @import 'reset';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+$a900: #e57601;
+$a400: #ffa700;
+$a2-300: #8fbdc2;
+$a2-900: #2b5865;
+$l: #f0ede8;
+$d: #363636;
 @import 'global';
 @import 'lego/header';
 @import 'lego/index';
+@import 'lego/all-courses-page';
+@import 'lego/course-program-page';
+@import 'lego/all-students-page';

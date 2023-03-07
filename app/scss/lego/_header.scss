@@ -1,6 +1,6 @@
 .header {
     // border-bottom: 1px solid rgb(0, 0, 0);
-    padding: 25px 0;
+    padding: 15px 0;
     position: fixed;
     top: 0;
     z-index: 99;
@@ -9,9 +9,7 @@
     background-color: rgba($l, 0.6);
 }
 
-.logo {
-    border-radius: 1px;
-}
+
 
 .menu {
     display: flex;
@@ -42,7 +40,7 @@
         }
 
         &:hover {
-            box-shadow:  7px 7px 14px #aaa8a5, -7px -7px 14px #ffffff;
+            box-shadow: 7px 7px 14px #aaa8a5, -7px -7px 14px #ffffff;
         }
 
         &:active {

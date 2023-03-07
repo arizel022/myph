@@ -1,0 +1,12 @@
+.course-program {
+    padding-top: 70px;
+
+    &__title {
+        font-size: 36px;
+        margin-bottom: 60px;
+    }
+
+    &__subtitle-accent {
+        color: $a900;
+    }
+}
