@@ -4,17 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,700;0,900;1,400&family=Unbounded:wght@200;300;400&display=swap"
     rel="stylesheet">
-
-
-
   <title>Myph - тестова версія сайту</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -24,18 +18,15 @@
   <header class="header">
     <div class="container">
         <nav class="menu">
-            <a class="logo" href="index.html">
-                <img class="logo__img" src="images/logo-black.svg" alt="логотип Міф" width="90" height="45">
+            <a class="logo" href="./index.html">
+                <img class="logo__img" src="./images/logo-black.svg" alt="логотип Міф" width="90" height="45">
             </a>
             <ul class="menu__list">
                 <li class="menu__item">
-                    <a class="menu__link" href="">Школа</a>
+                    <a class="menu__link" href="./school.html">Школа</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="all-courses.html">Курси</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="all-students-page.html">Студенти</a>
+                    <a class="menu__link" href="./authors.html">Автори</a>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="">Виставки</a>
@@ -47,7 +38,7 @@
                     <a class="menu__link" href="">Новини</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="">Партнери</a>
+                    <a class="menu__link" href="#partners-main-section">Партнери</a>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="">Контакти</a>
@@ -117,6 +108,72 @@
       </div>
     </section>
 
+    <section class="prev-courses section">
+      <div class="container">
+        <div class="section__top">
+          <h2 class="section__title">Найближчі курси</h2>
+          <a class="section__link" href="">Усі курси</a>
+        </div>
+
+        <div class="prev-courses__content">
+          <article class="prev-courses__card prev-courses__card--big" style="background-image: url('./images/all-courses/sergij.jpg');">
+            <a class="prev-courses__card-content" href="course-art-consciousness.html">
+              <h2 class="prev-courses__card-subtitle">
+                Онлайн-курс
+                <span class="prev-courses__card-subtitle-accent">"Арт свідомість"</span>
+                від
+                <span class="prev-courses__card-subtitle-author">Сергія Мельниченко</span>
+              </h2>
+              <p class="prev-courses__card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet vitae, architecto iusto corrupti
+                deleniti perferendis voluptate tempore dolor sed cumque, voluptatum ut quia enim corporis necessitatibus
+                facere laboriosam, quos quo.
+              </p>
+            </a>
+          </article>
+          <div class="prev-courses__inner">
+
+            <article class="prev-courses__card prev-courses__card--long" style="background-image: url('./images/all-courses/4.jpg');">
+
+              <a class="prev-courses__card-content" href="course-art-consciousness.html">
+                <h2 class="prev-courses__card-subtitle">
+                  Онлайн-курс
+                  <span class="prev-courses__card-subtitle-accent">"Арт свідомість"</span>
+                  від
+                  <span class="prev-courses__card-subtitle-author">Сергія Мельниченко</span>
+                </h2>
+                <p class="prev-courses__card-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet vitae.
+                </p>
+              </a>
+            </article>
+            <article class="prev-courses__card" style="background-image: url('./images/all-courses/2.jpg');">
+
+              <a class="prev-courses__card-content" href="course-art-consciousness.html">
+                <h2 class="prev-courses__card-subtitle">
+                  Онлайн-курс
+                  <span class="prev-courses__card-subtitle-accent">"Арт свідомість"</span>
+                  від
+                  <span class="prev-courses__card-subtitle-author">Сергія Мельниченко</span>
+                </h2>
+                <p class="prev-courses__card-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet vitae.
+                </p>
+              </a>
+            </article>
+
+            <article class="prev-courses__card" style="background-image: url('./images/all-courses/5.jpg');">
+              <a class="prev-courses__all-link" href="./school.html">
+                <span class="prev-courses__all-link-bg">Усі курси </span>
+                <span class="prev-courses__all-link-bg">MYPH</span>
+              </a>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <section class="anonses section">
       <div class="container">
         <div class="section__top">
@@ -177,7 +234,7 @@
       </div>
     </section>
 
-    <section class="partners section">
+    <section class="partners section" id="partners-main-section">
       <div class="container">
         <div class="section__top">
           <h2 class="section__title">Наші партнери</h2>

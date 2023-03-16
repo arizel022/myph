@@ -1,4 +1,3 @@
-
 // &:hover {
 //     box-shadow: 7px 7px 14px #aaa8a5, -7px -7px 14px #ffffff;
 // }
@@ -22,7 +21,8 @@ body {
     justify-content: space-between;
 }
 
-a, button {
+a,
+button {
     &:focus {
         outline: 1px solid $a2-300;
         outline-offset: 5px;
@@ -123,7 +123,8 @@ a, button {
             opacity: 0.7;
             outline: transparent;
 
-            &:before, &:after {
+            &:before,
+            &:after {
                 content: none;
             }
         }
@@ -158,7 +159,7 @@ a, button {
 
     &--footer {
         &:hover {
-            box-shadow:  7px 7px 14px #1f3e48, -7px -7px 14px #377282;
+            box-shadow: 7px 7px 14px #1f3e48, -7px -7px 14px #377282;
         }
 
         &:active {
@@ -229,7 +230,7 @@ a, button {
         transition: box-shadow 0.3s;
 
         &:hover {
-            box-shadow:  7px 7px 14px #1f3e48, -7px -7px 14px #377282;
+            box-shadow: 7px 7px 14px #1f3e48, -7px -7px 14px #377282;
         }
 
         &:active {
@@ -249,4 +250,88 @@ a, button {
 .page-title {
     font-size: 36px;
     margin-bottom: 60px;
+}
+
+.button {
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px 13px;
+    color: $a900;
+    border-radius: 40px;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: calc(100% + 25px);
+        height: calc(100% + 25px);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -2;
+        border-radius: 40px;
+        background: #f0ede8;
+        box-shadow: inset 5px 5px 10px #92918e,
+            inset -5px -5px 10px #ffffff;
+        transition: outline-offset 0.3s;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        outline: 2px solid $a900;
+        border-radius: 40px;
+        transition: background-color 0.5s, box-shadow 0.5s;
+    }
+
+    &--reverse {
+        color: inherit;
+
+        &:after {
+            content: none;
+        }
+    }
+
+    &:focus {
+        outline: transparent;
+
+        &:before {
+            outline: 1px solid $a2-900;
+            outline-offset: 5px;
+        }
+    }
+
+    &:hover {
+        color: $l;
+        &:after {
+            background: #e57601;
+            box-shadow: 4px 4px 2px #ae5a01,
+                -4px -4px 2px #ff9201;
+        }
+    }
+
+    &:active {
+        color: $d;
+        &:after {
+            background: #e57601;
+            box-shadow: inset 5px 5px 10px #954d01,
+                        inset -5px -5px 10px #ff9f01;
+        }
+    }
+
+    &__icon {
+        fill: currentColor;
+        margin-right: 20px;
+        transition: fill 0.3s;
+    }
 }
