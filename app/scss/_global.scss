@@ -335,3 +335,20 @@ button {
         transition: fill 0.3s;
     }
 }
+
+
+.accent {
+    color: $a900;
+}
+
+// path {
+//     &:hover {
+//         fill: red;
+//     }
+
+//     &#ocean {
+//         &:hover {
+//             fill: #fff;
+//         }
+//     }
+// }

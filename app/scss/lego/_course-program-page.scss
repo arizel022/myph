@@ -113,10 +113,6 @@
         }
     }
 
-    &__item-accent {
-        color: $a900;
-    }
-
     &__icon {
         margin-right: 20px;
         fill: currentColor;
@@ -127,13 +123,17 @@
 .course-plan {
     padding-top: 0;
 
-    &__modules {
+    deg &__modules {
         margin-bottom: 40px;
     }
 
     &__module {
         &:not(:last-child) {
             margin-bottom: 30px;
+        }
+
+        &--subauthor {
+            position: relative;
         }
     }
 
@@ -145,6 +145,35 @@
         margin-bottom: 15px;
     }
 
+    &__module-subauthor {
+        color: $a900;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__module-subauthor-btn {
+        animation: pulsate-fwd 1.5s ease-in-out infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15px;
+
+        &.open {
+            animation: none;
+            pointer-events: none;
+
+            .course-plan__module-subauthor-icon {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+    &__module-subauthor-icon {
+        stroke: $a900;
+        transform: rotate(0);
+        transition: transform 1s;
+    }
+
     &__date {
         font-weight: 700;
         display: inline-block;
@@ -152,11 +181,12 @@
     }
 
     &__text {
+        font-size: 14px;
         margin-bottom: 20px;
     }
 
     &__list {
-        
+
         &:not(:last-child) {
             margin-bottom: 20px;
         }
@@ -186,6 +216,94 @@
 
     &__ps {
         font-weight: 700;
+    }
+}
+
+
+@keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.3);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+.subauthor-card {
+    position: absolute;
+    top: -150px;
+    right: -20%;
+    width: 450px;
+    background-color: $l;
+    box-shadow: 5px 5px 12px #0000004d, -5px -5px 12px #0000004d;
+    text-align: center;
+    border-radius: 8px;
+    transform: scale(0);
+    transition: transform 1s;
+
+    &.open {
+        transform: scale(1);
+    }
+
+    &__content {
+        padding: 25px 25px 35px;
+    }
+
+    &__img {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        object-fit: cover;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+
+    &__text {
+        text-align: left;
+        margin-bottom: 25px;
+    }
+
+    &__links-list {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+
+        &:hover {
+            box-shadow: 7px 7px 14px #aaa8a5, -7px -7px 14px #ffffff;
+        }
+
+        &:active {
+            box-shadow: inset 7px 7px 14px #aaa8a5, inset -7px -7px 14px #ffffff;
+        }
+    }
+
+    &__icon {
+        stroke: $a2-900;
+    }
+
+    &__button {
+        justify-content: center;
     }
 }
 
@@ -296,7 +414,7 @@
             background-color: $d;
             z-index: -1;
         }
-        
+
     }
 
     &__button {
@@ -313,7 +431,7 @@
             &:after {
                 background: #222222;
                 box-shadow: inset 5px 5px 10px #1b1b1b,
-                            inset -5px -5px 10px #292929;
+                    inset -5px -5px 10px #292929;
                 outline: transparent;
             }
         }
@@ -336,7 +454,7 @@
 
 .course-faq {
     padding-top: 0;
-    
+
     &__list {
         border-radius: 20px;
         box-shadow: -3px -3px 10px rgba($d, 0.2), 3px 3px 10px rgba($d, 0.3);
@@ -358,10 +476,12 @@
 
         &.open {
             color: $a900;
+
             .course-faq__question-icon {
                 &:after {
                     background-color: $a900;
                 }
+
                 &:before {
                     height: 0;
                 }
@@ -402,4 +522,3 @@
         padding: 20px 35px;
     }
 }
-
