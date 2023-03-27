@@ -252,7 +252,7 @@ button {
     margin-bottom: 60px;
 }
 
-.button {
+.butrton {
     font-size: 18px;
     text-transform: uppercase;
     line-height: 1;
@@ -275,7 +275,7 @@ button {
         transform: translate(-50%, -50%);
         z-index: -2;
         border-radius: 40px;
-        background: #f0ede8;
+        background-color: #f0ede8;
         box-shadow: inset 5px 5px 10px #92918e,
             inset -5px -5px 10px #ffffff;
         transition: outline-offset 0.3s;
@@ -336,19 +336,115 @@ button {
     }
 }
 
+.button {
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    padding: 20px 30px 18px;
+    color: $a900;
+    border-radius: 40px;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s;
+    background-color: #f0ede8;
+    box-shadow: inset 5px 5px 10px #92918e,
+        inset -5px -5px 10px #ffffff;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: calc(100% - 25px);
+        height: calc(100% - 25px);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -2;
+        border-radius: 40px;
+        transition: outline-offset 0.3s;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: calc(100% - 25px);
+        height: calc(100% - 25px);
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        outline: 2px solid $a900;
+        border-radius: 40px;
+        transition: background-color 0.5s, box-shadow 0.5s;
+    }
+
+    &--reverse {
+        color: inherit;
+
+        &:after {
+            content: none;
+        }
+    }
+
+    &:focus {
+        outline: 1px solid $a2-900;
+        outline-offset: 2px;
+
+    }
+
+    &:hover {
+        color: $l;
+        &:after {
+            background: #e57601;
+            box-shadow: 4px 4px 2px #ae5a01,
+                -4px -4px 2px #ff9201;
+        }
+    }
+
+    &:active, &.mixitup-control-active {
+        color: $d;
+        &:after {
+            background: #e57601;
+            box-shadow: inset 5px 5px 10px #954d01,
+                        inset -5px -5px 10px #ff9f01;
+        }
+    }
+
+    &__icon {
+        fill: currentColor;
+        margin-right: 20px;
+        transition: fill 0.3s;
+    }
+}
 
 .accent {
     color: $a900;
 }
 
-// path {
-//     &:hover {
-//         fill: red;
-//     }
+.grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);;
 
-//     &#ocean {
-//         &:hover {
-//             fill: #fff;
-//         }
-//     }
-// }
+    &__item {
+        grid-row: span 2;
+        grid-column: span 2;
+
+        &--s-long {
+            grid-row: span 1;
+            grid-column: span 2;
+        }
+
+        &--l-long {
+            grid-row: span 2;
+            grid-column: span 4;
+        }
+
+        &--s-high {
+            grid-row: span 2;
+            grid-column: span 1;
+        }
+    }
+}
