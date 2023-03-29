@@ -1,0 +1,47 @@
+.myph-book {
+    padding-top: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(260deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 40%);
+        z-index: -1;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+
+    &__content {
+        // max-width: 70%;
+        width: 100%;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 48px;
+        margin-bottom: 40px;
+    }
+
+    &__button {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
