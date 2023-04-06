@@ -1,24 +1,24 @@
     // плавный скролл на Партнеры на главной, с других страниц - перенаправление
-    $(document).ready(function () {
-        var isHomepage = $("body.home").length > 0;
+    // $(document).ready(function () {
+    //     var isHomepage = $("body.home").length > 0;
 
-        $('a[href="#partners-main-section"]').on('click', function (e) {
-            e.preventDefault();
-            var target = $($(this).attr('href'));
+    //     $('a[href="#partners-main-section"]').on('click', function (e) {
+    //         e.preventDefault();
+    //         var target = $($(this).attr('href'));
 
-            if (isHomepage) {
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top - $('header').height() - 100
-                    }, 1000);
-                }
-            } else {
-                window.location.href = '/#partners-main-section';
-            }
-        });
+    //         if (isHomepage) {
+    //             if (target.length) {
+    //                 $('html, body').animate({
+    //                     scrollTop: target.offset().top - $('header').height() - 100
+    //                 }, 1000);
+    //             }
+    //         } else {
+    //             window.location.href = '/#partners-main-section';
+    //         }
+    //     });
 
 
-    });
+    // });
 
 
     $('.form__input').on('focus blur', function () {
