@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,700;0,900;1,400&family=Unbounded:wght@200;300;400&display=swap"
+        rel="stylesheet">
+    <title>Контакти Myph</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <span class="main-title main-title--ghost">Myph</span>
+    @@include('../lego/header.html')
+
+    <main>
+
+        <div class="wrapper">
+            <section class="section contact">
+                <div class="container">
+                    <div class="section__top">
+                        <h2 class="section__title">
+                            Контактна інформація MYPH
+                        </h2>
+                    </div>
+                    <div class="contact__inner">
+                        <address class="contact__address">
+                            <p class="contact__text">
+                                Щоб запитати більше про майбутній курс або отримати більш детальну інформацію про заняття залиште заявку – заповніть форму.
+                            </p>
+                            <ul class="contact__list">
+                                <li class="contact__item">
+                                    Надішліть нам електронного листа
+
+                                    <a class="contact__link" href="mailto:myph.projects@gmail.com" target="_blank">
+                                        <svg class="contact__icon" width="28" height="28">
+                                            <use xlink:href="images/sprite.svg#icon-mail"></use>
+                                        </svg>
+                                        myph.projects@gmail.com
+                                    </a>
+                                </li>
+                                <li class="contact__item">
+                                    Зателефонуйте нам
+                                    <a class="contact__link" href="tel:+380638866300">
+                                        <svg class="contact__icon" width="28" height="28">
+                                            <use xlink:href="images/sprite.svg#icon-call"></use>
+                                        </svg>
+                                        +38 063 8866300
+                                    </a>
+                                </li>
+                                <li class="contact__item">
+                                    Заходьте в гості до нас
+                                    <a class="contact__link" href="https://goo.gl/maps/GwkPNmH8VEkxxq5f7" target="_blank">
+                                        <svg class="contact__icon" width="28" height="28">
+                                            <use xlink:href="images/sprite.svg#icon-location"></use>
+                                        </svg>
+                                        Україна, м. Миколаїв, вул. Морехідна, 2а
+                                    </a>
+                                </li>
+                            </ul>
+                        </address>
+                        <form action="" class="form">
+                            <label class="form__label">
+                                <input type="text" class="form__input" name="name" required>
+                                <span class="form__text">Ваше ім'я*</span>
+                            </label>
+                            <label class="form__label">
+                                <input type="email" class="form__input" name="email" required>
+                                <span class="form__text">Ваша пошта*</span>
+                            </label>
+                            <label class="form__label">
+                                <textarea class="form__input form__input--area" name="message" required></textarea>
+                                <span class="form__text">Ваше повідомлення*</span>
+                            </label>
+                            <button class="button" type="submit">Відправити</button>
+                        </form>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+
+
+
+    </main>
+    @@include('../lego/footer.html')
+
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

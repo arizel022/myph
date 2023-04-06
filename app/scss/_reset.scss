@@ -41,10 +41,10 @@ input, button, textarea, select {
 	font: inherit;
 	border: none;
 	outline: transparent;
+	background-color: transparent;
+	padding: 0;
 }
 button {
-	padding: 0;
 	border: none;
-	background-color: transparent;
 	cursor: pointer;
 }
