@@ -1,14 +1,11 @@
 //переменные
-const { src, dest, watch, parallel, series } = require('gulp');
+const { src, dest, watch, parallel } = require('gulp');
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
-const del = require('del');
+const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
-// const svgSprite = require('gulp-svg-sprite');
-// const svgstore = require('gulp-svgstore');
 const fileinclude = require('gulp-file-include');
 
 //функции
@@ -20,14 +17,12 @@ function browsersync() {
         notify: false
     })
 }
-
-function styles () {
-    return src([
-        'node_modules/magnific-popup/dist/magnific-popup.css',
-        'app/scss/style.scss' //all files for min
-    ])
+function styles() {
+    return src('app/scss/*.scss')
     .pipe(scss({outputStyle: 'compressed'}))
-    .pipe(concat('style.min.css'))
+    .pipe(rename({
+        suffix: '.min',
+    }))
     .pipe(autoprefixer({
         overrideBrowserslist: ['last 10 version'],
         grid: true
@@ -54,40 +49,6 @@ function scripts() {
     .pipe(browserSync.stream())
 }
 
-function images() {
-    return src('app/images/**/*.*')
-    .pipe(imagemin([
-        imagemin.gifsicle({interlaced: true}),
-        imagemin.mozjpeg({quality: 75, progressive: true}),
-        imagemin.optipng({optimizationLevel: 5}),
-        imagemin.svgo({
-            plugins: [
-                {removeViewBox: true},
-                {cleanupIDs: false}
-            ]
-        })
-    ]))
-    .pipe(dest('dist/images'))
-}
-
-// function svgSprites () {
-// 	return src('app/images/**/*.svg')
-//     .pipe(svgstore())
-// 	.pipe(dest('./app/images'))
-// }
-
-function build() {
-    return src([
-        'app/**/*.html',
-        'app/css/style.min.css',
-        'app/js/main.min.js',
-    ], {base: 'app'})
-    .pipe(dest('dist'))
-}
-
-function cleanDist() {
-    return del('dist')
-}
 
 function htmlInclude() {
     return src('app/html/pages/*.html')
@@ -110,11 +71,8 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
-exports.images = images;
 exports.htmlInclude = htmlInclude;
-exports.cleanDist = cleanDist;
 
-exports.build = series(cleanDist, images, build);
 exports.default = parallel(styles, scripts, browsersync, watching, htmlInclude);
 
 

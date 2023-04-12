@@ -1,0 +1,180 @@
+
+@import 'reset';
+@import '../../node_modules/magnific-popup/src/css/main.scss';
+@import 'global';
+
+.exhibitions {
+
+    &__filter {
+        margin-bottom: 60px;
+    }
+
+    &__filter-list {
+        display: flex;
+        gap: 20px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__filter-btn {
+        text-transform: none;
+        color: $a2-900;
+        background-color: #f0ede8;
+        font-size: 15px;
+        padding: 13px 20px 13px;
+
+
+        &:after {
+            outline: 2px solid #8fbdc2;
+            width: calc(100% - 15px);
+            height: calc(100% - 15px);
+            top: 51%;
+        }
+
+        &:hover {
+            color: $l;
+
+            &:after {
+                background: #8fbdc2;
+                box-shadow: 4px 4px 2px #759b9f,
+                    -4px -4px 2px #a9dfe5;
+            }
+        }
+    
+        &:active, &.mixitup-control-active {
+            color: $d;
+
+            &:after {
+                background: #8fbdc2;
+                box-shadow: inset 5px 5px 10px #759b9f,
+                            inset -5px -5px 10px #a9dfe5;
+            }
+        }
+    }
+
+    &__grid {
+        gap: 0;
+        position: relative;
+
+        &:before {
+            content: '';
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        &.bg-ukr:before {
+            background-image: url('../images/icons/maps/ua.svg');
+        }
+
+        &.bg-norv:before {
+            background-image: url('../images/icons/maps/nor.svg');
+        }
+    }
+}
+
+.exhibitions-card {
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__content {
+        // position: absolute;
+        background: linear-gradient(-5deg, rgba(0,0,0,1) 10%, rgba(0, 0, 2, 0) 100%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        align-content: flex-end;
+        gap: 20px;
+        color: $l;
+        padding: 25px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__text {
+        width: 100%;
+    }
+
+    &__link {
+        padding: 8px 25px;
+        border: 1px solid $a400;
+        color: $a400;
+        transition: background-color 0.4s, transform 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+            background-color: #ffffff2a;
+        }
+
+        &:active {
+            background-color: transparent;
+        }
+    }
+}
+
+// для сторінки виставки
+.exh {
+
+    &__content {
+        margin-bottom: 60px;
+    }
+    
+    &__info {
+        display: flex;
+        gap: 80px;
+        margin-bottom: 60px;
+    }
+
+    &__info-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__info-item {
+        border: 1px solid $a2-900;
+        padding: 3px 20px;
+        color: $a2-900;
+    }
+
+    &__info-text {
+        max-width: 540px;
+    }
+
+    &__gallery {
+        display: flex;
+        gap: 45px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: calc((100% - 2 * 45px) / 3);
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}
+

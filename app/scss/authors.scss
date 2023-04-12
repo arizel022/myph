@@ -1,0 +1,151 @@
+
+@import 'reset';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import 'global';
+
+.all-students {
+    &__list {
+        display: grid;
+        gap: 50px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 250px;
+    }
+
+    &__item {
+        grid-row: span 1;
+        grid-column: span 1;
+
+        &--high {
+            grid-row: span 2;
+            grid-column: span 1;
+        }
+
+        &--long {
+            grid-row: span 1;
+            grid-column: span 2;
+        }
+
+        &--big {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+
+    }
+
+    &__link {
+        display: flex;
+        align-items: flex-end;
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        transition: box-shadow 0.7s;
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(9, 9, 121, 0) 80%);
+            position: absolute;
+            z-index: -1;
+        }
+
+        &:hover {
+            box-shadow: 7px 7px 14px #555555;
+
+            .all-students__name {
+                color: $a400;
+            }
+        }
+
+        &:active {
+
+            opacity: 0.7;
+        }
+    }
+
+    &__name {
+        font-size: 24px;
+        color: $l;
+        transition: color 0.4s;
+    }
+}
+
+.author {
+    padding: 0 0 70px;
+    &__description {
+        display: flex;
+        gap: 60px;
+    }
+
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__social-list {
+        display: flex;
+        gap: 15px;
+        // ховаємо соц.мережі автора - подивимось чи треба буде
+        display: none;
+    }
+
+    &__button {
+        width: fit-content;
+        margin-left: auto;
+    }
+
+    &__icon {
+        transition: fill 0.4s;
+    }
+
+    &__social-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        transition: box-shadow 0.4s, outline 0.4s;
+
+        &:hover {
+            box-shadow: 7px 7px 14px #aaa8a5, -7px -7px 14px #ffffff;
+
+            .author__icon {
+                fill: $a2-900;
+            }
+
+        }
+
+        &:active {
+            box-shadow: inset 7px 7px 14px #aaa8a5, inset -7px -7px 14px #ffffff;
+        }
+    }
+}
+
+.author-portfolio {
+    padding-top: 0;
+
+    &__title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        p:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}
