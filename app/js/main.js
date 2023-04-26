@@ -3,13 +3,13 @@
 
         
     $(document).ready(function() {
-        var isHomepage1 = $("body.home").length > 0;
+        var isHomepage = $("body.home").length > 0;
         $('a[href="#partners-main-section"]').on('click', function (e) {
             $('.burger-button').removeClass('active');
             $('.mobile-menu').removeClass('active');
             e.preventDefault();
             var target = $($(this).attr('href'));
-            if (isHomepage1) {
+            if (isHomepage) {
                 if (target.length) {
                     $('html, body').animate({
                         scrollTop: target.offset().top - $('header').height() - 100
@@ -21,7 +21,7 @@
         });
     });
 
-
+/*
 
     //при клике на бургер-кнопку сама кнопка меняется/появляется меню
     $(function () {
@@ -248,3 +248,5 @@
             $('body').removeClass('lock');
         });
     });
+
+    */
