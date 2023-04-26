@@ -1,6 +1,8 @@
 
     // плавный скролл на Партнеры на главной, с других страниц - перенаправление
-    $(function () {
+
+        
+    $(document).ready(function() {
         var isHomepage = $("body.home").length > 0;
         $('a[href="#partners-main-section"]').on('click', function (e) {
             $('.burger-button').removeClass('active');
@@ -18,6 +20,8 @@
             }
         });
     });
+
+
 
     //при клике на бургер-кнопку сама кнопка меняется/появляется меню
     $(function () {
