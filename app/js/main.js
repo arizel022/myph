@@ -1,25 +1,38 @@
+// плавный скролл на Партнеры на главной, с других страниц - перенаправление
 
-    // плавный скролл на Партнеры на главной, с других страниц - перенаправление
 
-        
-    $(document).ready(function() {
-        var isHomepage = $("body.home").length > 0;
-        $('a[href="#partners-main-section"]').on('click', function (e) {
-            $('.burger-button').removeClass('active');
-            $('.mobile-menu').removeClass('active');
-            e.preventDefault();
-            var target = $($(this).attr('href'));
-            if (isHomepage) {
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top - $('header').height() - 100
-                    }, 1000);
-                }
-            } else {
-                window.location.href = '/#partners-main-section';
+// Ожидаем полной загрузки DOM, чтобы начать работу скрипта
+$(document).ready(function () {
+    // Проверяем, является ли текущая страница главной страницей путем проверки наличия класса "home" у элемента body
+    var isHomepage = $("body.home").length > 0;
+    // Находим все ссылки, у которых href="#partners-main-section", и назначаем им обработчик события "click"
+    $('a[href="#partners-main-section"]').on('click', function (e) {
+        // Находим элементы с классами "burger-button" и "mobile-menu" и удаляем у них класс "active"
+        $('.burger-button').removeClass('active');
+        $('.mobile-menu').removeClass('active');
+        // Отменяем стандартное поведение при клике на ссылку
+        e.preventDefault();
+        // Находим целевой элемент, к которому нужно выполнить плавный скролл, используя значение атрибута "href" из кликнутой ссылки
+        var target = $($(this).attr('href'));
+        // Если текущая страница является главной
+        if (isHomepage) {
+            // Если целевой элемент найден
+            if (target.length) {
+                // Выполняем плавный скролл к целевому элементу, отнимая от его верхней позиции высоту заголовка и 100 пикселей, и анимируя это действие в течение 1000 миллисекунд
+                $('html, body').animate({
+                    scrollTop: target.offset().top - $('header').height() - 100
+                }, 1000);
             }
-        });
+        } else { // Если текущая страница не является главной
+            // Перенаправляем пользователя на главную страницу с якорем "partners-main-section"
+            
+            //этот путь - для сервера на гитхабе
+            window.location.href = '/myph/#partners-main-section';
+            //второй путь - для нашего сервера
+            // window.location.href = '/#partners-main-section';
+        }
     });
+});
 
 /*
 
