@@ -1,40 +1,7 @@
-    
-
-
-    //лайтбокс на странице автора - галерея автора
-    $('a.basic-gallery__link').colorbox({
-        rel: 'gal',
-        onOpen: function () {
-            $('body').css('overflow-y', 'hidden');
-        },
-        onCleanup: function () {
-            $('body').css('overflow-y', 'auto');
-        },
-        onComplete: function () {
-            $('body').css('overflow-y', 'hidden');
-        }
-    });
-
-    //swiper
-    // $(function () {
-
-    //     const swiper = new Swiper('.mySwiper', {
-
-    //         direction: "vertical",
-
-    //         pagination: {
-    //             el: ".swiper-pagination",
-    //             clickable: true,
-    //         }
-    //     });
-
-    // });
-
 
     // плавный скролл на Партнеры на главной, с других страниц - перенаправление
     $(function () {
-        // var isHomepage = $("body.home").length > 0;
-        var isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+        var isHomepage = $("body.home").length > 0;
         $('a[href="#partners-main-section"]').on('click', function (e) {
             $('.burger-button').removeClass('active');
             $('.mobile-menu').removeClass('active');
@@ -186,6 +153,22 @@
                 arrows: true
             });
         }
+    });
+
+    //лайтбокс на странице автора - галерея автора
+    $(function () {
+        $('a.basic-gallery__link').colorbox({
+            rel: 'gal',
+            onOpen: function () {
+                $('body').css('overflow-y', 'hidden');
+            },
+            onCleanup: function () {
+                $('body').css('overflow-y', 'auto');
+            },
+            onComplete: function () {
+                $('body').css('overflow-y', 'hidden');
+            }
+        });
     });
 
 
