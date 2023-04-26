@@ -16,40 +16,25 @@
     });
 
     //swiper
-    $(function () {
+    // $(function () {
 
-        const swiper = new Swiper('.mySwiper', {
+    //     const swiper = new Swiper('.mySwiper', {
 
-            direction: "vertical",
+    //         direction: "vertical",
 
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            }
+    //         pagination: {
+    //             el: ".swiper-pagination",
+    //             clickable: true,
+    //         }
+    //     });
 
-            // loop: true,
-            // slidesPerView: 1,
-            // centeredSlides: true,
-            // scrollbar: false,
-            // mousewheel: true,
-
-            // effect: slide,
-            //при включении эффекта почему-то не работает
-            // effect - выбор анимации для переключения слайдов. Доступные варианты: 'slide', 'fade', 'cube', 'coverflow', 'flip'
-
-
-
-
-        });
-
-
-
-    });
+    // });
 
 
     // плавный скролл на Партнеры на главной, с других страниц - перенаправление
     $(function () {
-        var isHomepage = $("body.home").length > 0;
+        // var isHomepage = $("body.home").length > 0;
+        var isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html';
         $('a[href="#partners-main-section"]').on('click', function (e) {
             $('.burger-button').removeClass('active');
             $('.mobile-menu').removeClass('active');
@@ -155,9 +140,21 @@
         });
     });
 
-    //слик-слайдер партнеров на главной странице
+    //слайдеры на главной странице
     $(function () {
         if (window.location.pathname === '/' || window.location.pathname.indexOf('/index.html') > -1) {
+
+            //слик-слайдер заглавных фото на главной странице
+            $('.hero__slider').slick({
+                dots: false,
+                infinite: true,
+                arrows: false,
+                autoplaySpeed: 10000,
+                autoplay: true,
+                fade: true
+            });
+
+            //слик-слайдер партнеров на главной странице
             $('.partners__list').slick({
                 dots: false,
                 infinite: true,
@@ -182,33 +179,15 @@
                     }
                 ]
             });
-        }
-    });
 
-
-    //слик-слайдер заглавных фото на главной странице
-    $(function () {
-        if (window.location.pathname === '/' || window.location.pathname.indexOf('/index.html') > -1) {
-            $('.hero__slider').slick({
-                dots: false,
-                infinite: true,
-                arrows: false,
-                autoplaySpeed: 10000,
-                autoplay: true,
-                fade: true
-            });
-        }
-    });
-
-    //слик-слайдер отзывов на главной странице
-    $(function () {
-        if (window.location.pathname === '/' || window.location.pathname.indexOf('/index.html') > -1) {
+            //слик-слайдер отзывов на главной странице
             $('.reviews__inner').slick({
                 dots: true,
                 arrows: true
             });
         }
     });
+
 
     //активное состояние кнопки call-to-action
     $(function () {
