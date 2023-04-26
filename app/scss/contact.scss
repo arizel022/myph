@@ -9,12 +9,20 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+
+        @media (max-width: 992px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__address {
         max-width: 540px;
         width: 100%;
         margin-right: 90px;
+
+        @media (max-width: 992px) {
+            margin: 0 auto 40px;
+        }
     }
 
     &__text {
@@ -24,6 +32,10 @@
     &__item {
         &:not(:last-child) {
             margin-bottom: 25px;
+
+            @media (max-width: 576px) {
+                margin-bottom: 10px;
+            }
         }
     }
 
@@ -37,6 +49,11 @@
         color: $a900;
         font-size: 16px;
         transition: box-shadow 0.3s, outline 0.3s;
+
+        @media (max-width: 576px) {
+            width: 100%;
+            padding: 10px 15px;
+        }
 
         &:hover {
             box-shadow: 7px 7px 14px #aaa8a5, -7px -7px 14px #ffffff;
@@ -60,6 +77,10 @@
 .form {
     max-width: 540px;
     width: 100%;
+
+    @media (max-width: 992px) {
+        margin: 0 auto;
+    }
 
     &__label {
         display: block;

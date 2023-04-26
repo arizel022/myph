@@ -1,11 +1,60 @@
-    // плавный скролл на Партнеры на главной, с других страниц - перенаправление
-    $(document).ready(function () {
-        var isHomepage = $("body.home").length > 0;
+    
 
+
+    //лайтбокс на странице автора - галерея автора
+    $('a.basic-gallery__link').colorbox({
+        rel: 'gal',
+        onOpen: function () {
+            $('body').css('overflow-y', 'hidden');
+        },
+        onCleanup: function () {
+            $('body').css('overflow-y', 'auto');
+        },
+        onComplete: function () {
+            $('body').css('overflow-y', 'hidden');
+        }
+    });
+
+    //swiper
+    $(function () {
+
+        const swiper = new Swiper('.mySwiper', {
+
+            direction: "vertical",
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            }
+
+            // loop: true,
+            // slidesPerView: 1,
+            // centeredSlides: true,
+            // scrollbar: false,
+            // mousewheel: true,
+
+            // effect: slide,
+            //при включении эффекта почему-то не работает
+            // effect - выбор анимации для переключения слайдов. Доступные варианты: 'slide', 'fade', 'cube', 'coverflow', 'flip'
+
+
+
+
+        });
+
+
+
+    });
+
+
+    // плавный скролл на Партнеры на главной, с других страниц - перенаправление
+    $(function () {
+        var isHomepage = $("body.home").length > 0;
         $('a[href="#partners-main-section"]').on('click', function (e) {
+            $('.burger-button').removeClass('active');
+            $('.mobile-menu').removeClass('active');
             e.preventDefault();
             var target = $($(this).attr('href'));
-
             if (isHomepage) {
                 if (target.length) {
                     $('html, body').animate({
@@ -16,27 +65,34 @@
                 window.location.href = '/#partners-main-section';
             }
         });
-
-
     });
 
-
-    $('.form__input').on('focus blur', function () {
-        var label = $(this).parent('.form__label');
-        if ($(this).val() === '') {
-            if (event.type === 'focus') {
-                label.addClass('focused');
-            } else if (event.type === 'blur') {
-                label.removeClass('focused');
-            }
-        } else {
-            label.addClass('focused');
-        }
-    });
-
-
+    //при клике на бургер-кнопку сама кнопка меняется/появляется меню
     $(function () {
+        $('.burger-button').click(function () {
+            $(this).toggleClass('active');
+            $('.mobile-menu').toggleClass('active');
+        });
+    });
 
+    //текст лейбла занимает место над полем при фокусе на поле
+    $(function () {
+        $('.form__input').on('focus blur', function () {
+            var label = $(this).parent('.form__label');
+            if ($(this).val() === '') {
+                if (event.type === 'focus') {
+                    label.addClass('focused');
+                } else if (event.type === 'blur') {
+                    label.removeClass('focused');
+                }
+            } else {
+                label.addClass('focused');
+            }
+        });
+    });
+
+    //вертикальный слик-слайдер
+    $(function () {
         $('.vertical-gallery__content').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -47,6 +103,7 @@
             asNavFor: '.vertical-gallery__nav'
         });
         $('.vertical-gallery__nav').slick({
+
             slidesToShow: 2,
             slidesToScroll: 1,
             asNavFor: '.vertical-gallery__content',
@@ -56,10 +113,20 @@
             nextArrow: '<button class="slick-arrow slick-next" type="button"><span class="sr-only">Наступний слайд</span><svg class="slick-arrow__icon" width="24" height="24"><use xlink:href="images/sprite.svg#icon-arrow-slider"></use></svg></button>',
             arrows: true,
             centerMode: true,
-            focusOnSelect: true
+            focusOnSelect: true,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                    vertical: false
+                }
+            }]
         });
+    });
 
-        //галерею можно использовать на любой странице
+
+    //галерея с увеличением по клику, можно использовать на любой странице
+    $(function () {
         $('.zoom-gallery').magnificPopup({
             delegate: 'a',
             type: 'image',
@@ -81,53 +148,81 @@
                 opener: function (element) {
                     return element.find('img');
                 }
+            },
+            swipe: {
+                enabled: true
             }
-
         });
+    });
+
+    //слик-слайдер партнеров на главной странице
+    $(function () {
+        if (window.location.pathname === '/' || window.location.pathname.indexOf('/index.html') > -1) {
+            $('.partners__list').slick({
+                dots: false,
+                infinite: true,
+                arrows: false,
+                autoplaySpeed: 1000,
+                slidesToShow: 4,
+                autoplay: true,
+                responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            autoplaySpeed: 5000
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        }
+    });
 
 
-        $('.partners__list').slick({
-            dots: false,
-            infinite: true,
-            arrows: false,
-            autoplaySpeed: 1000,
-            slidesToShow: 4,
+    //слик-слайдер заглавных фото на главной странице
+    $(function () {
+        if (window.location.pathname === '/' || window.location.pathname.indexOf('/index.html') > -1) {
+            $('.hero__slider').slick({
+                dots: false,
+                infinite: true,
+                arrows: false,
+                autoplaySpeed: 10000,
+                autoplay: true,
+                fade: true
+            });
+        }
+    });
 
-            autoplay: true
-        });
+    //слик-слайдер отзывов на главной странице
+    $(function () {
+        if (window.location.pathname === '/' || window.location.pathname.indexOf('/index.html') > -1) {
+            $('.reviews__inner').slick({
+                dots: true,
+                arrows: true
+            });
+        }
+    });
 
-        $('.hero__slider').slick({
-            dots: false,
-            infinite: true,
-            arrows: false,
-            autoplaySpeed: 10000,
-            autoplay: true,
-            fade: true
-        });
-
-        $('.reviews__inner').slick({
-            dots: true,
-            arrows: true
-        });
-
-
-
-
-
-
-
-
+    //активное состояние кнопки call-to-action
+    $(function () {
         $('.course-price__button').click(function () {
             $(this).toggleClass('active');
         });
+    });
 
-        //запускать инициализацию микситапа только, если мы на странице exhibitions.html
+    //фильтрация и карты exhibitions.html
+    $(function () {
         if (window.location.pathname === '/exhibitions.html') {
             var mixer = mixitup('.exhibitions__grid');
 
-
-        }
-        $(document).ready(function () {
+            //работа карт выставок. Должно быть только на странице exhibitions.html
             // Назначаем обработчик на все кнопки с классом .exhibitions__filter-btn
             $('.exhibitions__filter-btn').click(function () {
                 var filterValue = $(this).data('filter');
@@ -136,13 +231,11 @@
                 // Удаляем текущее фоновое изображение и добавляем новое, соответствующее нажатой кнопке
                 $('.exhibitions__grid').removeClass('bg-ukr bg-germ bg-neth bg-norv').addClass('bg-' + $(this).data('filter').substr(1));
             });
-        });
+        }
+    });
 
-
-
-
-
-        //-----------------------------------------гармошка блока faq
+    //гармошка блока faq
+    $(function () {
         $('.course-faq__ans').hide();
         $('.course-faq__question').click(function () { //при клике на вопрос
             $(this).toggleClass('open'); //применяются стили текущего вопроса
@@ -151,31 +244,41 @@
                 $('.course-faq__ans').not(this).prev('.course-faq__question').removeClass('open'); //НЕ текущий вопрос теряет стили открытого
             });
         });
+    });
 
-
-        //нужен только странице course-art-consciousness.html (возможно другим страницам курсов)
+    //Плавный скролл до цен при нажатии на кнопку call-to-action. нужен только странице конкретного курса
+    $(function () {
         $(".course-hero__button").on("click", function (e) {
             e.preventDefault();
             var id = $(this).attr('href'),
                 top = $(id).offset().top;
             $('body,html').animate({
-                scrollTop: top - 300
+                scrollTop: top - 100
             }, 1500);
         });
+    });
 
-
-        //попап сабавтора на странице курса
+    //При клике на сабавтора на странице курса появляется popup об этом авторе
+    $(function () {
         $('.course-plan__module-subauthor-btn').click(function () {
             $(this).addClass('open');
             $('.subauthor-card').addClass('open');
+            $('.backdrop').addClass('open');
+            $('body').addClass('lock');
         });
         $(document).mouseup(function (e) { // отслеживаем клик
             var block = $(".subauthor-card"); //кнопка, меню В ней
             if (!block.is(e.target) && block.has(e.target).length === 0) { //если клик не по кнопке/меню/чайлдам
                 $('.course-plan__module-subauthor-btn').removeClass('open'); //кнопка неактивна
                 $('.subauthor-card').removeClass('open'); //меню неактивно
+                $('.backdrop').removeClass('open'); //бекдроп неактивен
+                $('body').removeClass('lock');
             }
         });
-
-
+        $('.subauthor-card__close-btn').click(function () {
+            $('.course-plan__module-subauthor-btn').removeClass('open'); //кнопка неактивна
+            $('.subauthor-card').removeClass('open'); //меню неактивно
+            $('.backdrop').removeClass('open'); //бекдроп неактивен
+            $('body').removeClass('lock');
+        });
     });

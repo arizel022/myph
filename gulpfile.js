@@ -38,9 +38,11 @@ function scripts() {
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/mixitup/dist/mixitup.js',
-        // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-        // 'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
-        // 'node_modules/rateyo/src/jquery.rateyo.js',
+        // 'node_modules/swiper/swiper-element.js',
+        // 'node_modules/swiper/swiper-element.min.js',
+        // 'node_modules/swiper/swiper-bundle.js',
+        'app/js/colorbox.js',
+        'app/js/swiper.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))

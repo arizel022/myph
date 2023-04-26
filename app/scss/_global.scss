@@ -15,6 +15,21 @@ $a2-900: #2b5865;
 $l: #f0ede8;
 $d: #222222;
 
+/*
+@media (max-width: 1200px) {
+        
+}
+@media (max-width: 992px) {
+        
+}
+@media (max-width: 768px) {
+        
+}
+@media (max-width: 576px) {
+        
+}
+*/
+
 body {
     min-height: 100vh;
     background-color: $l;
@@ -28,6 +43,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &.lock {
+        overflow-y: hidden;
+    }
 }
 
 a,
@@ -50,11 +69,19 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+
+    &--big {
+        max-width: 1600px;
+    }
 }
 
 //компенсатор липкой шапки
 .wrapper {
     padding-top: 95px;
+
+    @media (max-width: 576px) {
+        padding-top: 75px;
+    }
 }
 
 .sr-only {
@@ -71,7 +98,6 @@ img {
 }
 
 .header {
-    // border-bottom: 1px solid rgb(0, 0, 0);
     padding: 15px 0;
     position: fixed;
     top: 0;
@@ -79,6 +105,45 @@ img {
     width: 100%;
     backdrop-filter: blur(12px);
     background-color: rgba($l, 0.6);
+
+    @media (max-width: 576px) {
+        padding: 5px 0;
+    }
+
+}
+
+.mobile-menu {
+    display: none;
+
+    @media (max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        transform: scale(0) skew(75deg, 25deg);
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: $l;
+        transition: transform 1s;
+        padding: 85px 0 40px;
+
+        &.active {
+            transform: scale(1) skew(0);
+        }
+
+
+        &__link {
+            display: block;
+            padding: 10px 0 10px 40px;
+        }
+
+        &__social {
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+    }
 }
 
 .menu {
@@ -89,6 +154,10 @@ img {
     &__list {
         display: flex;
         align-items: center;
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
     }
 
     &__item {
@@ -122,7 +191,16 @@ img {
 .logo {
     border-radius: 4px;
     padding: 10px;
+    z-index: 2;
     transition: box-shadow 0.5s;
+
+    &__img {
+        @media (max-width: 576px) {
+            max-width: 70px;
+            height: auto;
+        }
+    }
+
 
     &:hover {
         box-shadow: 7px 7px 14px #aaa8a5, -7px -7px 14px #ffffff;
@@ -132,7 +210,7 @@ img {
         box-shadow: inset 7px 7px 14px #aaa8a5, inset -7px -7px 14px #ffffff;
     }
 
-    &--footer {
+    &--dark {
         &:hover {
             box-shadow: 7px 7px 14px #171717, -7px -7px 14px #2d2d2d;
         }
@@ -155,6 +233,11 @@ img {
     line-height: 1;
     margin-bottom: 20px;
 
+    @media (max-width: 576px) {
+        font-size: 77px;
+        letter-spacing: -10px;
+    }
+
     &--ghost {
         right: 6%;
         top: 15vh;
@@ -163,13 +246,24 @@ img {
         font-size: 400px;
         color: rgba($a2-300, 0.1);
         pointer-events: none;
-        // text-shadow: 15px 15px 10px #002d0005;
         z-index: -5;
+
+        @media (max-width: 576px) {
+            letter-spacing: -46px;
+            font-size: 400px;
+            text-shadow: 15px 15px 10px #002d0005;
+        }
     }
+
+
 }
 
 .section {
     padding: 140px 0;
+
+    @media (max-width: 768px) {
+        padding: 100px 0;
+    }
 
     &__top {
         padding: 15px 0;
@@ -183,6 +277,10 @@ img {
         font-size: 36px;
         font-weight: 400;
         position: relative;
+
+        @media (max-width: 576px) {
+            font-size: 24px;
+        }
 
         &:before {
             content: '';
@@ -213,6 +311,10 @@ img {
             bottom: -2px;
             right: 0;
             transition: width 1s;
+
+            @media (max-width: 576px) {
+                content: none;
+            }
         }
 
         &:after {
@@ -265,11 +367,43 @@ img {
         align-items: center;
         flex-wrap: wrap;
         gap: 20px;
+
+        @media (max-width: 768px) {
+            gap: 40px;
+        }
     }
 
     &__text {
         text-transform: uppercase;
         color: $l;
+
+        @media (max-width: 768px) {
+            order: 2;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+
+    &__logo {
+        @media (max-width: 768px) {
+            order: 0;
+        }
+
+        @media (max-width: 576px) {
+            margin: 0 auto;
+        }
+    }
+
+    &__social {
+        @media (max-width: 768px) {
+            order: 1;
+        }
+
+        @media (max-width: 576px) {
+            width: 100%;
+            justify-content: center;
+        }
     }
 }
 
@@ -301,6 +435,22 @@ img {
 
         &:focus {
             outline: transparent;
+        }
+
+        &--light {
+            background-color: $l;
+
+            &:hover {
+                box-shadow: 7px 7px 14px #aaa8a5, -7px -7px 14px #ffffff;
+            }
+
+            &:active {
+                box-shadow: inset 7px 7px 14px #aaa8a5, inset -7px -7px 14px #ffffff;
+            }
+
+            .social__icon {
+                fill: $d;
+            }
         }
     }
 
@@ -399,8 +549,98 @@ img {
     }
 }
 
+.burger-button {
+
+    display: none;
+
+    @media (max-width: 1200px) {
+        display: flex;
+        padding: 0;
+        border-radius: 50%;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+
+        &:after {
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+        }
+
+        &__line {
+            width: 20px;
+            height: 2px;
+            background-color: $d;
+            position: relative;
+            transition: width 0.3s;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                background-color: $d;
+                left: 0;
+                width: 20px;
+                height: 2px;
+                transition: transform 0.3s, left 0.3s, bottom 0.3s, top 0.3s;
+            }
+
+            &:before {
+                top: -6px;
+            }
+
+            &:after {
+                bottom: -6px;
+            }
+        }
+
+        &.active {
+            color: $d;
+
+            &:after {
+                background: #e57601;
+                box-shadow: inset 5px 5px 10px #954d01,
+                    inset -5px -5px 10px #ff9f01;
+            }
+
+            .burger-button__line {
+                width: 0;
+
+                &:before {
+                    top: 0;
+                    left: -10px;
+                    transform: rotate(45deg);
+                }
+
+                &:after {
+                    bottom: 0;
+                    left: -10px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+
+}
+
 .accent {
     color: $a900;
+}
+
+.details-link {
+    padding: 8px 25px;
+    border: 1px solid $a400;
+    color: $a400;
+    transition: background-color 0.4s, transform 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: #ffffff2a;
+    }
+
+    &:active {
+        background-color: transparent;
+    }
 }
 
 .grid {
@@ -408,11 +648,40 @@ img {
     gap: 10px;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    ;
+
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 780px;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--4x3 {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+
+        @media (max-width: 768px) {
+            max-width: 575px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
 
     &__item {
+        // border: 1px solid red;
         grid-row: span 2;
         grid-column: span 2;
+
+        &--xs {
+            grid-row: span 1;
+            grid-column: span 1;
+            // чтобы айтем всегда был квадратом.
+            aspect-ratio: 1/1;
+        }
 
         &--s-long {
             grid-row: span 1;
@@ -422,11 +691,19 @@ img {
         &--l-long {
             grid-row: span 2;
             grid-column: span 4;
+
+            @media (max-width: 768px) {
+                grid-column: span 2;
+            }
         }
 
         &--s-high {
             grid-row: span 2;
             grid-column: span 1;
+
+            @media (max-width: 768px) {
+                grid-column: span 2;
+            }
         }
     }
 }
@@ -443,6 +720,10 @@ img {
     background-position: center 23%;
     background-size: cover;
 
+    @media (max-width: 576px) {
+        width: 100%;
+    }
+
     &--long {
         width: 100%;
     }
@@ -451,9 +732,17 @@ img {
         width: 40%;
         height: 540px;
 
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
         .prev-cours-card__subtitle {
             margin-bottom: 20px;
             font-size: 24px;
+
+            @media (max-width: 576px) {
+                font-size: 20px;
+            }
         }
     }
 
@@ -480,10 +769,6 @@ img {
                 color: $a400;
             }
         }
-
-        // &:active {
-
-        // }
     }
 
     &__subtitle {
@@ -506,13 +791,25 @@ img {
     align-items: flex-start;
     gap: 40px;
 
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__content {
-        max-width: 800px;
-        width: 100%;
+        // max-width: 800px;
+        // width: 100%;
+        width: 46vw;
+
+        @media (max-width: 1200px) {
+            max-width: 70vw;
+            width: 100%;
+        }
+
     }
 
     .slick-slide {
-        transition: all 1.5s!important;
+        transition: all 1.5s !important;
     }
 
     &__preview {
@@ -527,11 +824,20 @@ img {
 
     &__nav {
         flex-grow: 1;
+
+        @media (max-width: 768px) {
+            display: flex;
+        }
+
     }
 
     &__item {
         padding: 15px 0;
         height: 300px;
+
+        @media (max-width: 768px) {
+            height: 150px;
+        }
     }
 
     &__img {
@@ -585,5 +891,32 @@ img {
         .slick-arrow__icon {
             transform: rotate(180deg);
         }
+    }
+}
+
+
+// https://www.jacklmoore.com/colorbox/
+.basic-gallery {
+
+    @media (max-width: 576px) {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+
+    &__link {
+        width: calc((100% - 2 * 30px) / 3);
+        max-height: 200px;
+        display: block;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
     }
 }

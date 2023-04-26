@@ -8,30 +8,67 @@
     &__inner {
         display: flex;
         gap: 15px;
+
+        @media (max-width: 992px) {
+            flex-wrap: wrap;
+            gap: 40px;
+        }
     }
 
     &__list {
         width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        @media (max-width: 992px) {
+            width: 100%;
+        }
+
+        @media (max-width: 576px) {
+
+        }
     }
 
     &__item {
         display: flex;
+        align-items: center;
 
-        &:not(:last-child) {
-            margin-bottom: 30px;
+
+        @media (max-width: 576px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__img {
+        // @media (max-width: 992px) {
+        //     max-width: 200px;
+        //     height: 150px;
+        // }
+
+        @media (max-width: 576px) {
+            margin: 0 auto 20px;
         }
     }
 
     &__link {
         flex-grow: 1;
-        padding: 25px;
+        padding: 0 25px;
         transition: color 0.3s;
+
+        @media (max-width: 576px) {
+            padding: 0;
+        }
 
         &:hover {
             color: $a2-900;
 
             .all-news__subtitle {
                 transform: scale(1.1) translateX(22px);
+
+                @media (max-width: 576px) {
+                    transform: scale(1) translateX(0);
+                }
             }
         }
 
@@ -44,6 +81,10 @@
         font-size: 24px;
         margin-bottom: 10px;
         transition: transform 0.5s;
+
+        @media (max-width: 576px) {
+            text-align: center;
+        }
     }
 }
 
@@ -51,6 +92,17 @@
     flex-grow: 1;
     border-left: 1px solid $d;
     padding-left: 35px;
+
+    @media (max-width: 768px) {
+        width: 70%;
+        margin-left: auto;
+        flex-grow: 0;
+    }
+
+    @media (max-width: 576px) {
+        width: 100%;
+        margin: 0;
+    }
 
     &__title {
         font-size: 24px;
@@ -112,6 +164,10 @@
         display: flex;
         align-items: center;
         gap: 30px;
+
+        @media (max-width: 992px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__subtitle {
@@ -122,6 +178,12 @@
     &__text {
         &:not(:last-child) {
             margin-bottom: 20px;
+        }
+    }
+
+    &__img {
+        @media (max-width: 992px) {
+            margin: 0 auto;
         }
     }
 }

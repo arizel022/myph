@@ -9,12 +9,16 @@
     padding-top: 95px;
     padding-bottom: 0;
     position: relative;
-    // background-color: #3f3f3f;
 
     &__content {
         padding-top: 20vh;
         max-width: 50%;
         margin-bottom: 40px;
+
+        @media (max-width: 768px) {
+            padding-top: 10vh;
+            max-width: 80%;
+        }
     }
 
     &__slider {
@@ -23,10 +27,26 @@
         height: 80vh;
         margin: 0 auto;
         overflow: hidden;
+
+        @media (max-width: 768px) {
+            height: 50vh;
+        }
+
+        @media (max-width: 576px) {
+            height: 30vh;
+        }
     }
 
     &__slider-item {
         height: 80vh;
+
+        @media (max-width: 768px) {
+            height: 50vh;
+        }
+
+        @media (max-width: 576px) {
+            height: 30vh;
+        }
     }
 
     &__slider-img {
@@ -43,11 +63,25 @@
 .about {
     &__inner {
         display: flex;
+
+        @media (max-width: 1200px) {
+            flex-wrap: wrap;
+            padding: 0 45px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 0 15px;
+        }
     }
 
     &__img {
         margin-right: 90px;
         background-color: rgba(0, 128, 128, 0.205);
+
+        @media (max-width: 1200px) {
+            height: auto;
+            margin: 0 auto 30px;
+        }
     }
 
     &__text {
@@ -62,6 +96,10 @@
         display: flex;
         align-items: flex-start;
         gap: 60px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 
     &__inner {
@@ -70,10 +108,10 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 40px;
-    }
 
-    &__card {
-
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     &__all-link {
@@ -110,19 +148,24 @@
         background-color: rgba($d, 0.5);
         transition: color 0.7s, background-color 0.4s;
     }
-
-
-
 }
 
 .anonses {
     padding-top: 0;
     &__inner {
         display: flex;
+
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__main {
         width: 50%;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     &__link {
@@ -132,17 +175,37 @@
         position: relative;
         transition: opacity 0.3;
 
+
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+        }
+
         &:hover {
-            .anonses__content {
+            .anonses__overlay {
                 transform: scale(1) skew(0);
+            }
+
+            .anonses__content {
+                opacity: 0.2;
             }
         }
 
         &:focus {
             outline: transparent;
 
-            .anonses__content {
+            .anonses__overlay {
                 transform: scale(1) skew(0);
+            }
+
+            .anonses__content {
+                opacity: 0.2;
             }
         }
 
@@ -159,7 +222,6 @@
 
     &__content {
         position: absolute;
-        background-color: rgba($d, 0.75);
         bottom: 0;
         left: 0;
         width: 100%;
@@ -169,23 +231,57 @@
         justify-content: flex-end;
         color: $l;
         padding: 25px;
-        transform: scale(0) skew(75deg, 25deg);
-        transition: transform 1s;
+        transition: opacity 1s;
+
+        @media (max-width: 768px) {
+            padding: 10px;
+        }
     }
 
     &__subtitle {
         font-size: 24px;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+        }
     }
+
+    &__text {
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        background-color: rgba($d, 0.75);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 1s;
+        transform: scale(0) skew(75deg, 25deg);
+    }
+
 
     &__list {
         width: 50%;
         display: flex;
         flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     &__item {
         width: 50%;
     }
+
+
 }
 
 .partners {
@@ -205,6 +301,7 @@
         height: 100px;
         border-radius: 1px;
         transition: box-shadow 0.4s;
+        margin: 0 auto;
 
         &:hover {
             box-shadow:  7px 7px 14px #aaa8a5, -7px -7px 14px #ffffff;
@@ -242,6 +339,10 @@
 
     .slick-list {
         order: 0;
+
+        @media (max-width: 1200px) {
+            margin-bottom: 40px;
+        }
     }
 
     .slick-dots {
@@ -249,6 +350,10 @@
         font-size: 0;
         display: flex;
         margin-right: 35px;
+
+        @media (max-width: 576px) {
+            margin: 0 auto;
+        }
 
         li {
             &:not(:last-child) {
@@ -306,6 +411,10 @@
         justify-content: center;
         transition: box-shadow 0.3s;
 
+        @media (max-width: 576px) {
+            display: none!important;
+        }
+
         &:hover {
             box-shadow:  7px 7px 14px #aaa8a5, -7px -7px 14px #ffffff;
         }
@@ -348,11 +457,25 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 50px;
+
+        @media (max-width: 992px) {
+            flex-wrap: wrap;
+            padding: 0;
+        }
     }
 
     &__img {
         border-radius: 50%;
         margin-right: 100px;
+
+        @media (max-width: 992px) {
+            margin: 0 auto 40px;
+        }
+
+        @media (max-width: 576px) {
+            width: 100px;
+            height: 100px;
+        }
     }
 
     &__text {
@@ -363,12 +486,20 @@
         color: $a900;
         font-size: 24px;
         font-weight: 700;
+
+        @media (max-width: 576px) {
+            font-size: 18px;
+        }
     }
 
     &__status {
         font-size: 16px;
         display: block;
         color: $d;
+
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
     }
 }
 
