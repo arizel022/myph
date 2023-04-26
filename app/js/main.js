@@ -198,7 +198,10 @@ $(document).ready(function () {
 
     //фильтрация и карты exhibitions.html
     $(function () {
-        if (window.location.pathname === '/exhibitions.html') {
+        //этот путь - для сервера на гитхабе
+        if (window.location.pathname === '/myph/exhibitions.html') {
+        //второй путь - для нашего сервера
+        // if (window.location.pathname === '/exhibitions.html') {
             var mixer = mixitup('.exhibitions__grid');
 
             //работа карт выставок. Должно быть только на странице exhibitions.html
