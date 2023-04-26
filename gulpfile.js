@@ -39,8 +39,8 @@ function scripts() {
         'node_modules/mixitup/dist/mixitup.js',
         'app/js/colorbox.js',
         // 'app/js/swiper.js',
-        'app/js/main.js',
-        'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+        'app/js/main.js'
+        // 'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())

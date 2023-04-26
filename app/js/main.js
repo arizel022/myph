@@ -3,13 +3,13 @@
 
         
     $(document).ready(function() {
-        var isHomepage = $("body.home").length > 0;
+        var isHomepage1 = $("body.home").length > 0;
         $('a[href="#partners-main-section"]').on('click', function (e) {
             $('.burger-button').removeClass('active');
             $('.mobile-menu').removeClass('active');
             e.preventDefault();
             var target = $($(this).attr('href'));
-            if (isHomepage) {
+            if (isHomepage1) {
                 if (target.length) {
                     $('html, body').animate({
                         scrollTop: target.offset().top - $('header').height() - 100
