@@ -126,8 +126,8 @@ $(document).ready(function () {
 
     //слайдеры на главной странице
     $(function () {
-        
-        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+        // if (window.location.pathname === '/' || window.location.pathname.indexOf('/index.html') > -1)
+        // if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
 
             //слик-слайдер заглавных фото на главной странице
             $('.hero__slider').slick({
@@ -170,7 +170,7 @@ $(document).ready(function () {
                 dots: true,
                 arrows: true
             });
-        }
+        // }
     });
 
     //лайтбокс на странице автора - галерея автора
