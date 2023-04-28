@@ -33,7 +33,7 @@ $d: #222222;
 body {
     min-height: 100vh;
     background-color: $l;
-    font-family: 'Jost', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-size: 15px;
     line-height: 1.6;
@@ -564,6 +564,7 @@ img {
         &:after {
             width: calc(100% - 10px);
             height: calc(100% - 10px);
+            border-radius: 50%;
         }
 
         &__line {
@@ -735,21 +736,12 @@ img {
         @media (max-width: 768px) {
             width: 100%;
         }
-
-        .prev-cours-card__subtitle {
-            margin-bottom: 20px;
-            font-size: 24px;
-
-            @media (max-width: 576px) {
-                font-size: 20px;
-            }
-        }
     }
 
     &__content {
         border-radius: 15px;
         position: absolute;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(9, 9, 121, 0) 80%);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 80%);
         bottom: 0;
         left: 0;
         width: 100%;
@@ -772,8 +764,22 @@ img {
     }
 
     &__subtitle {
-        font-size: 18px;
-        margin-bottom: 10px;
+        font-size: 16px;
+        margin-bottom: 5px;
+
+        &--long {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        &--big {
+            margin-bottom: 20px;
+            font-size: 24px;
+
+            @media (max-width: 576px) {
+                font-size: 20px;
+            }
+        }
     }
 
     &__subtitle-accent {
@@ -782,6 +788,10 @@ img {
 
     &__subtitle-author {
         transition: color 1s;
+    }
+
+    &__text {
+        font-size: 14px;
     }
 }
 
