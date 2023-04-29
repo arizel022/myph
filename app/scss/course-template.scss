@@ -9,6 +9,22 @@
     position: relative;
     z-index: 1;
 
+    @media (max-width: 576px) {
+        padding: 30px 0;
+    }
+
+    &--roman {
+        background-position: left top;
+
+        @media (max-width: 576px) {
+            background-position: right top;
+        }
+    }
+
+    &--maryna {
+        background-position: center bottom;
+    }
+
     &:before {
         content: '';
         position: absolute;
@@ -130,7 +146,7 @@
             margin-bottom: 40px;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             flex-wrap: wrap;
         }
     }
@@ -138,7 +154,7 @@
     &__img {
         margin-right: 100px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             margin: 0 auto 40px;
         }
     }
@@ -148,7 +164,11 @@
     }
 
     &__text {
-        margin-bottom: 30px;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        
 
         p:not(:last-child) {
             margin-bottom: 15px;
@@ -198,9 +218,23 @@
     padding-top: 0;
     position: relative;
 
+    &__pre-text {
+        font-style: italic;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
     &__inner {
         display: flex;
         gap: 60px;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 992px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__text {
@@ -208,6 +242,15 @@
 
         p:not(:last-child) {
             margin-bottom: 15px;
+        }
+    }
+
+    &__img {
+        height: auto;
+        
+        @media (max-width: 992px) {
+            margin: 0 auto;
+
         }
     }
 
@@ -222,8 +265,10 @@
     }
 
     &__module {
+        font-size: 16px;
+
         &:not(:last-child) {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
     }
 
