@@ -715,7 +715,7 @@ img {
 
 .prev-cours-card {
     position: relative;
-    width: 46%;
+    width: 45%;
     height: 250px;
     min-height: 250px;
     box-shadow: 5px 5px 8px #555555;
@@ -913,7 +913,7 @@ img {
 .basic-gallery {
 
     @media (max-width: 576px) {
-        display: none;
+        
     }
 
     &__list {
@@ -927,6 +927,10 @@ img {
         width: calc((100% - 2 * 30px) / 3);
         max-height: 200px;
         display: block;
+
+        @media (max-width: 576px) {
+            width: calc((100% - 30px) / 2);
+        }
     }
 
     &__img {

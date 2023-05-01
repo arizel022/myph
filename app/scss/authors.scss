@@ -129,9 +129,17 @@
     }
 
     &__text {
+
         &:not(:last-child) {
             margin-bottom: 30px;
         }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
     }
 
     &__social-list {
@@ -188,19 +196,24 @@
 
 .author-portfolio {
     padding-top: 0;
+}
 
-
+.author-project {
+    &:not(:last-child) {
+        margin-bottom: 50px;
+    }
 
     &__title {
         font-size: 24px;
         margin-bottom: 20px;
+        text-align: center;
     }
-
+    
     &__text {
         margin-bottom: 50px;
 
         p:not(:last-child) {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
     }
 }

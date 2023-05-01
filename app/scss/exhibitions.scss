@@ -180,6 +180,7 @@
 
     &__info-list {
         display: flex;
+        align-items: center;
         flex-wrap: wrap;
         gap: 20px;
     }
@@ -192,6 +193,10 @@
 
     &__info-text {
         max-width: 540px;
+    }
+
+    &__main-img {
+        margin: 0 auto;
     }
 
     &__gallery {

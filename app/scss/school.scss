@@ -34,8 +34,7 @@
         }
 
         @media (max-width: 768px) {
-            margin-left: auto;
-            margin-right: auto;
+            width: 100%;
         }
     }
 
@@ -130,10 +129,16 @@
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 60px;
+
     }
 
     &__grid-item {
         width: calc((100% - 60px) / 2);
         height: 380px;
+
+        
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 }

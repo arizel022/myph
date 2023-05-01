@@ -61,37 +61,37 @@ $(document).ready(function () {
     });
 
     //вертикальный слик-слайдер
-    $(function () {
-        $('.vertical-gallery__content').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            speed: 500,
-            cssEase: 'linear',
-            asNavFor: '.vertical-gallery__nav'
-        });
-        $('.vertical-gallery__nav').slick({
+    // $(function () {
+    //     $('.vertical-gallery__content').slick({
+    //         slidesToShow: 1,
+    //         slidesToScroll: 1,
+    //         arrows: false,
+    //         fade: true,
+    //         speed: 500,
+    //         cssEase: 'linear',
+    //         asNavFor: '.vertical-gallery__nav'
+    //     });
+    //     $('.vertical-gallery__nav').slick({
 
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            asNavFor: '.vertical-gallery__content',
-            dots: false,
-            vertical: true,
-            prevArrow: '<button class="slick-arrow slick-prev" type="button"><span class="sr-only">Попередній слайд</span><svg class="slick-arrow__icon" width="24" height="24"><use xlink:href="images/sprite.svg#icon-arrow-slider"></use></svg></button>',
-            nextArrow: '<button class="slick-arrow slick-next" type="button"><span class="sr-only">Наступний слайд</span><svg class="slick-arrow__icon" width="24" height="24"><use xlink:href="images/sprite.svg#icon-arrow-slider"></use></svg></button>',
-            arrows: true,
-            centerMode: true,
-            focusOnSelect: true,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 4,
-                    vertical: false
-                }
-            }]
-        });
-    });
+    //         slidesToShow: 2,
+    //         slidesToScroll: 1,
+    //         asNavFor: '.vertical-gallery__content',
+    //         dots: false,
+    //         vertical: true,
+    //         prevArrow: '<button class="slick-arrow slick-prev" type="button"><span class="sr-only">Попередній слайд</span><svg class="slick-arrow__icon" width="24" height="24"><use xlink:href="images/sprite.svg#icon-arrow-slider"></use></svg></button>',
+    //         nextArrow: '<button class="slick-arrow slick-next" type="button"><span class="sr-only">Наступний слайд</span><svg class="slick-arrow__icon" width="24" height="24"><use xlink:href="images/sprite.svg#icon-arrow-slider"></use></svg></button>',
+    //         arrows: true,
+    //         centerMode: true,
+    //         focusOnSelect: true,
+    //         responsive: [{
+    //             breakpoint: 768,
+    //             settings: {
+    //                 slidesToShow: 4,
+    //                 vertical: false
+    //             }
+    //         }]
+    //     });
+    // });
 
 
     //галерея с увеличением по клику, можно использовать на любой странице
@@ -174,23 +174,6 @@ $(document).ready(function () {
             });
         // }
     });
-
-    //лайтбокс на странице автора - галерея автора
-    $(function () {
-        $('a.basic-gallery__link').colorbox({
-            rel: 'gal',
-            onOpen: function () {
-                $('body').css('overflow-y', 'hidden');
-            },
-            onCleanup: function () {
-                $('body').css('overflow-y', 'auto');
-            },
-            onComplete: function () {
-                $('body').css('overflow-y', 'hidden');
-            }
-        });
-    });
-
 
     //активное состояние кнопки call-to-action
     $(function () {
