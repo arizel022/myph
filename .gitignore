@@ -9,4 +9,5 @@ package-lock.json
 dist/
 node_modules/
 loc/
+app/images
 project-start.txt
