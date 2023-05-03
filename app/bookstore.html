@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,700;0,900;1,400&family=Unbounded:wght@200;300;400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300&family=Unbounded:wght@200;300;400&display=swap" rel="stylesheet">
     <title>Книжковий магазин MYPH</title>
     <link rel="stylesheet" href="css/bookstore.min.css">
 </head>
@@ -120,17 +118,42 @@
                         </h1>
                     </div>
 
+                    <div class="filter">
+                        <ul class="filter__list">
+                            <li class="filter__item">
+                                <button class="button filter__button" type="button" data-filter="all">Усі товари</button>
+                            </li>
+                            <li class="filter__item">
+                                <button class="button filter__button" type="button" data-filter=".books">Книжки</button>
+                            </li>
+                            <li class="filter__item">
+                                <button class="button filter__button" type="button" data-filter=".newspappers">Газети</button>
+                            </li>
+                            <li class="filter__item">
+                                <button class="button filter__button" type="button" data-filter=".catalogs">Каталоги</button>
+                            </li>
+                            <li class="filter__item">
+                                <button class="button filter__button" type="button" data-filter=".zines">Зіни</button>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    
 
-                    <ul class="grid grid--4x3">
-                        <li class="grid__item">
+                    
+                    <ul class="bookstore__grid">
+                        <li class="bookstore__grid-item bookstore__grid-item--xl mix books">
                             <article class="bookstore__card"
-                                style="background-image: url('./images/bookstore/all-books/L1004024c.jpg');">
-                                <a class="bookstore__link" href="./book_template.html">
+                                style="background-image: url('./images/bookstore/books/myph/5.jpg');">
+
+                                <a class="bookstore__link" href="./book-myph.html">
                                     <h2 class="bookstore__subtitle bookstore__subtitle--big">
-                                        Назва книжки
+                                        MYPH
                                     </h2>
                                     <p class="bookstore__author">
-                                        Автор книжки
+                                        Молода Миколаївська Фотографія
                                     </p>
                                     <span class="bookstore__overlay">
                                         Детальніше
@@ -138,96 +161,91 @@
                                 </a>
                             </article>
                         </li>
-                        <li class="grid__item grid__item--xs">
+                        <li class="bookstore__grid-item mix catalogs">
                             <article class="bookstore__card"
-                                style="background-image: url('./images/bookstore/all-books/Behind-the-scenes-24-1.jpg');">
-                                <a class="bookstore__link" href="./book_template.html">
+                                style="background-image: url('./images/bookstore/catalogs/humilevskyy/4.jpeg');">
+                                <a class="bookstore__link" href="./book-catalog-humilevskyy.html">
                                     <h2 class="bookstore__subtitle">
-                                        Назва книжки
+                                        Артем Гумілевський
                                     </h2>
-                                    <p class="bookstore__author">
-                                        Автор книжки
-                                    </p>
                                     <span class="bookstore__overlay">
                                         Детальніше
                                     </span>
                                 </a>
                             </article>
                         </li>
-                        <li class="grid__item grid__item--xs">
+                        <li class="bookstore__grid-item mix zines">
                             <article class="bookstore__card"
-                                style="background-image: url('./images/bookstore/all-books/Whos-here-11.jpg');">
-                                <a class="bookstore__link" href="./book_template.html">
+                                style="background-image: url('./images/bookstore/zines/awarness-from-the-inside/1.jpg');">
+                                <a class="bookstore__link" href="./book-zine-awarness-from-the-inside.html">
                                     <h2 class="bookstore__subtitle">
-                                        Назва книжки
+                                        Awarness from the inside
                                     </h2>
-                                    <p class="bookstore__author">
-                                        Автор книжки
-                                    </p>
                                     <span class="bookstore__overlay">
                                         Детальніше
                                     </span>
                                 </a>
                             </article>
                         </li>
-                        <li class="grid__item grid__item--xs">
+                        <li class="bookstore__grid-item mix zines">
                             <article class="bookstore__card"
-                                style="background-image: url('./images/bookstore/all-books/Whos-here-43.jpg');">
-                                <a class="bookstore__link" href="./book_template.html">
+                                style="background-image: url('./images/bookstore/zines/deputies/1.jpg');">
+                                <a class="bookstore__link" href="./book-zine-deputies.html">
                                     <h2 class="bookstore__subtitle">
-                                        Назва книжки
+                                        Deputies
                                     </h2>
-                                    <p class="bookstore__author">
-                                        Автор книжки
-                                    </p>
                                     <span class="bookstore__overlay">
                                         Детальніше
                                     </span>
                                 </a>
                             </article>
                         </li>
-                        <li class="grid__item grid__item--xs">
+                        <li class="bookstore__grid-item mix zines">
                             <article class="bookstore__card"
-                                style="background-image: url('./images/bookstore/all-books/Whos-here-68.jpg');">
-                                <a class="bookstore__link" href="./book_template.html">
+                                style="background-image: url('./images/bookstore/zines/ideal-mate/1.jpg');">
+                                <a class="bookstore__link" href="./book-zine-ideal-mate.html">
                                     <h2 class="bookstore__subtitle">
-                                        Назва книжки
+                                        Ideal mate
                                     </h2>
-                                    <p class="bookstore__author">
-                                        Автор книжки
-                                    </p>
                                     <span class="bookstore__overlay">
                                         Детальніше
                                     </span>
                                 </a>
                             </article>
                         </li>
-                        <li class="grid__item grid__item--xs">
+                        <li class="bookstore__grid-item mix zines">
                             <article class="bookstore__card"
-                                style="background-image: url('./images/bookstore/all-books/Whos-here-48.jpg');">
-                                <a class="bookstore__link" href="./book_template.html">
+                                style="background-image: url('./images/bookstore/zines/my-little-columbine/1.jpg');">
+                                <a class="bookstore__link" href="./book-zine-my-little-columbine.html">
                                     <h2 class="bookstore__subtitle">
-                                        Назва книжки
+                                        My little columbine
                                     </h2>
-                                    <p class="bookstore__author">
-                                        Автор книжки
-                                    </p>
                                     <span class="bookstore__overlay">
                                         Детальніше
                                     </span>
                                 </a>
                             </article>
                         </li>
-                        <li class="grid__item grid__item--xs">
+                        <li class="bookstore__grid-item mix zines">
                             <article class="bookstore__card"
-                                style="background-image: url('./images/bookstore/all-books/Whos-here-49.jpg');">
-                                <a class="bookstore__link" href="./book_template.html">
+                                style="background-image: url('./images/bookstore/zines/on-the-other-side-of-light/1.jpg');">
+                                <a class="bookstore__link" href="./book-zine-on-the-other-side-of-light.html">
                                     <h2 class="bookstore__subtitle">
-                                        Назва книжки
+                                        On the other side of light
                                     </h2>
-                                    <p class="bookstore__author">
-                                        Автор книжки
-                                    </p>
+                                    <span class="bookstore__overlay">
+                                        Детальніше
+                                    </span>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="bookstore__grid-item mix zines">
+                            <article class="bookstore__card"
+                                style="background-image: url('./images/bookstore/zines/the-temple-of-holy-spirit/1.jpg');">
+                                <a class="bookstore__link" href="./book-zine-the-temple-of-holy-spirit.html">
+                                    <h2 class="bookstore__subtitle">
+                                        The temple of holy spirit
+                                    </h2>
                                     <span class="bookstore__overlay">
                                         Детальніше
                                     </span>
@@ -235,11 +253,6 @@
                             </article>
                         </li>
                     </ul>
-
-
-
-
-
                 </div>
             </section>
 

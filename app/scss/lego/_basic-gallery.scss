@@ -1,0 +1,22 @@
+.basic-gallery {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__link {
+        width: calc((100% - 2 * 30px) / 3);
+        max-height: 200px;
+        display: block;
+
+        @media (max-width: 576px) {
+            width: calc((100% - 30px) / 2);
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+}

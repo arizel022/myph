@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300&family=Unbounded:wght@200;300;400&display=swap"
+        rel="stylesheet">
+    <title>ШАБЛОН Книжка фотографій</title>
+    <link rel="stylesheet" href="css/bookstore.min.css">
+</head>
+
+<body>
+    <span class="main-title main-title--ghost">Myph</span>
+    @@include('../lego/header.html')
+    <main>
+        <div class="wrapper">
+            <section class="section book">
+                <div class="container book__container">
+
+
+
+                    <div class="book__info">
+                        <h1 class="book__title">
+                            My little columbine
+                        </h1>
+                        <p class="book__text">
+
+                        </p>
+
+                        <a href="" class="button book__button">Придбати</a>
+                    </div>
+
+                    <ul class="book__gallery zoom-gallery">
+                        
+                        <li class="book__gallery-item">
+                            <a class="book__gallery-link" href="./images/bookstore/zines/my-little-columbine/1.jpg" title="Зін My little columbine">
+                                <img class="book__gallery-img" src="./images/bookstore/zines/my-little-columbine/1.jpg" alt="Зін My little columbine" width="400">
+                            </a>
+                        </li>
+                        <li class="book__gallery-item">
+                            <a class="book__gallery-link" href="./images/bookstore/zines/my-little-columbine/2.jpg" title="Зін My little columbine">
+                                <img class="book__gallery-img" src="./images/bookstore/zines/my-little-columbine/2.jpg" alt="Зін My little columbine" width="400">
+                            </a>
+                        </li>
+                        <li class="book__gallery-item">
+                            <a class="book__gallery-link" href="./images/bookstore/zines/my-little-columbine/3.jpg" title="Зін My little columbine">
+                                <img class="book__gallery-img" src="./images/bookstore/zines/my-little-columbine/3.jpg" alt="Зін My little columbine" width="400">
+                            </a>
+                        </li>
+                        <li class="book__gallery-item">
+                            <a class="book__gallery-link" href="./images/bookstore/zines/my-little-columbine/4.jpg" title="Зін My little columbine">
+                                <img class="book__gallery-img" src="./images/bookstore/zines/my-little-columbine/4.jpg" alt="Зін My little columbine" width="400">
+                            </a>
+                        </li>
+                        <li class="book__gallery-item">
+                            <a class="book__gallery-link" href="./images/bookstore/zines/my-little-columbine/5.jpg" title="Зін My little columbine">
+                                <img class="book__gallery-img" src="./images/bookstore/zines/my-little-columbine/5.jpg" alt="Зін My little columbine" width="400">
+                            </a>
+                        </li>
+
+
+
+
+                    </ul>
+                </div>
+            </section>
+
+
+
+
+        </div>
+
+    </main>
+    @@include('../lego/footer.html')
+
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
