@@ -1,14 +1,16 @@
 
-@import 'reset';
+
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 // @import '../../node_modules/magnific-popup/src/css/main.scss';
-@import 'global';
+@import 'global/global';
 
 
 .hero {
     padding-top: 95px;
     padding-bottom: 0;
     position: relative;
+
+
 
     &__content {
         padding-top: 20vh;
@@ -124,7 +126,7 @@
         text-align: center;
         border-radius: 15px;
         color: $l;
-        background-color: rgba($a400, 0.5);
+        background-color: rgba($a, 0.5);
         transition: box-shadow 0.4s, opacity 0.4s;
 
         &:hover {
@@ -133,7 +135,7 @@
             
 
             .prev-courses__all-link-bg {
-                color: $a400;
+                color: $a;
                 opacity: 1;
                 background-color: rgba($d, 1);
             }
@@ -311,7 +313,7 @@
             outline: transparent;
 
             .partners__img {
-                outline: 1px solid $a2-300;
+                outline: 1px solid $s;
                 outline-offset: 5px;
             }
         }
@@ -371,7 +373,7 @@
             display: block;
             width: 10px;
             height: 10px;
-            background-color: $a2-900;
+            background-color: $s;
             border-radius: 50%;
             transition: box-shadow 0.3s, transform 0.3s;
             position: relative;
@@ -387,7 +389,7 @@
             }
 
             &:hover {
-                box-shadow: 3px 3px 8px #3636367a;
+                box-shadow: 3px 3px 8px rgba($d, 0.5);
             }
 
             &:focus {
@@ -395,7 +397,7 @@
             }
 
             &:active {
-                box-shadow: inset 3px 3px 8px #3636367a;
+                box-shadow: inset 3px 3px 8px rgba($d, 0.5);
             }
 
         }
@@ -416,11 +418,11 @@
         }
 
         &:hover {
-            box-shadow:  7px 7px 14px #aaa8a5, -7px -7px 14px #ffffff;
+            box-shadow: 5px 5px 10px $l-d, -5px -5px 10px $l-l;
         }
 
         &:active {
-            box-shadow: inset 7px 7px 14px #aaa8a5, inset -7px -7px 14px #ffffff;
+            box-shadow: inset 5px 5px 10px $l-d, inset -5px -5px 10px $l-l;
         }
 
         &:before {
@@ -428,8 +430,8 @@
             display: block;
             width: 20px;
             height: 20px;
-            border-bottom: 2px solid $a2-900;
-            border-left: 2px solid $a2-900;
+            border-bottom: 2px solid $s;
+            border-left: 2px solid $s;
             transform: rotate(45deg);
             margin-left: 9px;
         }
@@ -483,7 +485,7 @@
     }
 
     &__author {
-        color: $a900;
+        color: $a-d;
         font-size: 24px;
         font-weight: 700;
 

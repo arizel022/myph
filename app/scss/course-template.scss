@@ -1,5 +1,5 @@
-@import 'reset';
-@import 'global';
+
+@import 'global/global';
 
 .course-hero {
     padding-top: 70px;
@@ -181,7 +181,7 @@
         transition: color 0.3s, opacity 0.3s;
 
         &:hover {
-            color: $a900;
+            color: $a-d;
 
             .course-author__site-icon {
                 fill: currentColor;
@@ -285,7 +285,7 @@
     }
 
     &__module-subauthor-btn {
-        color: $a900;
+        color: $a-d;
         animation: pulsate-fwd 1.5s ease-in-out infinite;
         display: inline-flex;
         justify-content: center;
@@ -308,7 +308,7 @@
     }
 
     &__module-subauthor-icon {
-        stroke: $a900;
+        stroke: $a-d;
         margin-left: 15px;
         transform: rotate(0);
         transition: transform 1s;
@@ -507,7 +507,7 @@
     }
 
     &__icon {
-        stroke: $a2-900;
+        stroke: $s-d;
     }
 
     &__button {
@@ -524,7 +524,7 @@
         border-radius: 50%;
         justify-content: center;
         align-items: center;
-        border: 1px solid $a900;
+        border: 1px solid $a-d;
 
         &:before,
         &:after {
@@ -569,7 +569,7 @@
         padding: 40px 25px;
         text-align: center;
         border-radius: 8px;
-        border: 1px solid $a2-300;
+        border: 1px solid $s;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -590,7 +590,7 @@
     }
 
     &__icon {
-        stroke: $a900;
+        stroke: $a-d;
         margin-bottom: 30px;
     }
 
@@ -728,11 +728,11 @@
         }
 
         &.open {
-            color: $a900;
+            color: $a-d;
 
             .course-faq__question-icon {
                 &:after {
-                    background-color: $a900;
+                    background-color: $a-d;
                 }
 
                 &:before {

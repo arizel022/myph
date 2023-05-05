@@ -1,8 +1,6 @@
 
-@import 'reset';
-// @import '../../node_modules/slick-carousel/slick/slick.scss';
-// @import '../../node_modules/magnific-popup/src/css/main.scss';
-@import 'global';
+
+@import 'global/global';
 
 .contact {
     &__inner {
@@ -46,7 +44,7 @@
         width: fit-content;
         padding: 5px 15px;
         border-radius: 3px;
-        color: $a900;
+        color: $a-d;
         font-size: 16px;
         transition: box-shadow 0.3s, outline 0.3s;
 

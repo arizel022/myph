@@ -1,6 +1,6 @@
-@import 'reset';
+
 @import '../../node_modules/magnific-popup/src/css/main.scss';
-@import 'global';
+@import 'global/global';
 
 .bookstore {
     padding-top: 70px;
@@ -106,7 +106,7 @@
         align-items: center;
         font-size: 36px;
         text-decoration: underline;
-        color: $a400;
+        color: $a;
         transform: scale(0) skew(75deg, 25deg);
         transition: transform 1s;
     
@@ -183,7 +183,7 @@
             bottom: -2px;
             width: 100%;
             height: 2px;
-            background-color: $a400;
+            background-color: $a;
         }
     }
 

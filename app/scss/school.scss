@@ -1,5 +1,5 @@
-@import 'reset';
-@import 'global';
+
+@import 'global/global';
 
 .all-courses {
     padding-top: 70px;
@@ -99,7 +99,7 @@
             box-shadow: 7px 7px 14px #555555;
 
             .all-courses__card-subtitle-author {
-                color: $a400;
+                color: $a;
             }
         }
 
@@ -117,7 +117,7 @@
     }
 
     &__card-subtitle-accent {
-        color: $a400;
+        color: $a;
     }
 
     &__card-subtitle-author {

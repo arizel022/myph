@@ -149,8 +149,7 @@ $(document).ready(function () {
     });
 
 
-    //ТИМЧАСОВИЙ РЯДОК
-var mixer = mixitup('.exhibitions__grid, .bookstore__grid');
+
 
 
     //фильтрация и карты exhibitions.html
@@ -222,3 +221,5 @@ var mixer = mixitup('.exhibitions__grid, .bookstore__grid');
         });
     });
 
+    //ТИМЧАСОВИЙ РЯДОК
+    var mixer = mixitup('.exhibitions__grid, .bookstore__grid');

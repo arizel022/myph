@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300&family=Unbounded:wght@200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 
   
@@ -17,14 +17,24 @@
 </head>
 
 <body class="home">
-  <span class="main-title main-title--ghost">Myph</span>
+
+  <svg class="main-title-ghost" width="1530" height="400">
+    <use xlink:href="images/sprite.svg#main-title"></use>
+  </svg>
+
+
+
+
   @@include('../lego/header.html')
   <main>
     <section class="section hero">
       <div class="container">
         <div class="hero__content">
           <h1 class="main-title">
-            Myph
+ 
+            <svg class="main-title" width="428" height="90" fill="red">
+              <use xlink:href="images/sprite.svg#main-title"></use>
+            </svg>
             <span class="sr-only">Міф - Миколаївська школа фотографії</span>
           </h1>
           <p class="hero__text">

@@ -77,7 +77,7 @@
         transition: box-shadow 0.5s;
 
         &.current {
-            color: $a900;
+            color: $a-d;
         }
 
         &:hover {
@@ -138,9 +138,9 @@
             color: $d;
 
             &:after {
-                background: #e57601;
-                box-shadow: inset 5px 5px 10px #954d01,
-                    inset -5px -5px 10px #ff9f01;
+                background: $a;
+                box-shadow: inset 5px 5px 10px $a-d,
+                    inset -5px -5px 10px $a-l;
             }
 
             .burger-button__line {
