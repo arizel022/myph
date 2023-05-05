@@ -40,7 +40,7 @@
     display: flex;
     align-items: center;
     padding: 20px 30px 18px;
-    color: $a-d;
+    color: $a;
     border-radius: 40px;
     position: relative;
     z-index: 2;
@@ -71,7 +71,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        outline: 2px solid $a-d;
+        outline: 2px solid $a;
         border-radius: 40px;
         transition: background-color 0.5s, box-shadow 0.5s;
     }
@@ -120,13 +120,11 @@
     border: 1px solid $s-l;
     border-radius: 12px;
     color: $s-l;
-    background-color: rgba($d, 0.6);
+    background-color: rgba($d-d, 0.6);
     transition: background-color 0.3s, transform 0.3s;
 
     &:hover {
-        background-color: rgba($d-d, 0.6);
         transform: scale(1.1);
-
     }
 
     &:active {

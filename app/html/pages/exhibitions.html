@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <title>Myph - тестова версія сайту</title>
     <link rel="stylesheet" href="css/exhibitions.min.css">
 </head>
@@ -33,13 +34,25 @@
                             <button class="button filter__button" type="button" data-filter=".ukr">Україна</button>
                         </li>
                         <li class="filter__item">
-                            <button class="button filter__button" type="button" data-filter=".germ">Німеччина</button>
+                            <button class="button filter__button" type="button" data-filter=".de">Німеччина</button>
                         </li>
                         <li class="filter__item">
                             <button class="button filter__button" type="button" data-filter=".neth">Нідерланди</button>
                         </li>
                         <li class="filter__item">
                             <button class="button filter__button" type="button" data-filter=".norv">Норвегія</button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="button filter__button" type="button" data-filter=".usa">США</button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="button filter__button" type="button" data-filter=".aust">Австрія</button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="button filter__button" type="button" data-filter=".hung">Угорщина</button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="button filter__button" type="button" data-filter=".geor">Сакартвело</button>
                         </li>
                     </ul>
                     <ul class="filter__list">
@@ -54,78 +67,230 @@
                         </li>
                     </ul>
                 </div>
+
+
                 <ul class="exhibitions__grid grid">
-                    <li class="grid__item grid__item--l-long mix ukr real">
-                        <article class="exhibitions-card" style="background-image: url('./images/exhibitions/anonses/01.jpg');">
-                            <div class="exhibitions-card__content">
-                                <h2 class="exhibitions-card__title">FACE2FACE</h2>
-                                <a class="details-link" href="./exhibition_template.html">Детальніше</a>
+                    <!-- 1-я партия -->
+                    <li class="grid__item grid__item--l-long mix de real">
+                        <article class="exhibitions-card"
+                            style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">Майнц Март 2023</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
                                 <p class="exhibitions-card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, maxime alias quia mollitia temporibus asperiores voluptates magni aspernatur nulla. Praesentium aliquid illo aut tempore ipsum cum nemo dolore fugit consectetur?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, maxime alias quia
+                                    mollitia temporibus asperiores voluptates magni aspernatur nulla. Praesentium
+                                    aliquid illo aut tempore ipsum cum nemo dolore fugit consectetur?
                                 </p>
-                            </div>
+                            </a>
                         </article>
                     </li>
                     <li class="grid__item grid__item--s-long mix neth real free">
-                        <article class="exhibitions-card" style="background-image: url('./images/exhibitions/anonses/01.jpg');">
-                            <div class="exhibitions-card__content">
-                                <h2 class="exhibitions-card__title">FACE2FACE</h2>
-                                <a class="details-link" href="./exhibition_template.html">Детальніше</a>
-                                <p class="exhibitions-card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                </p>
-                            </div>
+                        <article class="exhibitions-card"
+                            style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">Утрехт Фотодок</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                            </a>
                         </article>
                     </li>
-                    <li class="grid__item grid__item--s-long mix ukr int">
-                        <article class="exhibitions-card" style="background-image: url('./images/exhibitions/anonses/01.jpg');">
-                            <div class="exhibitions-card__content">
-                                <h2 class="exhibitions-card__title">FACE2FACE</h2>
-                                <a class="details-link" href="./exhibition_template.html">Детальніше</a>
-                                <p class="exhibitions-card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                </p>
-                            </div>
+                    <li class="grid__item grid__item--s-long mix norv int">
+                        <article class="exhibitions-card"
+                            style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">Слайдшоу презентацій</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                            </a>
                         </article>
                     </li>
                     <li class="grid__item mix norv real free">
-                        <article class="exhibitions-card" style="background-image: url('./images/exhibitions/anonses/01.jpg');">
-                            <div class="exhibitions-card__content">
-                                <h2 class="exhibitions-card__title">FACE2FACE</h2>
-                                <a class="details-link" href="./exhibition_template.html">Детальніше</a>
+                        <article class="exhibitions-card"
+                            style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">Осло Январь 2023</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="grid__item mix usa int">
+                        <article class="exhibitions-card"
+                            style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">«For Better or Worse: Crossing the Line»</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="grid__item grid__item--s-high mix aust real free">
+                        <article class="exhibitions-card"
+                            style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">«Rotlicht»</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="grid__item grid__item--s-high mix de int">
+                        <article class="exhibitions-card"
+                            style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">Hamburg</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                            </a>
+                        </article>
+                    </li>
+
+                    <!-- 2-я партия -->
+                    <li class="grid__item grid__item--s-long mix norv int">
+                        <article class="exhibitions-card"
+                            style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">«Nordic Light Festival»</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="grid__item grid__item--s-high mix ukr int">
+                        <article class="exhibitions-card"
+                            style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">«Dymchuk»</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="grid__item mix hung int">
+                        <article class="exhibitions-card"
+                            style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">«Art Market Budapest»</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="grid__item grid__item--s-high mix geor int">
+                        <article class="exhibitions-card"
+                            style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">«Tbilisi Art Fair»</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="grid__item mix neth int">
+                        <article class="exhibitions-card"
+                            style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">«Unseen»</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="grid__item grid__item--l-long mix ukr int">
+                        <article class="exhibitions-card"
+                            style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">MYPH GRADUATES ONLINE SHOW</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                                <p class="exhibitions-card__text">
+                                    Онлайн виставка 25 проєктів молодих та дуже амбітних авторок 3 і 4 курсів школи концептуальної і арт фотографії MYPH.
+                                </p>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="grid__item grid__item--s-long mix ukr int">
+                        <article class="exhibitions-card"
+                            style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">«Face2Face»</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                            </a>
+                        </article>
+                    </li>
+
+
+
+
+
+                    <!-- <li class="grid__item grid__item--l-long mix ukr real">
+                        
+                    </li>
+                    <li class="grid__item grid__item--s-long mix neth real free">
+                                                <article class="exhibitions-card" style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">Утрехт Фотодок</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
                                 <p class="exhibitions-card__text">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 </p>
-                            </div>
+                            </a>
                         </article>
+                    </li>
+                    <li class="grid__item grid__item--s-long mix ukr int">
+                                                <article class="exhibitions-card" style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">Утрехт Фотодок</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                                <p class="exhibitions-card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                </p>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="grid__item mix norv real free">
                     </li>
                     <li class="grid__item mix ukr int">
-                        <article class="exhibitions-card" style="background-image: url('./images/exhibitions/anonses/01.jpg');">
-                            <div class="exhibitions-card__content">
-                                <h2 class="exhibitions-card__title">FACE2FACE</h2>
-                                <a class="details-link" href="./exhibition_template.html">Детальніше</a>
+                    </li>
+                    <li class="grid__item grid__item--s-high mix norv real free">
+                    </li>
+                    <li class="grid__item grid__item--s-high mix neth int">
+                    </li>
+                    <li class="grid__item grid__item--s-long 5mix int">
+                                                <article class="exhibitions-card" style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">Утрехт Фотодок</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
                                 <p class="exhibitions-card__text">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 </p>
-                            </div>
+                            </a>
                         </article>
                     </li>
-                    <li class="grid__item grid__item--s-high mix norv real free">
-                        <article class="exhibitions-card" style="background-image: url('./images/exhibitions/anonses/01.jpg');">
-                            <div class="exhibitions-card__content">
-                                <h2 class="exhibitions-card__title">FACE2FACE</h2>
-                                <a class="details-link" href="./exhibition_template.html">Детальніше</a>
-                            </div>
+                    <li class="grid__item grid__item--s-high 5mix int">
+                    </li>
+                    <li class="grid__item 5mix int">
+                    </li>
+                    <li class="grid__item grid__item--s-high 5mix int">
+                    </li>
+                    <li class="grid__item 5mix int">
+                    </li>
+                    <li class="grid__item grid__item--l-long 5mix int">
+                                                <article class="exhibitions-card" style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">Утрехт Фотодок</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                                <p class="exhibitions-card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                </p>
+                            </a>
                         </article>
                     </li>
-                    <li class="grid__item grid__item--s-high mix neth int">
-                        <article class="exhibitions-card" style="background-image: url('./images/exhibitions/anonses/01.jpg');">
-                            <div class="exhibitions-card__content">
-                                <h2 class="exhibitions-card__title">FACE2FACE</h2>
-                                <a class="details-link" href="./exhibition_template.html">Детальніше</a>
-                            </div>
+                    <li class="grid__item grid__item--s-long 5mix int">
+                                                <article class="exhibitions-card" style="background-image: url('./images/exhibitions/anonses/01.jpg');">
+                            <a class="exhibitions-card__link" href="./exhibition_template.html">
+                                <h2 class="exhibitions-card__title">Утрехт Фотодок</h2>
+                                <span class="exhibitions-card__details">Детальніше</span>
+                                <p class="exhibitions-card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                </p>
+                            </a>
                         </article>
-                    </li>
+                    </li> -->
+
+
+
+
+
                 </ul>
             </div>
         </section>

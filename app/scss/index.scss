@@ -14,12 +14,18 @@
 
     &__content {
         padding-top: 20vh;
-        max-width: 50%;
+        max-width: 60%;
         margin-bottom: 40px;
 
         @media (max-width: 768px) {
             padding-top: 10vh;
             max-width: 80%;
+        }
+    }
+
+    &__text {
+        p:not(:last-child) {
+            margin-bottom: 10px;
         }
     }
 
@@ -57,6 +63,17 @@
     }
 }
 
+.main-title {
+    display: block;
+    margin-bottom: 20px;
+    fill: $d-d;
+
+    @media (max-width: 576px) {
+        width: 245px;
+        height: 52px;
+    }
+}
+
 .slick-slide, .slick-current, .slick-active {
     transition: left 5s, opacity 5s !important;
     //плавность фейдинга слика
@@ -87,7 +104,7 @@
     }
 
     &__text {
-        &:not(:last-child) {
+        p:not(:last-child) {
             margin-bottom: 20px;
         }
     }

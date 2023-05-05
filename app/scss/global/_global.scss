@@ -25,7 +25,7 @@ $l: #f3f3f3;
 $l-d: darken($l, 14.45%);
 $l-l: lighten($l, 14.45%);
 
-$a: #ee5700;
+$a: #ee4b00;
 $a-d: darken($a, 14.45%);
 $a-l: lighten($a, 14.45%);
 
@@ -125,18 +125,7 @@ img {
     position: fixed;
     pointer-events: none;
     z-index: -5;
-    fill: rgba($d, 0.1);
-}
-
-.main-title {
-    display: block;
-    margin-bottom: 20px;
-    fill: $d-d;
-
-    @media (max-width: 576px) {
-        width: 245px;
-        height: 52px;
-    }
+    fill: rgba($s, 0.1);
 }
 
 .section {
