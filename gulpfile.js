@@ -7,6 +7,7 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 const fileinclude = require('gulp-file-include');
+const flatten = require('gulp-flatten');
 
 //функции
 function browsersync() {
@@ -52,6 +53,17 @@ function scripts() {
     .pipe(browserSync.stream())
 }
 
+function htmlIncludeBlog() {
+    return src('app/html/pages/articles/*.html') // выбираем только файлы в папке articles
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(rename({dirname: ''})) // Оставляем только имя файла без пути
+        .pipe(flatten({ includeParents: 1 })) // Перемещаем в папку blog
+        .pipe(dest('app/articles'))
+        .pipe(browserSync.stream());
+}
 
 function htmlInclude() {
     return src('app/html/pages/*.html')
@@ -63,10 +75,15 @@ function htmlInclude() {
         .pipe(browserSync.stream());
 }
 
+
+
+
+
 function watching() {
     watch(['app/scss/**/*.scss'], styles);
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
     watch('app/html/**/*.html', htmlInclude);
+    watch('app/html/pages/articles/*.html', htmlIncludeBlog);
 }
 
 //вызовы функций
@@ -76,7 +93,7 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.htmlInclude = htmlInclude;
 
-exports.default = parallel(styles, scripts, browsersync, watching, htmlInclude);
+exports.default = parallel(styles, scripts, browsersync, watching, htmlIncludeBlog, htmlInclude);
 
 
 

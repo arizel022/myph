@@ -6,9 +6,12 @@
 .exhibitions {
 
     &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
         gap: 0;
         position: relative;
-        grid-template-rows: repeat(8, 150px);
+        // grid-template-rows: repeat(8, 150px);
 
         @media (max-width: 576px) {
             gap: 10px;
@@ -52,6 +55,20 @@
             background-image: url('../images/icons/maps/nl.svg');
         }
     }
+
+    &__grid-item {
+        aspect-ratio: 1/1;
+        grid-row: span 1;
+        grid-column: span 1;
+        // height: 150px;
+        // width: 150px;
+
+        &--big {
+            aspect-ratio: 0;
+            grid-row: span 1;
+            grid-column: span 2;
+        }
+    }
 }
 
 .exhibitions-card {
@@ -76,6 +93,7 @@
         color: $l;
         padding: 25px;
         overflow: hidden;
+        transition: backdrop-filter 0.5s;
 
         @media (max-width: 576px) {
             gap: 10px;
@@ -86,6 +104,19 @@
             .exhibitions-card__details {
                 transform: translateX(0);
             }
+        }
+
+        &:focus {
+            outline: transparent;
+
+            .exhibitions-card__details {
+                transform: translateX(0);
+            }
+        }
+
+        &:active {
+            // filter: blur(10px);
+            backdrop-filter: blur(4px);
         }
     }
 
