@@ -30,7 +30,7 @@ $a-d: darken($a, 14.45%);
 $a-l: lighten($a, 14.45%);
 
 //для фокусов, для фильтра выставок
-$s: #004918;
+$s: #376b7e;
 $s-d: darken($s, 14.45%);
 $s-l: lighten($s, 14.45%);
 
@@ -65,6 +65,22 @@ body {
 
     &.lock {
         overflow-y: hidden;
+    }
+
+    &:before {
+        content: '';
+        background-image: url('../images/logo-black.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 1500px;
+        height: 480px;
+        right: 1%;
+        top: 9vh;
+        position: fixed;
+        pointer-events: none;
+        z-index: -5;
+        opacity: 0.1;
     }
 }
 
@@ -126,7 +142,10 @@ img {
     pointer-events: none;
     z-index: -5;
     fill: rgba($s, 0.1);
+    display: none;
 }
+
+
 
 .section {
     padding: 140px 0;

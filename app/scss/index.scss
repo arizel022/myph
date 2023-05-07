@@ -24,6 +24,9 @@
     }
 
     &__text {
+        font-size: 16px;
+        font-weight: 700;
+
         p:not(:last-child) {
             margin-bottom: 10px;
         }
@@ -63,16 +66,16 @@
     }
 }
 
-.main-title {
-    display: block;
-    margin-bottom: 20px;
-    fill: $d-d;
+// .main-title {
+//     display: block;
+//     margin-bottom: 20px;
+//     fill: $d-d;
 
-    @media (max-width: 576px) {
-        width: 245px;
-        height: 52px;
-    }
-}
+//     @media (max-width: 576px) {
+//         width: 245px;
+//         height: 52px;
+//     }
+// }
 
 .slick-slide, .slick-current, .slick-active {
     transition: left 5s, opacity 5s !important;
@@ -104,6 +107,8 @@
     }
 
     &__text {
+        font-weight: 700;
+
         p:not(:last-child) {
             margin-bottom: 20px;
         }
