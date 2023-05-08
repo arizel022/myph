@@ -229,4 +229,4 @@ $(document).ready(function () {
     });
 
     //ТИМЧАСОВИЙ РЯДОК
-    var mixer = mixitup('.exhibitions__grid, .bookstore__grid');
+    // var mixer = mixitup('.exhibitions__grid, .bookstore__grid');
