@@ -164,7 +164,7 @@ $(document).ready(function () {
         if (window.location.pathname === '/myph/exhibitions.html') {
         //второй путь - для нашего сервера
         // if (window.location.pathname === '/exhibitions.html') {
-            var mixer = mixitup('.exhibitions__grid');
+            // var mixer = mixitup('.exhibitions__grid');
 
             //работа карт выставок. Должно быть только на странице exhibitions.html
 
@@ -174,11 +174,11 @@ $(document).ready(function () {
 var mixer = mixitup('.exhibitions__grid');
     
             // Назначаем обработчик на все кнопки с классом .filter__button
-            $('.filter__button').click(function () {
+            $('.exhibitions .filter__button').click(function () {
 
                 var filterValue = $(this).data('filter');
                 // Добавляем класс .active на нажатую кнопку и удаляем этот класс у других кнопок
-                $(this).addClass('active').parent().siblings().find('.filter__button').removeClass('active');
+                $(this).addClass('active').parent().siblings().find('.exhibitions .filter__button').removeClass('active');
                 // Удаляем текущее фоновое изображение и добавляем новое, соответствующее нажатой кнопке
                 $('.exhibitions__grid').removeClass('bg-ukr bg-germ bg-neth bg-norv').addClass('bg-' + $(this).data('filter').substr(1));
             });
