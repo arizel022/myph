@@ -106,6 +106,12 @@ $(document).ready(function () {
                 autoplay: true,
                 fade: true
             });
+        
+            $('.about__pictures').slick({
+                dots: false,
+                infinite: true,
+                arrows: true
+            });
 
             //слик-слайдер партнеров на главной странице
             $('.partners__list').slick({
@@ -161,11 +167,12 @@ $(document).ready(function () {
             var mixer = mixitup('.exhibitions__grid');
 
             //работа карт выставок. Должно быть только на странице exhibitions.html
-            // Назначаем обработчик на все кнопки с классом .exhibitions__filter-btn
-            $('.exhibitions__filter-btn').click(function () {
+            // Назначаем обработчик на все кнопки с классом .filter__button
+            $('.filter__button').click(function () {
+
                 var filterValue = $(this).data('filter');
                 // Добавляем класс .active на нажатую кнопку и удаляем этот класс у других кнопок
-                $(this).addClass('active').parent().siblings().find('.exhibitions__filter-btn').removeClass('active');
+                $(this).addClass('active').parent().siblings().find('.filter__button').removeClass('active');
                 // Удаляем текущее фоновое изображение и добавляем новое, соответствующее нажатой кнопке
                 $('.exhibitions__grid').removeClass('bg-ukr bg-germ bg-neth bg-norv').addClass('bg-' + $(this).data('filter').substr(1));
             });
