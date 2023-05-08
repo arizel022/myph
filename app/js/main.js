@@ -167,6 +167,12 @@ $(document).ready(function () {
             var mixer = mixitup('.exhibitions__grid');
 
             //работа карт выставок. Должно быть только на странице exhibitions.html
+
+        }
+    });
+
+var mixer = mixitup('.exhibitions__grid');
+    
             // Назначаем обработчик на все кнопки с классом .filter__button
             $('.filter__button').click(function () {
 
@@ -176,8 +182,9 @@ $(document).ready(function () {
                 // Удаляем текущее фоновое изображение и добавляем новое, соответствующее нажатой кнопке
                 $('.exhibitions__grid').removeClass('bg-ukr bg-germ bg-neth bg-norv').addClass('bg-' + $(this).data('filter').substr(1));
             });
-        }
-    });
+
+
+
 
     //гармошка блока faq
     $(function () {
