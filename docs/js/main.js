@@ -106,6 +106,12 @@ $(document).ready(function () {
                 autoplay: true,
                 fade: true
             });
+        
+            $('.about__pictures').slick({
+                dots: false,
+                infinite: true,
+                arrows: true
+            });
 
             //слик-слайдер партнеров на главной странице
             $('.partners__list').slick({
@@ -158,19 +164,27 @@ $(document).ready(function () {
         if (window.location.pathname === '/myph/exhibitions.html') {
         //второй путь - для нашего сервера
         // if (window.location.pathname === '/exhibitions.html') {
-            var mixer = mixitup('.exhibitions__grid');
+            // var mixer = mixitup('.exhibitions__grid');
 
             //работа карт выставок. Должно быть только на странице exhibitions.html
-            // Назначаем обработчик на все кнопки с классом .exhibitions__filter-btn
-            $('.exhibitions__filter-btn').click(function () {
-                var filterValue = $(this).data('filter');
-                // Добавляем класс .active на нажатую кнопку и удаляем этот класс у других кнопок
-                $(this).addClass('active').parent().siblings().find('.exhibitions__filter-btn').removeClass('active');
-                // Удаляем текущее фоновое изображение и добавляем новое, соответствующее нажатой кнопке
-                $('.exhibitions__grid').removeClass('bg-ukr bg-germ bg-neth bg-norv').addClass('bg-' + $(this).data('filter').substr(1));
-            });
+
         }
     });
+
+var mixer = mixitup('.exhibitions__grid');
+    
+            // Назначаем обработчик на все кнопки с классом .filter__button
+            $('.exhibitions .filter__button').click(function () {
+
+                var filterValue = $(this).data('filter');
+                // Добавляем класс .active на нажатую кнопку и удаляем этот класс у других кнопок
+                $(this).addClass('active').parent().siblings().find('.exhibitions .filter__button').removeClass('active');
+                // Удаляем текущее фоновое изображение и добавляем новое, соответствующее нажатой кнопке
+                $('.exhibitions__grid').removeClass('bg-ukr bg-de bg-neth bg-norv bg-usa bg-aust bg-hung bg-geor').addClass('bg-' + $(this).data('filter').substr(1));
+            });
+
+
+
 
     //гармошка блока faq
     $(function () {
@@ -222,4 +236,4 @@ $(document).ready(function () {
     });
 
     //ТИМЧАСОВИЙ РЯДОК
-    var mixer = mixitup('.exhibitions__grid, .bookstore__grid');
+    // var mixer = mixitup('.exhibitions__grid, .bookstore__grid');
