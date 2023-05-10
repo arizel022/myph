@@ -496,13 +496,14 @@
         width: 44px;
         height: 44px;
         border-radius: 50%;
+        transition: box-shadow 0.3s;
 
         &:hover {
-            box-shadow: 7px 7px 14px #aaa8a5, -7px -7px 14px #ffffff;
+            box-shadow: 5px 5px 10px #aaa8a5, -5px -5px 10px #ffffff;
         }
 
         &:active {
-            box-shadow: inset 7px 7px 14px #aaa8a5, inset -7px -7px 14px #ffffff;
+            box-shadow: inset 5px 5px 10px #aaa8a5, inset -5px -5px 10px #ffffff;
         }
     }
 

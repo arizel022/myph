@@ -30,10 +30,13 @@ $a-d: darken($a, 14.45%);
 $a-l: lighten($a, 14.45%);
 
 //для фокусов, для фильтра выставок
-$s: #376b7e;
+// $s: #376b7e;
+$s: #b12626;
 $s-d: darken($s, 14.45%);
 $s-l: lighten($s, 14.45%);
 
+
+// #01cfc2
 /*
 @media (max-width: 1200px) {
         
@@ -67,23 +70,23 @@ body {
         overflow-y: hidden;
     }
 
-    &:before {
-        content: '';
-        background-image: url('../images/logo-black.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        max-width: 70vw;
-        width: 100%;
-        height: 480px;
-        right: 1%;
-        top: 9vh;
-        position: fixed;
-        pointer-events: none;
-        z-index: -5;
-        opacity: 0.1;
-        display: none;
-    }
+    // &:before {
+    //     content: '';
+    //     background-image: url('../images/logo-black.svg');
+    //     background-repeat: no-repeat;
+    //     background-position: center;
+    //     background-size: cover;
+    //     max-width: 70vw;
+    //     width: 100%;
+    //     height: 480px;
+    //     right: 1%;
+    //     top: 9vh;
+    //     position: fixed;
+    //     pointer-events: none;
+    //     z-index: -5;
+    //     opacity: 0.1;
+    //     display: none;
+    // }
 }
 
 a,
@@ -137,14 +140,32 @@ img {
 
 @import 'global/ints';
 
+.main-title {
+    fill: $d;
+    margin-bottom: 15px;
+
+    @media (max-width: 576px) {
+        width: 100%;
+        height: auto;
+    }
+}
+
 .main-title-ghost {
     right: -9%;
     top: 15vh;
     position: fixed;
     pointer-events: none;
     z-index: -5;
-    fill: rgba($s, 0.1);
-    display: none;
+    fill: rgba($d-l, 0.1);
+
+    @media (max-width: 1200px) {
+        width: 180vw;
+        height: auto;
+        transform: rotate(-90deg);
+        top: 50vh;
+        right: -80%;
+    }
+
 }
 
 

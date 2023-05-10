@@ -102,7 +102,7 @@ $(document).ready(function () {
                 dots: false,
                 infinite: true,
                 arrows: false,
-                autoplaySpeed: 10000,
+                autoplaySpeed: 5000,
                 autoplay: true,
                 fade: true
             });
@@ -157,7 +157,7 @@ $(document).ready(function () {
 
 
 
-
+    /*
     //фильтрация и карты exhibitions.html
     $(function () {
         //этот путь - для сервера на гитхабе
@@ -170,18 +170,8 @@ $(document).ready(function () {
 
         }
     });
+    */
 
-var mixer = mixitup('.exhibitions__grid');
-    
-            // Назначаем обработчик на все кнопки с классом .filter__button
-            $('.exhibitions .filter__button').click(function () {
-
-                var filterValue = $(this).data('filter');
-                // Добавляем класс .active на нажатую кнопку и удаляем этот класс у других кнопок
-                $(this).addClass('active').parent().siblings().find('.exhibitions .filter__button').removeClass('active');
-                // Удаляем текущее фоновое изображение и добавляем новое, соответствующее нажатой кнопке
-                $('.exhibitions__grid').removeClass('bg-ukr bg-de bg-neth bg-norv bg-usa bg-aust bg-hung bg-geor').addClass('bg-' + $(this).data('filter').substr(1));
-            });
 
 
 
@@ -235,5 +225,14 @@ var mixer = mixitup('.exhibitions__grid');
         });
     });
 
-    //ТИМЧАСОВИЙ РЯДОК
-    // var mixer = mixitup('.exhibitions__grid, .bookstore__grid');
+    var mixer = mixitup('.exhibitions__grid, .bookstore__grid');
+    
+    // Назначаем обработчик на все кнопки с классом .filter__button
+    $('.exhibitions .filter__button').click(function () {
+
+        var filterValue = $(this).data('filter');
+        // Добавляем класс .active на нажатую кнопку и удаляем этот класс у других кнопок
+        $(this).addClass('active').parent().siblings().find('.exhibitions .filter__button').removeClass('active');
+        // Удаляем текущее фоновое изображение и добавляем новое, соответствующее нажатой кнопке
+        $('.exhibitions__grid').removeClass('bg-ukr bg-de bg-neth bg-norv bg-usa bg-aust bg-hung bg-geor').addClass('bg-' + $(this).data('filter').substr(1));
+    });
