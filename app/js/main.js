@@ -118,7 +118,7 @@ $(function () {
         dots: false,
         infinite: true,
         arrows: false,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 4000,
         autoplay: true,
         fade: true
     });
