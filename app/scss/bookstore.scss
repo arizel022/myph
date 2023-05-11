@@ -144,9 +144,6 @@
     }
 }
 
-
-
-
 .book {
     &__container {
         display: flex;
@@ -244,4 +241,8 @@
     &__gallery-item {
         width: 47%;
     }
+}
+
+.awards {
+    padding-top: 0;
 }

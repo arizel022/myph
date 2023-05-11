@@ -162,8 +162,16 @@ img {
         width: 180vw;
         height: auto;
         transform: rotate(-90deg);
-        top: 50vh;
+        top: 53vh;
         right: -80%;
+    }
+
+    @media (max-width: 768px) {
+
+        &.active {
+            z-index: 999;
+        }
+
     }
 
 }
