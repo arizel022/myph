@@ -185,7 +185,7 @@
             background-color: $a;
         }
 
-        &:after {
+        &--mark::after {
             content: '';
             // position: absolute;
             background-image: url('../images/bookstore/books/myph/awards/book-arsenal-mark.png');

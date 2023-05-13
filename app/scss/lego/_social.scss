@@ -14,6 +14,7 @@
         width: 44px;
         height: 44px;
         border-radius: 50%;
+        background-color: $d;
         transition: box-shadow 0.3s;
 
         &:hover {
@@ -32,11 +33,11 @@
             background-color: $l;
 
             &:hover {
-                box-shadow: 7px 7px 14px #aaa8a5, -7px -7px 14px #ffffff;
+                box-shadow: 7px 7px 14px $l-d, -7px -7px 14px $l-l;
             }
 
             &:active {
-                box-shadow: inset 7px 7px 14px #aaa8a5, inset -7px -7px 14px #ffffff;
+                box-shadow: inset 7px 7px 14px $l-d, inset -7px -7px 14px $l-l;
             }
 
             .social__icon {

@@ -38,12 +38,9 @@ function scripts() {
         // 'app/js/swiper.js',
         
         'node_modules/jquery/dist/jquery.js',
-
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/mixitup/dist/mixitup.js',
-
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
-
         'app/js/main.js'
 
     ])
@@ -53,15 +50,18 @@ function scripts() {
     .pipe(browserSync.stream())
 }
 
-function htmlIncludeBlog() {
-    return src('app/html/pages/articles/*.html') // выбираем только файлы в папке articles
+    
+        
+
+function htmlIncludeExhs() {
+    return src('app/html/pages/exhibitions/*.html') // выбираем только файлы в папке articles
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
         }))
         .pipe(rename({dirname: ''})) // Оставляем только имя файла без пути
-        .pipe(flatten({ includeParents: 1 })) // Перемещаем в папку blog
-        .pipe(dest('app/articles'))
+        .pipe(flatten({ includeParents: 1 })) // Перемещаем в папку exhibitions
+        .pipe(dest('app/exhibitions'))
         .pipe(browserSync.stream());
 }
 
@@ -76,7 +76,41 @@ function htmlInclude() {
 }
 
 
+function htmlIncludeBlog() {
+    return src('app/html/pages/articles/*.html') // выбираем только файлы в папке articles
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(rename({dirname: ''})) // Оставляем только имя файла без пути
+        .pipe(flatten({ includeParents: 1 })) // Перемещаем в папку blog
+        .pipe(dest('app/articles'))
+        .pipe(browserSync.stream());
+}
 
+function htmlIncludeBookstore() {
+    return src('app/html/pages/bookstore/*.html') // выбираем только файлы в папке bookstore
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(rename({dirname: ''})) // Оставляем только имя файла без пути
+        .pipe(flatten({ includeParents: 1 })) // Перемещаем в папку bookstore
+        .pipe(dest('app/bookstore'))
+        .pipe(browserSync.stream());
+}
+
+function htmlIncludeCourses() {
+    return src('app/html/pages/courses/*.html') // выбираем только файлы в папке courses
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(rename({dirname: ''})) // Оставляем только имя файла без пути
+        .pipe(flatten({ includeParents: 1 })) // Перемещаем в папку courses
+        .pipe(dest('app/courses'))
+        .pipe(browserSync.stream());
+}
 
 
 function watching() {
@@ -93,81 +127,4 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.htmlInclude = htmlInclude;
 
-exports.default = parallel(styles, scripts, browsersync, watching, htmlIncludeBlog, htmlInclude);
-
-
-
-
-
-
-
-
-
-
-
-// ======================================ПОЛНЫЙ текст старого галпа по лекциям Вадима 2020 года
-// let gulp = require('gulp'),
-//     sass = require('gulp-sass'),
-//     rename = require('gulp-rename'),
-//     browserSync = require('browser-sync'),
-//     autoprefixer = require('gulp-autoprefixer'),
-//     concat = require('gulp-concat'),
-//     uglify = require('gulp-uglify'),
-//     cssmin = require('gulp-cssmin');
-// gulp.task('sass', function(){
-//     return gulp.src('app/scss/**/*.scss')
-//         .pipe(sass({outputStyle: 'compressed'}))
-//         .pipe(rename({suffix: ".min"}))
-//         .pipe(autoprefixer({
-//             overrideBrowserslist: ['last 8 version']
-//         }))
-//         .pipe(gulp.dest('app/css'))
-//         .pipe(browserSync.reload({stream: true}))
-// });
-// gulp.task('style', function(){
-//     return gulp.src([
-//         'node_modules/normalize.css/normalize.css',
-//         'node_modules/slick-carousel/slick/slick.css',
-//         // 'node_modules/magnific-popup/dist/magnific-popup.css',
-//         // 'node_modules/rateyo/src/jquery.rateyo.css',
-//         // 'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
-//         // magnific-popup - всплывающие окна, rateyo - звезды рейтинга, rangeSlider - регулятор цены == плагины отключены, если надо - включить, новые подключаются по аналогии.
-//     ])
-//         .pipe(concat('libs.min.css'))
-//         .pipe(cssmin())
-//         .pipe(gulp.dest('app/css'))
-// });
-// gulp.task('script', function(){
-//     return gulp.src([
-//         'node_modules/slick-carousel/slick/slick.js',
-//         // 'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
-//         // 'node_modules/mixitup/dist/mixitup.js',
-//         // 'node_modules/rateyo/src/jquery.rateyo.js',
-//         // 'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
-//     ])
-//         .pipe(concat('libs.min.js'))
-//         .pipe(uglify())
-//         .pipe(gulp.dest('app/js'))
-// });
-// gulp.task('html', function(){
-//     return gulp.src('app/*.html')
-//     .pipe(browserSync.reload({stream: true}))
-// });
-// gulp.task('js', function(){
-//     return gulp.src('app/js/*.js')
-//     .pipe(browserSync.reload({stream: true}))
-// });
-// gulp.task('browser-sync', function() {
-//     browserSync.init({
-//         server: {
-//             baseDir: "app/"
-//         }
-//     });
-// });
-// gulp.task('watch', function(){
-//     gulp.watch('app/scss/**/*.scss', gulp.parallel('sass')); // указываем, за кем следим. Если тот, за кем следим, меняется, то выполняется таск sass.
-//     gulp.watch('app/*.html', gulp.parallel('html'));   //
-//     gulp.watch('app/js/*.js', gulp.parallel('js'));  // чтобы за файлами хтмл и джс было слежение.
-// });
-
-// gulp.task('default', gulp.parallel('style', 'script', 'sass', 'watch', 'browser-sync'))
+exports.default = parallel(styles, scripts, browsersync, watching, htmlIncludeBlog, htmlInclude, htmlIncludeCourses, htmlIncludeExhs, htmlIncludeBookstore);

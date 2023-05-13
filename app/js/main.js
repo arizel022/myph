@@ -1,6 +1,5 @@
 // плавный скролл на Партнеры на главной, с других страниц - перенаправление
 
-
 // Ожидаем полной загрузки DOM, чтобы начать работу скрипта
 $(document).ready(function () {
     // Проверяем, является ли текущая страница главной страницей путем проверки наличия класса "home" у элемента body
@@ -34,6 +33,19 @@ $(document).ready(function () {
     });
 });
 
+
+// const authorsLink = '/authors.html';
+// const logo = document.querySelector('.logo'); // выбираем элемент с классом 'logo'
+// logo.src = './images/logo-black.svg';
+// const links = document.querySelectorAll('[data-link]');
+
+// links.forEach(link => {
+//     link.addEventListener('click', event => {
+//         event.preventDefault();
+//         const href = link.dataset.link;
+//         window.location.href = href;
+//     });
+// });
 
 
 //при клике на бургер-кнопку сама кнопка меняется/появляется меню

@@ -1,4 +1,3 @@
-
 @import 'global/global';
 
 .course-hero {
@@ -140,7 +139,8 @@
 .course-author {
     &__inner {
         display: flex;
-        
+        gap: 100px;
+
 
         &:not(:last-child) {
             margin-bottom: 40px;
@@ -148,19 +148,30 @@
 
         @media (max-width: 992px) {
             flex-wrap: wrap;
+            gap: 40px;
         }
     }
 
-    &__img {
-        margin-right: 100px;
-
-        @media (max-width: 992px) {
-            margin: 0 auto 40px;
-        }
+    &__box {
+        width: 43%;
     }
+
+    // &__img {
+
+
+    //     @media (max-width: 992px) {
+    //         margin: 0 auto 40px;
+    //     }
+    // }
 
     &__list {
         margin-bottom: 40px;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 20px;
     }
 
     &__text {
@@ -168,20 +179,25 @@
         &:not(:last-child) {
             margin-bottom: 30px;
         }
-        
+
 
         p:not(:last-child) {
             margin-bottom: 15px;
         }
     }
 
+    &__links {
+        display: flex;
+    }
+
     &__site-link {
         display: inline-flex;
         align-items: center;
+        margin-right: 50px;
         transition: color 0.3s, opacity 0.3s;
 
         &:hover {
-            color: $a-d;
+            color: $a;
 
             .course-author__site-icon {
                 fill: currentColor;
@@ -194,8 +210,41 @@
     }
 
     &__site-icon {
+        fill: $d;
         margin-right: 15px;
         transition: fill 0.3s;
+    }
+
+    &__social {
+        display: flex;
+        gap: 25px;
+    }
+
+    &__social-icon {
+        fill: $d;
+        transition: fill 0.3s;
+    }
+
+    &__social-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s, opacity 0.3s;
+
+        &:hover {
+            background-color: $a;
+
+            .course-author__social-icon {
+                fill: $l;
+            }
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
     }
 
     &__item {
@@ -247,7 +296,7 @@
 
     &__img {
         height: auto;
-        
+
         @media (max-width: 992px) {
             margin: 0 auto;
 
@@ -405,17 +454,29 @@
     }
 }
 
+
 .subauthor-card {
-    position: absolute;
-    top: 120px;
-    right: 50px;
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
     background-color: $l;
     box-shadow: 5px 5px 12px #0000004d, -5px -5px 12px #0000004d;
     text-align: center;
     border-radius: 8px;
+    position: absolute;
+    top: 120px;
+    right: 50px;
     transform: scale(0);
     transition: transform 1s;
+
+    @media (max-width: 576px) {
+        padding: 15px;
+        width: 95vw;
+        height: auto;
+        z-index: 1;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%) scale(0);
+    }
 
     &.open {
         transform: scale(1);
@@ -424,18 +485,6 @@
         @media (max-width: 576px) {
             transform: translate(50%, -50%) scale(1);
         }
-    }
-
-    @media (max-width: 576px) {
-        width: 95vw;
-        height: auto;
-        z-index: 1;
-        top: 50%;
-        right: 50%;
-        transform: translate(50%, -50%) scale(0);
-        padding: 15px;
-
-
     }
 
     &__content {
@@ -556,7 +605,8 @@
 
     &__list {
         display: flex;
-        gap: 45px;;
+        gap: 45px;
+        ;
 
         @media (max-width: 992px) {
             flex-wrap: wrap;
