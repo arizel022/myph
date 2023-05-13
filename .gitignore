@@ -9,5 +9,7 @@ package-lock.json
 dist/
 node_modules/
 loc/
+docs/html
+docs/scss
 app/images
 project-start.txt
