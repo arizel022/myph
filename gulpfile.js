@@ -54,7 +54,7 @@ function scripts() {
         
 
 function htmlIncludeExhs() {
-    return src('app/html/pages/exhibitions/*.html') // выбираем только файлы в папке articles
+    return src('app/html/pages/exhibitions/*.html') // выбираем только файлы в папке exhibitions
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
@@ -74,7 +74,6 @@ function htmlInclude() {
         .pipe(dest('app'))
         .pipe(browserSync.stream());
 }
-
 
 function htmlIncludeBlog() {
     return src('app/html/pages/articles/*.html') // выбираем только файлы в папке articles
@@ -118,6 +117,9 @@ function watching() {
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
     watch('app/html/**/*.html', htmlInclude);
     watch('app/html/pages/articles/*.html', htmlIncludeBlog);
+    watch('app/html/pages/exhibitions/*.html', htmlIncludeExhs);
+    watch('app/html/pages/bookstore/*.html', htmlIncludeBookstore);
+    watch('app/html/pages/courses/*.html', htmlIncludeCourses);
 }
 
 //вызовы функций

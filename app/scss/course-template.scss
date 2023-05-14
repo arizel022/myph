@@ -157,11 +157,6 @@
     }
 
     // &__img {
-
-
-    //     @media (max-width: 992px) {
-    //         margin: 0 auto 40px;
-    //     }
     // }
 
     &__list {
@@ -213,38 +208,6 @@
         fill: $d;
         margin-right: 15px;
         transition: fill 0.3s;
-    }
-
-    &__social {
-        display: flex;
-        gap: 25px;
-    }
-
-    &__social-icon {
-        fill: $d;
-        transition: fill 0.3s;
-    }
-
-    &__social-link {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.3s, opacity 0.3s;
-
-        &:hover {
-            background-color: $a;
-
-            .course-author__social-icon {
-                fill: $l;
-            }
-        }
-
-        &:active {
-            opacity: 0.5;
-        }
     }
 
     &__item {

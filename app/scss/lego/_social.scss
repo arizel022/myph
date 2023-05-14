@@ -3,7 +3,7 @@
 
     &__item {
         &:not(:last-child) {
-            margin-right: 35px;
+            margin-right: 25px;
         }
     }
 
@@ -33,17 +33,19 @@
             background-color: $l;
 
             &:hover {
-                box-shadow: 7px 7px 14px $l-d, -7px -7px 14px $l-l;
+                box-shadow: 5px 5px 10px $l-d, -5px -5px 10px $l-l;
             }
 
             &:active {
-                box-shadow: inset 7px 7px 14px $l-d, inset -7px -7px 14px $l-l;
+                box-shadow: inset 5px 5px 10px $l-d, inset -5px -5px 10px $l-l;
             }
 
             .social__icon {
                 fill: $d;
             }
         }
+
+        
     }
 
     &__icon {
