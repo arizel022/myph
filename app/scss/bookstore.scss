@@ -220,6 +220,18 @@
             font-size: 16px;
             margin-bottom: 30px;
         }
+
+        .publishing-mark {
+            color: $a;
+            background-color: $d;
+            padding: 5px 15px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            width: fit-content;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
     }
 
     &__details {

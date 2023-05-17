@@ -117,7 +117,7 @@
         .slick-arrow {
             z-index: 5;
             position: absolute;
-            bottom: -40px;
+            bottom: -50px;
             width: 30px;
             height: 30px;
             border-radius: 50%;
@@ -126,10 +126,6 @@
             align-items: center;
             justify-content: center;
             transition: box-shadow 0.3s;
-
-            @media (max-width: 1200px) {
-                bottom: 0;
-            }
 
             @media (max-width: 768px) {
                 display: none!important;
@@ -155,11 +151,7 @@
         }
 
         .slick-prev {
-            left: 0;
-
-            @media (max-width: 1200px) {
-                left: -45px;
-            }
+            right: 55px;
 
             &:before {
                 margin-left: 5px;
@@ -168,10 +160,6 @@
 
         .slick-next {
             right: 0;
-
-            @media (max-width: 1200px) {
-                right: -45px;
-            }
 
             &:before {
                 transform: rotate(-135deg);
