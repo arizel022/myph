@@ -138,6 +138,8 @@ $(function () {
     $('.about__pictures').slick({
         dots: false,
         infinite: true,
+        autoplaySpeed: 4000,
+        autoplay: true,
         arrows: true
     });
 

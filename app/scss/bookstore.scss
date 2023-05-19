@@ -255,8 +255,6 @@
 
     }
 
-
-
     &__gallery {
         order: 0;
         max-width: 400px;
@@ -274,6 +272,10 @@
 
     &__gallery-item {
         width: 47%;
+    }
+
+    &__gallery-img {
+        height: auto;
     }
 }
 
@@ -334,6 +336,7 @@
 
         &--row {
             flex-direction: row;
+            justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
         }
