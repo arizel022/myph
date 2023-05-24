@@ -3,7 +3,7 @@
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 // @import '../../node_modules/magnific-popup/src/css/main.scss';
 @import 'global/global';
-
+@import 'lego/prev-courses';
 
 .hero {
     padding-top: 95px;
@@ -189,64 +189,7 @@
     }
 }
 
-.prev-courses {
-    &__content {
-        display: flex;
-        align-items: flex-start;
-        gap: 60px;
 
-        @media (max-width: 768px) {
-            flex-direction: column;
-        }
-    }
-
-    &__inner {
-        width: 60%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 40px;
-
-        @media (max-width: 768px) {
-            width: 100%;
-        }
-    }
-
-    &__all-link {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-size: 36px;
-        text-align: center;
-        border-radius: 15px;
-        color: $l;
-        background-color: rgba($a, 0.5);
-        transition: box-shadow 0.4s, opacity 0.4s;
-
-        &:hover {
-            box-shadow: 7px 7px 14px #555555;
-            opacity: 0.7;
-            
-
-            .prev-courses__all-link-bg {
-                color: $a;
-                opacity: 1;
-                background-color: rgba($d, 1);
-            }
-        }
-
-        &:active {
-            opacity: 0.4;
-        }
-    }
-
-    &__all-link-bg {
-        background-color: rgba($d, 0.5);
-        transition: color 0.7s, background-color 0.4s;
-    }
-}
 
 .anonses {
     padding-top: 0;

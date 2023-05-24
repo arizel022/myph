@@ -3,6 +3,7 @@
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 // @import '../../node_modules/magnific-popup/src/css/main.scss';
 @import 'global/global';
+@import 'lego/prev-courses';
 
 .all-news {
     &__inner {
@@ -41,6 +42,8 @@
     }
 
     &__img {
+        flex-shrink: 0;
+        object-position: top;
         // @media (max-width: 992px) {
         //     max-width: 200px;
         //     height: 150px;
