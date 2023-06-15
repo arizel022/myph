@@ -87,6 +87,18 @@ function htmlIncludeBlog() {
         .pipe(browserSync.stream());
 }
 
+function htmlIncludeAuthors() {
+    return src('app/html/pages/authors/*.html') // выбираем только файлы в папке authors
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(rename({dirname: ''})) // Оставляем только имя файла без пути
+        .pipe(flatten({ includeParents: 1 })) // Перемещаем в папку blog
+        .pipe(dest('app/authors'))
+        .pipe(browserSync.stream());
+}
+
 function htmlIncludeBookstore() {
     return src('app/html/pages/bookstore/*.html') // выбираем только файлы в папке bookstore
         .pipe(fileinclude({
@@ -120,6 +132,7 @@ function watching() {
     watch('app/html/pages/exhibitions/*.html', htmlIncludeExhs);
     watch('app/html/pages/bookstore/*.html', htmlIncludeBookstore);
     watch('app/html/pages/courses/*.html', htmlIncludeCourses);
+    watch('app/html/pages/authors/*.html', htmlIncludeCourses);
 }
 
 //вызовы функций
@@ -129,4 +142,4 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.htmlInclude = htmlInclude;
 
-exports.default = parallel(styles, scripts, browsersync, watching, htmlIncludeBlog, htmlInclude, htmlIncludeCourses, htmlIncludeExhs, htmlIncludeBookstore);
+exports.default = parallel(styles, scripts, browsersync, watching, htmlIncludeBlog, htmlInclude, htmlIncludeCourses, htmlIncludeExhs, htmlIncludeBookstore, htmlIncludeAuthors);
