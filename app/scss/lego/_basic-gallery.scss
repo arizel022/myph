@@ -7,11 +7,12 @@
 
     &__link {
         width: calc((100% - 2 * 30px) / 3);
-        max-height: 200px;
+        max-height: 300px;
         display: block;
 
         @media (max-width: 576px) {
             width: calc((100% - 30px) / 2);
+            max-height: 200px;
         }
     }
 

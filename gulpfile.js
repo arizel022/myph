@@ -132,7 +132,7 @@ function watching() {
     watch('app/html/pages/exhibitions/*.html', htmlIncludeExhs);
     watch('app/html/pages/bookstore/*.html', htmlIncludeBookstore);
     watch('app/html/pages/courses/*.html', htmlIncludeCourses);
-    watch('app/html/pages/authors/*.html', htmlIncludeCourses);
+    watch('app/html/pages/authors/*.html', htmlIncludeAuthors);
 }
 
 //вызовы функций
