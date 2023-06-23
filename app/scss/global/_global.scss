@@ -104,6 +104,12 @@ body {
     
         }
     }
+
+    &.without-logo {
+        &:before {
+            content: none;
+        }
+    }
 }
 
 a,

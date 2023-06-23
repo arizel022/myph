@@ -1,5 +1,3 @@
-
-
 @import '../../node_modules/magnific-popup/src/css/main.scss';
 @import 'global/global';
 
@@ -10,6 +8,9 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 0;
         position: relative;
+
+        //чтобы микситап не обрезал изображение карты при миксе
+        overflow: visible !important;
 
         @media (max-width: 992px) {
             grid-template-columns: repeat(2, 1fr);
@@ -34,6 +35,8 @@
             left: 50%;
             pointer-events: none;
             transform: translate(-50%, -50%);
+            animation: none;
+            transition: all 2s;
 
             @media (max-width: 992px) {
                 width: 100%;
@@ -43,34 +46,42 @@
 
         &.bg-ukr:before {
             background-image: url('../images/icons/maps/ua.svg');
+            @extend %map-animation;
         }
 
         &.bg-norv:before {
             background-image: url('../images/icons/maps/nor.svg');
+            @extend %map-animation;
         }
 
         &.bg-de:before {
             background-image: url('../images/icons/maps/de.svg');
+            @extend %map-animation;
         }
 
         &.bg-neth:before {
             background-image: url('../images/icons/maps/nl.svg');
+            @extend %map-animation;
         }
 
         &.bg-usa:before {
-            background-image: url('../images/icons/maps/nl.svg');
+            background-image: url('../images/icons/maps/usa.svg');
+            @extend %map-animation;
         }
 
         &.bg-aust:before {
-            background-image: url('../images/icons/maps/nl.svg');
+            background-image: url('../images/icons/maps/aust.svg');
+            @extend %map-animation;
         }
 
         &.bg-hung:before {
-            background-image: url('../images/icons/maps/nl.svg');
+            background-image: url('../images/icons/maps/hung.svg');
+            @extend %map-animation;
         }
 
         &.bg-geor:before {
-            background-image: url('../images/icons/maps/nl.svg');
+            background-image: url('../images/icons/maps/geor.svg');
+            @extend %map-animation;
         }
     }
 
@@ -78,8 +89,7 @@
         aspect-ratio: 1/1;
         grid-row: span 1;
         grid-column: span 1;
-        // height: 150px;
-        // width: 150px;
+        position: relative;
 
         &--big {
             aspect-ratio: 0;
@@ -90,30 +100,124 @@
                 aspect-ratio: 2/1;
             }
         }
+
+        &.de .exhibitions-card {
+            &:before {
+                content: 'de';
+            }
+        }
+
+        &.neth .exhibitions-card {
+            &:before {
+                content: 'neth';
+            }
+        }
+
+        &.norv .exhibitions-card {
+            &:before {
+                content: 'norv';
+            }
+        }
+
+        &.usa .exhibitions-card {
+            &:before {
+                content: 'usa';
+            }
+        }
+
+        &.ukr .exhibitions-card {
+            &:before {
+                content: 'ukr';
+            }
+        }
+
+        &.hung .exhibitions-card {
+            &:before {
+                content: 'hung';
+            }
+        }
+
+        &.aust .exhibitions-card {
+            &:before {
+                content: 'aust';
+            }
+        }
+
+        &.geor .exhibitions-card {
+            &:before {
+                content: 'geor';
+            }
+        }
+
+        //маркеры года слева
+
+        &:before {
+            content: none;
+            position: absolute;
+            top: 0;
+            left: -200px;
+            transform: rotate(-90deg) translateX(-35%);
+            font-size: 80px;
+            line-height: 1;
+            font-weight: 700;
+            color: #5f5f5f1a;
+            padding-right: 20px;
+            border-right: 8px solid $l-d;
+        }
+
+        &--2023 {
+            &:before {
+                content: '2023';
+            }
+        }
+
+        &--2022 {
+            &:before {
+                content: '2022';
+            }
+        }
+
+
     }
+
+
 }
 
 .exhibitions-card {
     width: 100%;
     height: 100%;
-
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
+
+    &:before {
+        content: none;
+        position: absolute;
+        top: 0;
+        right: 20px;
+        color: $a-l;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        font-size: 18px;
+        background-color: $d-d;
+        padding: 3px 10px 10px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
 
     &__link {
         position: relative;
-        background: linear-gradient(-5deg, rgba(0,0,0,1) 10%, rgba(0, 0, 2, 0) 100%);
+        background: linear-gradient(-5deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 2, 0) 100%);
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        gap: 20px;
+        gap: 10px;
         color: $l;
         padding: 25px;
         overflow: hidden;
-        transition: backdrop-filter 0.5s;
+        transition: opacity 0.5s;
 
         @media (max-width: 576px) {
             gap: 10px;
@@ -121,23 +225,31 @@
         }
 
         &:hover {
-            .exhibitions-card__details {
-                transform: translateX(0);
+            .exhibitions-card__content {
+                transform: translateY(0);
             }
         }
 
         &:focus {
             outline: transparent;
 
-            .exhibitions-card__details {
-                transform: translateX(0);
+            .exhibitions-card__content {
+                transform: translateY(0);
             }
         }
 
         &:active {
-            // filter: blur(10px);
-            backdrop-filter: blur(4px);
+            opacity: 0.8;
         }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 10px;
+        transform: translateY(50px);
+        transition: transform 0.4s;
     }
 
     &__title {
@@ -158,18 +270,12 @@
     }
 
     &__details {
-        position: absolute;
-        background-color: rgba($d-d, 0.9);
-        top: 15px;
-        left: 0;
         text-align: right;
         color: $a-l;
-
-        z-index: 1;
+        // z-index: 1;
         width: 100%;
-        padding: 10px 15px 10px 0;
-        transform: translateX(-101%);
-        transition: transform 0.4s;
+        padding: 0 15px 0 0;
+        transform: translateY(0);
     }
 
 
@@ -185,7 +291,7 @@
             margin-bottom: 30px;
         }
     }
-    
+
     // &__info {
     //     display: flex;
     //     align-items: flex-start;
@@ -265,4 +371,3 @@
         }
     }
 }
-

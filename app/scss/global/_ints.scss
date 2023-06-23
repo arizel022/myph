@@ -188,3 +188,27 @@
         }
     }
 }
+
+
+
+@keyframes map-animation {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        animation: none;
+    }
+}
+
+%map-animation {
+    animation-name: map-animation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
