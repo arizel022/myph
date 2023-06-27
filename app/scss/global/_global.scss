@@ -160,6 +160,54 @@ img {
     overflow: hidden;
 }
 
+
+
+.buymecoffee {
+    position: fixed;
+    left: 0;
+    top: 80%;
+    transform: translateX(-65%);
+    transition: transform 0.5s;
+
+
+    &:hover {
+        transform: translateX(0);
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        padding: 10px 25px;
+        font-weight: 700;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background-color: $l;
+        transition: outline 1.5s, outline-offset 0.5s;
+
+        &:after {
+            content: '';
+            margin-left: 25px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 30px;
+            height: 40px;
+            // border-top-right-radius: 50%;
+            // border-bottom-right-radius: 50%;
+            background-image: url('../images/icons/buymecoffee.svg');
+        }
+
+        &:hover {
+            outline: 1px solid $a;
+        }
+    }
+
+
+
+
+
+}
+
 @import 'global/ints';
 
 .section {
@@ -343,9 +391,32 @@ img {
     }
 }
 
+.pre {
+    color: $l;
+    font-size: 24px;
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba($d-d, 0.8);
+        width: 100vw;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+
 @import 'lego/header';
 @import 'lego/footer';
 @import 'lego/social';
 
-@import 'lego/prev-cours-card';
+@import 'lego/prev-courses';
 @import 'lego/basic-gallery';
