@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    @@include('../../lego/fonts.html')
+    @@include('../../lego/favicon.html')
     <base href="/" />
     <title>Книжка фотографій MYPH</title>
     <link rel="stylesheet" href="css/bookstore.min.css">
@@ -48,7 +46,11 @@
                                 Лідія Лихач, Сергій Мельниченко
                             </li>
                         </ul>
-                        <a href="" class="button book__button">Придбати</a>
+
+                        @@include('../../lego/buy-book-button.html')
+
+
+
                         <div class="book__text">
                             <p>
                                 MYPH — перше фотовидання про школу «Молодої Миколаївської Фотографії».

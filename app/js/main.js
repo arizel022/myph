@@ -58,6 +58,13 @@ $(function () {
     });
 });
 
+
+$(function () {
+    $('.buy-book__button').click(function () {
+        $('.buy-book__options').toggleClass('show');
+    });
+});
+
 //текст лейбла занимает место над полем при фокусе на поле
 $(function () {
     $('.form__input').on('focus blur', function () {
@@ -127,6 +134,18 @@ $(function () {
             enabled: true
         }
     });
+});
+
+$(function () {
+	$('.popup-youtube').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+
+		fixedContentPos: false
+	});
 });
 
 //слайдеры на главной странице

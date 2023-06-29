@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    @@include('../lego/fonts.html')
+    @@include('../lego/favicon.html')
     <base href="/" />
     <title>Книжковий магазин MYPH</title>
     <link rel="stylesheet" href="css/bookstore.min.css">
@@ -53,16 +51,18 @@
                                 style="background-image: url('images/bookstore/books/myph/1.jpg');">
 
                                 <a class="bookstore__link" href="bookstore/book-myph.html">
-                                    <h2 class="bookstore__subtitle bookstore__subtitle--big">
-                                        MYPH
-                                        <span class="bookstore__author">
-                                            Молода Миколаївська Фотографія
+                                    <div class="bookstore__content">
+                                        <h2 class="bookstore__subtitle bookstore__subtitle--big">
+                                            MYPH
+                                            <span class="bookstore__author">
+                                                Молода Миколаївська Фотографія
+                                            </span>
+                                        </h2>
+                                        <span class="bookstore__details">
+                                            Детальніше
                                         </span>
-                                    </h2>
-
-                                    <span class="bookstore__details">
-                                        Детальніше
-                                    </span>
+                                    </div>
+                                    
                                 </a>
                             </article>
                         </li>
@@ -70,12 +70,15 @@
                             <article class="bookstore__card"
                                 style="background-image: url('images/bookstore/catalogs/humilevskyy/1.jpg');">
                                 <a class="bookstore__link" href="bookstore/book-catalog-humilevskyy.html">
-                                    <h2 class="bookstore__subtitle">
-                                        Артем Гумілевський
-                                    </h2>
-                                    <span class="bookstore__details">
-                                        Детальніше
-                                    </span>
+                                    <div class="bookstore__content">
+                                        <h2 class="bookstore__subtitle">
+                                            Артем Гумілевський
+                                        </h2>
+                                        <span class="bookstore__details">
+                                            Детальніше
+                                        </span>
+                                    </div>
+                                    
                                 </a>
                             </article>
                         </li>
@@ -83,12 +86,15 @@
                             <article class="bookstore__card"
                                 style="background-image: url('images/bookstore/zines/awarness-from-the-inside/5.jpg');">
                                 <a class="bookstore__link" href="bookstore/book-zine-awarness-from-the-inside.html">
-                                    <h2 class="bookstore__subtitle">
-                                        Усвідомлення зсередини
-                                    </h2>
-                                    <span class="bookstore__details">
-                                        Детальніше
-                                    </span>
+                                    <div class="bookstore__content">
+                                        <h2 class="bookstore__subtitle">
+                                            Усвідомлення зсередини
+                                        </h2>
+                                        <span class="bookstore__details">
+                                            Детальніше
+                                        </span>
+                                    </div>
+                                    
                                 </a>
                             </article>
                         </li>
@@ -96,12 +102,15 @@
                             <article class="bookstore__card"
                                 style="background-image: url('images/bookstore/zines/deputies/1.jpg');">
                                 <a class="bookstore__link" href="bookstore/book-zine-deputies.html">
-                                    <h2 class="bookstore__subtitle">
-                                        Депутати
-                                    </h2>
-                                    <span class="bookstore__details">
-                                        Детальніше
-                                    </span>
+                                    <div class="bookstore__content">
+                                        <h2 class="bookstore__subtitle">
+                                            Депутати
+                                        </h2>
+                                        <span class="bookstore__details">
+                                            Детальніше
+                                        </span>
+                                    </div>
+                                    
                                 </a>
                             </article>
                         </li>
@@ -109,12 +118,15 @@
                             <article class="bookstore__card"
                                 style="background-image: url('images/bookstore/zines/ideal-mate/3.jpg');">
                                 <a class="bookstore__link" href="bookstore/book-zine-ideal-mate.html">
-                                    <h2 class="bookstore__subtitle">
-                                        Ідеальний друг
-                                    </h2>
-                                    <span class="bookstore__details">
-                                        Детальніше
-                                    </span>
+                                    <div class="bookstore__content">
+                                        <h2 class="bookstore__subtitle">
+                                            Ідеальний друг
+                                        </h2>
+                                        <span class="bookstore__details">
+                                            Детальніше
+                                        </span>
+                                    </div>
+                                    
                                 </a>
                             </article>
                         </li>
@@ -122,12 +134,15 @@
                             <article class="bookstore__card"
                                 style="background-image: url('images/bookstore/zines/my-little-columbine/1.jpg');">
                                 <a class="bookstore__link" href="bookstore/book-zine-my-little-columbine.html">
-                                    <h2 class="bookstore__subtitle">
-                                        Мій маленький колумбайн
-                                    </h2>
-                                    <span class="bookstore__details">
-                                        Детальніше
-                                    </span>
+                                    <div class="bookstore__content">
+                                        <h2 class="bookstore__subtitle">
+                                            Мій маленький колумбайн
+                                        </h2>
+                                        <span class="bookstore__details">
+                                            Детальніше
+                                        </span>
+                                    </div>
+                                    
                                 </a>
                             </article>
                         </li>
@@ -135,12 +150,15 @@
                             <article class="bookstore__card"
                                 style="background-image: url('images/bookstore/zines/on-the-other-side-of-light/1.jpg');">
                                 <a class="bookstore__link" href="bookstore/book-zine-on-the-other-side-of-light.html">
-                                    <h2 class="bookstore__subtitle">
-                                        По той бік світла
-                                    </h2>
-                                    <span class="bookstore__details">
-                                        Детальніше
-                                    </span>
+                                    <div class="bookstore__content">
+                                        <h2 class="bookstore__subtitle">
+                                            По той бік світла
+                                        </h2>
+                                        <span class="bookstore__details">
+                                            Детальніше
+                                        </span>
+                                    </div>
+
                                 </a>
                             </article>
                         </li>
@@ -148,12 +166,15 @@
                             <article class="bookstore__card"
                                 style="background-image: url('images/bookstore/zines/the-temple-of-holy-spirit/1.jpg');">
                                 <a class="bookstore__link" href="bookstore/book-zine-the-temple-of-holy-spirit.html">
-                                    <h2 class="bookstore__subtitle">
-                                        Храм Святого Духа
-                                    </h2>
-                                    <span class="bookstore__details">
-                                        Детальніше
-                                    </span>
+                                    <div class="bookstore__content">
+                                        <h2 class="bookstore__subtitle">
+                                            Храм Святого Духа
+                                        </h2>
+                                        <span class="bookstore__details">
+                                            Детальніше
+                                        </span>
+                                    </div>
+
                                 </a>
                             </article>
                         </li>

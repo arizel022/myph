@@ -42,6 +42,11 @@
         background-size: cover;
     }
 
+    &__content {
+        transform: translateY(45px);
+        transition: transform 0.4s;
+    }
+
     &__link {
         z-index: 1;
         display: flex;
@@ -56,19 +61,16 @@
         text-align: center;
         padding: 15px;
         overflow: hidden;
-        transition: opacity 0.5s;
+        transition: opacity 0.3s;
+        background: linear-gradient(-5deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 2, 0) 100%);
 
         @media (max-width: 992px) {
             padding: 20px;
         }
 
         &:hover {
-            .bookstore__details {
+            .bookstore__content {
                 transform: translateY(0);
-            }
-
-            .bookstore__subtitle {
-                transform: translateY(200%);
             }
         }
 
@@ -78,24 +80,17 @@
 
         &:active {
             opacity: 0.7;
-
-            .bookstore__details {
-                transform: translateY(-101%);
-            }
         }
     }
 
+
+
     &__details {
-        position: absolute;
-        background-color: rgba($d-d, 0.9);
-        top: 15px;
-        left: 0;
         text-align: right;
+        display: block;
         color: $a-l;
-        z-index: 1;
         width: 100%;
-        padding: 10px 15px 10px 0;
-        transform: translateY(-200%);
+        padding: 15px 15px 10px 0;
         transition: transform 0.4s;
     }
 
@@ -105,18 +100,6 @@
         transition: color 1s;
         position: relative;
         transition: transform 0.4s;
-        
-        &:before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 140%;
-            height: 140%;
-            background-color: rgba($d-d, 0.9);
-            z-index: -1;
-        }
 
         @media (max-width: 992px) {
             font-size: 18px;
@@ -147,6 +130,8 @@
         }
     }
 }
+
+
 
 .book {
     &__container {
@@ -210,10 +195,12 @@
         }
     }
 
-    &__button {
-        width: fit-content;
-        margin-bottom: 40px;
-    }
+
+
+
+
+
+
 
     &__text {
         &:not(:last-child) {
@@ -349,5 +336,76 @@
     &__img {
         margin: 0 auto;
 
+    }
+}
+
+
+
+.buy-book {
+    position: relative;
+
+    &__button {
+        width: fit-content;
+        margin-bottom: 40px;
+        cursor: pointer;
+    }
+
+    &__options {
+        position: absolute;
+        top: 50%;
+        left: 170px;
+        padding: 15px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        background-color: $d;
+        border-radius: 35px;
+        z-index: 999;
+        transform: translateY(-50%) scale(0);
+        transition: transform 0.4s;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -19px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 20px 10px 0;
+            border-color: transparent $d transparent transparent;
+        }
+
+        &.show {
+            transform: translateY(-50%) scale(1);
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: $a;
+        transition: box-shadow 0.3s;
+
+        &:hover {
+            box-shadow: 3px 3px 3px $a-d, -2px -2px 3px $a-l;
+        }
+
+        &:active {
+            box-shadow: inset 5px 5px 10px $a-d, inset -5px -5px 10px $a-l;
+        }
+
+        &:focus {
+            outline: transparent;
+        }
+    }
+
+    &__icon {
+        fill: $l;
     }
 }
