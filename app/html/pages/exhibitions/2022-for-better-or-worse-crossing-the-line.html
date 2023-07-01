@@ -57,77 +57,28 @@
                     </div>
                 </div>
                 <ul class="exh__gallery zoom-gallery">
-
-                    <li class="exh__item">
-                        <a class="exh__link"
-                            href="images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/1.jpg"
-                            title="виставка MYPH For Better or Worse: Crossing the Line">
-                            <picture>
-                                <source
-                                    srcset="./images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/1-mob.jpg 1x, ./images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/1-mob-2x.jpg 2x"
-                                    media="(min-width:320px)">
-                                <source
-                                    srcset="./images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/1-mob.webp 1x, ./images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/1-mob-2x.webp 2x"
-                                    type="image/webp" media="(min-width:320px)">
-                                <img class="exh__img"
-                                    src="./images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/1-mob-2x.jpg"
-                                    alt="виставка MYPH For Better or Worse: Crossing the Line" width="400" height="224">
-                            </picture>
-                        </a>
-                    </li>
-                    <li class="exh__item">
-                        <a class="exh__link"
-                            href="images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/2.jpg"
-                            title="виставка MYPH For Better or Worse: Crossing the Line">
-                            <picture>
-                                <source
-                                    srcset="images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/2-mob-2x.jpg"
-                                    media="(min-width:320px)">
-                                <source
-                                    srcset="images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/2-mob-2x.webp"
-                                    type="image/webp" media="(min-width:320px)">
-                                <img class="exh__img"
-                                    src="./images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/2-mob-2x.jpg"
-                                    alt="виставка MYPH For Better or Worse: Crossing the Line" width="400" height="224">
-                            </picture>
-                        </a>
-                    </li>
-                    <li class="exh__item">
-                        <a class="exh__link"
-                            href="images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/5.jpg"
-                            title="виставка MYPH For Better or Worse: Crossing the Line">
-                            <picture>
-                                <source
-                                    srcset="images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/5-mob-2x.jpg"
-                                    media="(min-width:320px)">
-                                <source
-                                    srcset="images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/5-mob-2x.webp"
-                                    type="image/webp" media="(min-width:320px)">
-                                <img class="exh__img"
-                                    src="./images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/5-mob-2x.jpg"
-                                    alt="виставка MYPH For Better or Worse: Crossing the Line" width="400" height="224">
-                            </picture>
-                        </a>
-                    </li>
-                    <li class="exh__item">
-                        <a class="exh__link"
-                            href="images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/6.jpg"
-                            title="виставка MYPH For Better or Worse: Crossing the Line">
-                            <picture>
-                                <source
-                                    srcset="images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/6-mob-2x.jpg"
-                                    media="(min-width:320px)">
-                                <source
-                                    srcset="images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/6-mob-2x.webp"
-                                    type="image/webp" media="(min-width:320px)">
-                                <img class="exh__img"
-                                    src="./images/exhibitions/2022/8-for-better-or-worse-crossing-the-line/6-mob-2x.jpg"
-                                    alt="виставка MYPH For Better or Worse: Crossing the Line" width="400" height="224">
-                            </picture>
-                        </a>
-                    </li>
-
+                    @@include('../../lego/exhibition-gallery-work.html', {
+                        "yearName": "2022/8-for-better-or-worse-crossing-the-line",
+                        "fileName": "1",
+                        "exhsName": "MYPH For Better or Worse: Crossing the Line"
+                    }) 
+                    @@include('../../lego/exhibition-gallery-work.html', {
+                        "yearName": "2022/8-for-better-or-worse-crossing-the-line",
+                        "fileName": "2",
+                        "exhsName": "MYPH For Better or Worse: Crossing the Line"
+                    }) 
+                    @@include('../../lego/exhibition-gallery-work.html', {
+                        "yearName": "2022/8-for-better-or-worse-crossing-the-line",
+                        "fileName": "5",
+                        "exhsName": "MYPH For Better or Worse: Crossing the Line"
+                    }) 
+                    @@include('../../lego/exhibition-gallery-work.html', {
+                        "yearName": "2022/8-for-better-or-worse-crossing-the-line",
+                        "fileName": "6",
+                        "exhsName": "MYPH For Better or Worse: Crossing the Line"
+                    }) 
                 </ul>
+                    
 
 
             </div>

@@ -114,14 +114,12 @@
         transition: border-color 0.4s, box-shadow 0.4s;
 
         &:hover {
-            box-shadow: 3px 3px 4px #aaa8a5, -3px -3px 4px #ffffff;
+            box-shadow: 2px 2px 2px #aaa8a5, -2px -2px 2px #ffffff;
         }
 
         &:focus {
             border-color: transparent;
-            box-shadow: inset 3px 3px 4px #aaa8a5, inset -3px -3px 4px #ffffff;
-
-
+            box-shadow: inset 2px 2px 2px #aaa8a5, inset -2px -2px 2px #ffffff;
         }
 
         &--area {

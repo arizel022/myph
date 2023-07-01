@@ -149,6 +149,24 @@
             }
         }
 
+        &.fr .exhibitions-card {
+            &:before {
+                content: 'fr';
+            }
+        }
+
+        &.pl .exhibitions-card {
+            &:before {
+                content: 'pl';
+            }
+        }
+
+        &.it .exhibitions-card {
+            &:before {
+                content: 'it';
+            }
+        }
+
         //маркеры года слева
 
         &:before {
@@ -177,6 +195,23 @@
             }
         }
 
+        &--2020 {
+            &:before {
+                content: '2020';
+            }
+        }
+
+        &--2019 {
+            &:before {
+                content: '2019';
+            }
+        }
+
+        &--2018 {
+            &:before {
+                content: '2018';
+            }
+        }
 
     }
 

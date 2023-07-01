@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @@include('../../lego/fonts.html')
+    @@include('../../lego/favicon.html')
+    <base href="/" />
+    <title>"LET US IN: Together" - виставка Myph</title>
+    <link rel="stylesheet" href="css/exhibitions.min.css">
+</head>
+
+<body>
+
+    @@include('../../lego/header.html')
+    <main>
+        <section class="section exh">
+            <div class="container">
+                <div class="section__top">
+                    <h1 class="section__title">
+                        "LET US IN: Together"
+                    </h1>
+                </div>
+                <div class="exh__content">
+                    <ul class="exh__info-list">
+                        <li class="exh__info-item">
+                            2019
+                        </li>
+                        <li class="exh__info-item">
+                            Париж, Франція
+                        </li>
+
+                    </ul>
+                    <div class="exh__info-text">
+                        <p>
+                            Наталі Агризкова, Сергій Мельниченко
+                        </p>
+                    </div>
+                </div>
+
+                <ul class="exh__gallery zoom-gallery">
+                    @@include('../../lego/exhibition-gallery-work.html', {
+                        "yearName": "2019/14-let-us-in-together",
+                        "fileName": "1",
+                        "exhsName": "MYPH LET US IN: Together"
+                    }) 
+                    @@include('../../lego/exhibition-gallery-work.html', {
+                        "yearName": "2019/14-let-us-in-together",
+                        "fileName": "2",
+                        "exhsName": "MYPH LET US IN: Together"
+                    }) 
+
+                    @@include('../../lego/exhibition-gallery-work.html', {
+                        "yearName": "2019/14-let-us-in-together",
+                        "fileName": "3",
+                        "exhsName": "MYPH LET US IN: Together"
+                    }) 
+                </ul>
+            </div>
+        </section>
+
+    </main>
+    @@include('../../lego/footer.html')
+
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

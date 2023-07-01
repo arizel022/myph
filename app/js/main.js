@@ -58,10 +58,19 @@ $(function () {
     });
 });
 
-
+//при клике на кнопку КУПИТЬ - появляется меню покупки
 $(function () {
-    $('.buy-book__button').click(function () {
+    $('.buy-book__button').click(function (event) {
+        event.stopPropagation(); // Остановить всплытие события, чтобы клик не попал на документ сразу после клика на кнопку
         $('.buy-book__options').toggleClass('show');
+    });
+
+    $(document).click(function (event) {
+        var $target = $(event.target);
+        if (!$target.closest('.buy-book__button').length && !$target.closest('.buy-book__options').length) {
+            // Если клик был сделан вне кнопки КУПИТЬ и вне меню покупки, скрыть меню
+            $('.buy-book__options').removeClass('show');
+        }
     });
 });
 
