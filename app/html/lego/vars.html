@@ -1,9 +1,14 @@
+
 <!-- 
+-----------------------------------------------------------------------------------------------
+exhibition-zoom-gallery.html
+
 @@yearName - частина шляху до фотки із роком і назвою папки виставки
 @@fileName - номер файлу фотки
 @@exhsName - назва виставки для альта та тайтлу
 -->
 
+<!-- сюди додавати останню лішку для копіювання шляхів і данних у шаблон -->
 <ul class="exh__gallery zoom-gallery">
     <li class="exh__item">
         <a class="exh__link" href="images/exhibitions/2023/13-myph-5-years-anniversary/10.jpg"
@@ -23,6 +28,7 @@
     </li>
 </ul>
 
+<!-- шаблон - вписати змінні, скопіювати на сторінку виставки, видалити зайві лішки -->
 <ul class="exh__gallery zoom-gallery">
     @@include('../../lego/exhibition-gallery-work.html', {
         "yearName": "2023/13-myph-5-years-anniversary",
@@ -172,3 +178,205 @@
     }) 
 </ul>
     
+
+
+
+
+<!-- 
+-----------------------------------------------------------------------------------------------
+author-gallery-work.html
+
+@@authorFolderSeries - частина шляху до фотки із іменем папки автора. Якщо треба серія, то у змінну кладеться автор/сері -authorFolderSeriesад "2-mary-jane"
+
+@@fileName - номер файлу фотки
+@@author - автор для альта та тайтлу. Кого - наприклад "Mary Jane"
+@@series - назва серії, наприклад ""
+-->
+
+<a class="basic-gallery__link" href="images/authors/2-mary-jane/27.jpg"
+title="робота Mary Jane">
+<picture>
+    <source srcset="images/authors/2-mary-jane/27-mob-2x.jpg 1x"
+        media="(min-width:992px)">
+    <source
+        srcset="images/authors/2-mary-jane/27-mob.jpg 1x, images/authors/2-mary-jane/27-mob-2x.jpg 2x"
+        media="(min-width:320px)">
+    <source
+        srcset="images/authors/2-mary-jane/27-mob.webp 1x, images/authors/2-mary-jane/27-mob-2x.webp 2x"
+        type="image/webp" media="(min-width:320px)">
+    <img class="basic-gallery__img" src="images/authors/2-mary-jane/27-mob-2x.jpg"
+        alt="робота Mary Jane" width="370" height="300">
+</picture>
+</a>
+
+<div class="boo">
+
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "1",
+    "author": "Mary Jane",
+    "series": ""
+})
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "2",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "3",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "4",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "5",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "6",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "7",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "8",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "9",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "10",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "11",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "12",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "13",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "14",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "15",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "16",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "17",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "18",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "19",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "20",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "21",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "22",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "23",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "24",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "25",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "26",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "27",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+@@include('../../lego/author-gallery-work.html', {
+    "authorFolderSeries": "2-mary-jane",
+    "fileName": "28",
+    "author": "Mary Jane",
+    "series": ""
+}) 
+</div>

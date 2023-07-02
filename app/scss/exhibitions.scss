@@ -83,6 +83,21 @@
             background-image: url('../images/icons/maps/geor.svg');
             @extend %map-animation;
         }
+
+        &.bg-it:before {
+            background-image: url('../images/icons/maps/it.svg');
+            @extend %map-animation;
+        }
+
+        &.bg-pl:before {
+            background-image: url('../images/icons/maps/pl.svg');
+            @extend %map-animation;
+        }
+
+        &.bg-fr:before {
+            background-image: url('../images/icons/maps/fr.svg');
+            @extend %map-animation;
+        }
     }
 
     &__grid-item {
