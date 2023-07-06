@@ -778,11 +778,10 @@
         margin-top: auto;
         margin-bottom: 40px;
         position: relative;
-        padding: 15px 0;
+        padding: 15px 25px;
         z-index: 1;
         width: calc(100% + 50px);
         color: $l;
-        text-transform: uppercase;
 
         &:before {
             content: '';
@@ -795,7 +794,24 @@
             background-color: $d;
             z-index: -1;
         }
+    }
 
+    &__cost-item {
+        display: flex;
+
+        .accent-bright {
+            text-transform: uppercase;
+            margin-left: 8px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__cost-value {
+        text-transform: uppercase;
+        margin-left: auto;
     }
 
     &__button {
@@ -818,7 +834,6 @@
         }
     }
 
-
     &__icon {
         fill: currentColor;
         margin-right: 20px;
@@ -832,6 +847,47 @@
     }
 
 }
+
+.course-additional {
+    padding-top: 0;
+
+    &__info {
+        display: flex;
+        justify-content: space-around;
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+    
+    &__info-item {
+        padding: 25px 45px;
+        border-radius: 10px;
+        outline: 1px solid $s;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+
+    &__booking {
+        padding: 25px 45px 10px 45px;
+
+        margin-bottom: 40px;
+        border-bottom: 1px solid $s;
+    }
+
+    &__booking-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__booking-text {
+        p {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
 
 .course-faq {
     padding-top: 0;

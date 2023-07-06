@@ -160,8 +160,6 @@ img {
     overflow: hidden;
 }
 
-
-
 .buymecoffee {
     position: fixed;
     left: 0;
@@ -470,4 +468,14 @@ img {
         }
     }
 
+}
+
+.mark {
+    color: #ee4b00;
+    background-color: #3a3a3a;
+    padding: 5px 15px;
+    border-radius: 6px;
+    width: fit-content;
+    font-size: 18px;
+    font-weight: 600;
 }
