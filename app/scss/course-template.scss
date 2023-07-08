@@ -25,6 +25,12 @@
         background-position: center bottom;
     }
 
+    &--sergij {
+        &:before {
+            backdrop-filter: blur(3px);
+        }
+    }
+
     &:before {
         content: '';
         position: absolute;
@@ -32,8 +38,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-
-        background: linear-gradient(260deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 70%);
+        background-color: rgba(255, 255, 255, 0.7);
         z-index: -1;
     }
 
@@ -68,7 +73,10 @@
     }
 
     &__text {
-        margin-bottom: 40px;
+        font-size: 24px;
+        color: $s-d;
+        max-width: 70%;
+        margin: 0 auto 40px;
 
         P:not(:last-child) {
             margin-bottom: 10px;
@@ -325,6 +333,22 @@
         font-size: 18px;
         font-weight: 700;
         margin-bottom: 10px;
+
+        display: flex;
+        align-items: center;
+        line-height: 1;
+
+        &:before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            display: block;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: url('../images/icons/finger.svg');
+            margin-right: 10px;
+        }
     }
 
     &__modules {
@@ -366,26 +390,19 @@
     }
 
     &__module-subauthor-btn {
-        color: $a-d;
-        animation: pulsate-fwd 1.5s ease-in-out infinite;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 20px;
-        font-size: 24px;
+        color: $a;
+        font-weight: 700;
+        display: inline-block;
+        border-bottom: 1px solid $a;
+        line-height: 1;
+
+
 
         @media (max-width: 576px) {
             font-size: 14px;
         }
 
-        &.open {
-            animation: none;
-            pointer-events: none;
 
-            .course-plan__module-subauthor-icon {
-                transform: rotate(-90deg);
-            }
-        }
     }
 
     &__bonuses {
@@ -413,6 +430,21 @@
         color: rgba($s-l, 0.8);
         font-weight: 700;
         margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        line-height: 1;
+
+        &:before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            display: block;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: url('../images/icons/star.svg');
+            margin-right: 10px;
+        }
     }
 
     &__bonuses-text {
@@ -439,8 +471,6 @@
         display: inline-block;
         margin-bottom: 5px;
     }
-
-
 
     &__whom-item {
         &:not(:last-child) {
@@ -492,6 +522,26 @@
     // кандидат навылет
     &__ps {
         font-weight: 700;
+    }
+}
+
+.animate-pulsed {
+    animation: pulsate-fwd 1.5s ease-in-out infinite;
+
+    &__icon {
+        stroke: $a-d;
+        margin-left: 15px;
+        transform: rotate(0);
+        transition: transform 1s;
+    }
+
+    &.open {
+        animation: none;
+        pointer-events: none;
+
+        .animate-pulsed__icon {
+            transform: rotate(-90deg);
+        }
     }
 }
 
@@ -607,7 +657,7 @@
         display: flex;
         justify-content: center;
         gap: 30px;
-        margin-bottom: 40px;
+        // margin-bottom: 40px;
 
         @media (max-width: 576px) {
             margin-bottom: 15px;
@@ -650,7 +700,9 @@
         border-radius: 50%;
         justify-content: center;
         align-items: center;
-        border: 1px solid $a-d;
+        background-color: rgba($l, 0.5);
+        // border: 1px solid $a-d;
+        transition: opacity 0.3s;
 
         &:before,
         &:after {
@@ -667,6 +719,14 @@
 
         &:after {
             transform: rotate(-45deg);
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &:active {
+            opacity: 0.5;
         }
     }
 }
@@ -754,6 +814,7 @@
         margin-bottom: 5px;
         display: flex;
         align-items: center;
+        position: relative;
 
         &:before {
             content: '';
@@ -812,6 +873,21 @@
     &__cost-value {
         text-transform: uppercase;
         margin-left: auto;
+        overflow: hidden;
+        position: relative;
+
+        &--not {
+            &:before {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: rgba($a, 0.7);
+                position: absolute;
+                left: 0;
+                bottom: 12px;
+                transform: rotate(-10deg);
+            }
+        }
     }
 
     &__button {
@@ -845,6 +921,36 @@
         fill: currentColor;
         flex-shrink: 0;
     }
+
+    &__assist-info {
+        position: absolute;
+        width: 300px;
+        background-color: $d-d;
+        color: $l;
+        padding: 25px;
+        border-radius: 10px;
+        z-index: 10;
+        bottom: 37px;
+        transform: scale(0);
+        transition: transform 0.4s;
+    }
+
+    &__assist-btn {
+        display: flex;
+        align-items: center;
+
+        &:hover, &:focus, &:active {
+            & + .course-price__assist-info {
+                transform: scale(1);
+            }
+
+            .animate-pulsed__icon {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+
 
 }
 
@@ -880,6 +986,29 @@
     }
 
     &__booking-text {
+
+        &--last {
+            p {
+                &:not(:first-child) {
+                    display: flex;
+                    align-items: center;
+                    color: $s;
+        
+                    &:before {
+                        content: '';
+                        width: 24px;
+                        height: 24px;
+                        display: block;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        background-image: url('../images/icons/star.svg');
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
         p {
             &:not(:last-child) {
                 margin-bottom: 10px;

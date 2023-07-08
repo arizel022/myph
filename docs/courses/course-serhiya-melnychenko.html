@@ -127,7 +127,8 @@
 
     <main>
         <div class="wrapper">
-            <section class="course-hero" style="background-image: url('images/school/sergij-melnichenko/1.jpg');">
+            <section class="course-hero course-hero--sergij"
+                style="background-image: url('images/school/sergij-melnichenko/1.jpg');">
                 <div class="container container--big course-hero__container">
 
                     <div class="course-hero__content">
@@ -145,9 +146,6 @@
                         </div>
 
                         <ul class="course-hero__list">
-                            <li class="course-hero__item">
-                                Тривалість курсу: 2.5 - 5 місяців
-                            </li>
                             <li class="course-hero__item">
                                 Живі лекції, котрі можна буде переглядати у записі
                             </li>
@@ -183,6 +181,9 @@
                         <div class="course-hero__actions">
                             <p class="course-hero__start-time">
                                 старт - Жовтень 2023
+                            </p>
+                            <p class="course-hero__start-time">
+                                Тривалість курсу: 2.5 - 5 місяців
                             </p>
                             <a class="course-hero__button button" href="#course-price">
                                 <svg class="button__icon" width="32" height="32">
@@ -438,7 +439,10 @@
                                 <h4 class="course-plan__bonuses-title">Бонус</h4>
                                 <div class="course-plan__bonuses-text">
                                     <p>
-                                        Лекція Станіслава Остроуса - "Знайомство с аналоговою фототехнікою, види і
+                                        Лекція <button
+                                            class="course-plan__module-subauthor-btn course-plan__module-subauthor-btn--stanislav"
+                                            type="button">Станіслава Остроуса</button> - "Знайомство с аналоговою
+                                        фототехнікою, види і
                                         формати камер".
                                     </p>
                                 </div>
@@ -487,18 +491,31 @@
                                 <h4 class="course-plan__bonuses-title">Бонуси</h4>
                                 <div class="course-plan__bonuses-text">
                                     <p>
-                                        Лекція Катерини Лесів "Досвід роботи над фото-книгою - від задуму до співпраці з
+                                        Лекція
+                                        <button
+                                            class="course-plan__module-subauthor-btn course-plan__module-subauthor-btn--katya"
+                                            type="button">Катерини Лесів</button> "Досвід роботи над фото-книгою - від
+                                        задуму до співпраці з
                                         видавництвом".
                                     </p>
                                     <p>
-                                        Екскурс до Харківської школи фотографії від Олександри Осадчої.
+                                        Екскурс до Харківської школи фотографії від <button
+                                            class="course-plan__module-subauthor-btn course-plan__module-subauthor-btn--oleksandra"
+                                            type="button">Олександри Осадчої</button>.
                                     </p>
                                     <p>
-                                        Артіст-толк від Романа Пятковки "Тіло як соціальний індикатор. Особистий
+                                        Артіст-толк від <button
+                                            class="course-plan__module-subauthor-btn course-plan__module-subauthor-btn--roman"
+                                            type="button">Романа Пятковки</button> "Тіло як соціальний індикатор.
+                                        Особистий
                                         комунальний простір та інтимний монолог".
+
                                     </p>
                                     <p>
-                                        Артіст-толк Тараса Бичко "Фотоапарат, як інструмент що дозволяє розмовляти".
+                                        Артіст-толк <button
+                                            class="course-plan__module-subauthor-btn course-plan__module-subauthor-btn--taras"
+                                            type="button">Тараса Бичко</button> "Фотоапарат, як інструмент що дозволяє
+                                        розмовляти".
                                     </p>
                                 </div>
                             </div>
@@ -632,11 +649,10 @@
                         <li class="course-plan__module">
                             <h3 class="course-plan__module-title">
                                 Модуль 7. “Колаж, як мистецтво”, 3 заняття від
-                                <button class="course-plan__module-subauthor-btn" type="button" data-modal-open>
+                                <button
+                                    class="course-plan__module-subauthor-btn course-plan__module-subauthor-btn--maryna"
+                                    type="button">
                                     Марини Бродовської
-                                    <svg class="course-plan__module-subauthor-icon" width="25" height="25">
-                                        <use xlink:href="images/sprite.svg#icon-details"></use>
-                                    </svg>
                                 </button>
                             </h3>
                             <ul class="course-plan__list">
@@ -698,9 +714,100 @@
                             </ul>
                         </li>
                     </ul>
-                    <!-- попап автора модуля -->
+                    <!-- попап авторовів модулів -->
                     <div class="backdrop">
-                        <div class="course-plan__subauthor-card subauthor-card" data-modal>
+                        <div class="course-plan__subauthor-card subauthor-card subauthor-card--stanislav">
+                            <img class="subauthor-card__img"
+                                src="./images/school/stanislav-ostrous/stanislav-mentor.jpg" alt="Станіслав Остроус"
+                                width="450" height="300">
+                            <div class="subauthor-card__content">
+                                <h4 class="subauthor-card__title">Станіслав Остроус</h4>
+                                <p class="subauthor-card__text">
+                                    Фотограф, викладач. Працює з документальною та арт фотографією, переважно
+                                    використовуючи класичний срібно-желатиновий процес.
+                                    Учасник основної експозиції фестивалю «BatumiPhotoDays» (2016 – 2019) та
+                                    фотосимпозіуму у Ніді (Литва). Член UPHA (Української фотоальтернативи), член MYPH.
+                                    Виставлявся в Німеччині, Польщі, Литві, Кореї, Грузії, Вірменії, Україні. Шорт-лист
+                                    PhotoCULT 2019. Його фотографії знаходяться у державних та приватних колекціях в
+                                    Україні, Польщі, Швейцарії, Литві.
+                                    Викладає фотографію у ХДАК (Харківська Державна Академія Культури).
+                                </p>
+                                <!-- <a href="./course-kolazh-yak-mystetstvo-maryna-brodovska.html"
+                                    class="subauthor-card__button button" target="_blank">Курс Марини</a> -->
+                            </div>
+                            <button class="subauthor-card__close-btn" type="button">
+                                <span class="sr-only">Закрити інфу про автора</span>
+                            </button>
+                        </div>
+
+                        <div class="course-plan__subauthor-card subauthor-card subauthor-card--katya">
+                            <img class="subauthor-card__img" src="./images/index/prev-courses/katya.jpg"
+                                alt="Катя Лесів" width="450" height="300">
+                            <div class="subauthor-card__content">
+                                <h4 class="subauthor-card__title">Катя Лесів</h4>
+                                <p class="subauthor-card__text">
+                                    Катя Лесів наразі живе та працює поміж Україною та Фінляндією.
+
+                                    Отримала освіту Магістра у Національній Академії Мистецтва та Архітектури у Києві
+                                    (2017). Художня практика Катерини має форму таких медіа як арт бук, фотографія,
+                                    інсталяція, графіка, відео. Її особливим інтересом є експонування книги як об’єкту у
+                                    просторі.
+
+                                    Книга “Колискова 1” увійшла до топ-100 фотокниг за версією 10×10 Photobooks “How We
+                                    See: Photobooks by Women”. Книга “I love you” увійшла до короткого списку Aperture
+                                    PhotoBooks Award у 2022 році.
+                                </p>
+                                <!-- <a href="./course-kolazh-yak-mystetstvo-maryna-brodovska.html"
+                                    class="subauthor-card__button button" target="_blank">Курс Марини</a> -->
+                            </div>
+                            <button class="subauthor-card__close-btn" type="button">
+                                <span class="sr-only">Закрити інфу про автора</span>
+                            </button>
+                        </div>
+
+                        <div class="course-plan__subauthor-card subauthor-card subauthor-card--roman">
+                            <img class="subauthor-card__img" src="./images/school/roman-pyatkovka/roman-card.jpg"
+                                alt="Роман Пятковка" width="450" height="300">
+                            <div class="subauthor-card__content">
+                                <h4 class="subauthor-card__title">Роман Пятковка</h4>
+                                <p class="subauthor-card__text">
+                                    Представник Харківської школи фотографії. Народився у 1955 в м. Харкові. На початку
+                                    1980-х років захопився фотографією, формуючись як професіонал у спілкуванні з
+                                    Борисом Михайловим, Євгеном Павловим, Олегом Мальованим, Ю. Рупіним та ін. Член
+                                    Національної спілки фотохудожників України з 1989. Як послідовник Харківської Школи
+                                    Фотографії зайнявся концептуальною фотографією, використовуючи в роботах її головний
+                                    принцип «теорії удару». Приділяє увагу не лише естетиці зображення, а й цілісності
+                                    авторського висловлення. В центрі уваги фотографа – тема приватного простору та
+                                    тілесності як маркерів соціального стану.
+                                </p>
+                                <!-- <a href="./course-kolazh-yak-mystetstvo-maryna-brodovska.html"
+                                    class="subauthor-card__button button" target="_blank">Курс Марини</a> -->
+                            </div>
+                            <button class="subauthor-card__close-btn" type="button">
+                                <span class="sr-only">Закрити інфу про автора</span>
+                            </button>
+                        </div>
+
+                        <div class="course-plan__subauthor-card subauthor-card subauthor-card--taras">
+                            <img class="subauthor-card__img" src="./images/school//taras-bychko/taras-mentor.jpg"
+                                alt="Тарас Бичко" width="450" height="300">
+                            <div class="subauthor-card__content">
+                                <h4 class="subauthor-card__title">Тарас Бичко</h4>
+                                <p class="subauthor-card__text">
+                                    Тарас Бичко працює в жанрі документальної та художньої фотографії, є куратором,
+                                    викладачем та суддею різноманітних міжнародних конкурсів. Керівник фотопроектів
+                                    Львівського муніципального мистецького центру з 2021 року. Фріланс фотограф з 2015
+                                    року.
+                                </p>
+                                <!-- <a href="./course-kolazh-yak-mystetstvo-maryna-brodovska.html"
+                                    class="subauthor-card__button button" target="_blank">Курс Марини</a> -->
+                            </div>
+                            <button class="subauthor-card__close-btn" type="button">
+                                <span class="sr-only">Закрити інфу про автора</span>
+                            </button>
+                        </div>
+
+                        <div class="course-plan__subauthor-card subauthor-card subauthor-card--maryna">
                             <img class="subauthor-card__img" src="./images/school/maryna-brodovska/maryna-mentor.jpeg"
                                 alt="Марина Бродовська" width="450" height="300">
                             <div class="subauthor-card__content">
@@ -735,8 +842,53 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <a href="./course-kolazh-yak-mystetstvo-maryna-brodovska.html"
-                                    class="subauthor-card__button button" target="_blank">Курс Марини</a>
+                                <!-- <a href="./course-kolazh-yak-mystetstvo-maryna-brodovska.html"
+                                    class="subauthor-card__button button" target="_blank">Курс Марини</a> -->
+                            </div>
+                            <button class="subauthor-card__close-btn" type="button">
+                                <span class="sr-only">Закрити інфу про автора</span>
+                            </button>
+                        </div>
+
+                        <div class="course-plan__subauthor-card subauthor-card subauthor-card--oleksandra">
+                            <img class="subauthor-card__img" src="./images/school/invited-lecturers/osadcha.jpg"
+                                alt="Олександра Осадча" width="450" height="300">
+                            <div class="subauthor-card__content">
+                                <h4 class="subauthor-card__title">Олександра Осадча</h4>
+                                <p class="subauthor-card__text">
+                                    Дослідниця та кураторка. У 2008-2014 рр. навчалася на кафедрі теорії та історії
+                                    мистецтв Харківської державної академії дизайну і мистецтв. У 2020-му захистила
+                                    кандидатську дисертацію. Організаторка виставкових заходів у Харкові з 2008 р. З
+                                    2018-го — голова правління, кураторка Музею Харківської школи фотографії (MOKSOP).
+                                    2022-2023 — стипендіатка Бібілотеки Герціана, Інститут історії мистецтва Макса
+                                    Планка (Рим, Італія). Авторка наукових публікацій з сучасного українського
+                                    мистецтва.
+                                </p>
+                                <ul class="subauthor-card__links-list">
+                                    <li class="subauthor-card__links-item">
+                                        <a href="" class="subauthor-card__link">
+                                            <svg class="subauthor-card__icon" width="25" height="25">
+                                                <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="subauthor-card__links-item">
+                                        <a href="" class="subauthor-card__link">
+                                            <svg class="subauthor-card__icon" width="25" height="25">
+                                                <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="subauthor-card__links-item">
+                                        <a href="" class="subauthor-card__link">
+                                            <svg class="subauthor-card__icon" width="25" height="25">
+                                                <use xlink:href="images/sprite.svg#icon-internet"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- <a href="./course-kolazh-yak-mystetstvo-maryna-brodovska.html"
+                                    class="subauthor-card__button button" target="_blank">Курс Марини</a> -->
                             </div>
                             <button class="subauthor-card__close-btn" type="button">
                                 <span class="sr-only">Закрити інфу про автора</span>
@@ -796,7 +948,8 @@
                                 <span class="course-price__cost-item">
                                     Вартість курсу
                                     <span class="accent-bright">з 14 вересня:</span>
-                                    <span class="course-price__cost-value">19 900 грн</span>
+                                    <span class="course-price__cost-value course-price__cost-value--not">19 900
+                                        грн</span>
                                 </span>
                             </div>
                             <button class="course-price__button button" type="button">
@@ -865,9 +1018,18 @@
                                     Можливість участі в NFT-колекціях MYPH вже під час навчання
                                 </li>
                                 <li class="course-price__details-item">
-                                    MYPH-assistance ASSISTANCE (тут виділити цю фразу і типу у вспливаючому вікні наче
-                                    пояснення що це таке (як з Мариною Бродовською ми робили) - "Професійна відправка
-                                    заявок ваших проектів на міжнародні конкурси протягом 2-х місяців"
+                                    <p>
+                                        Добірка з 9 сучасних книжок по фотографії від партнеру нашої школи - магазину
+                                        <span class="accent">
+                                            Fotoplenka.in.ua
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="course-price__details-item">
+                                    <p>
+                                        Друк та оформлення фотографій розміром 90x60 см від наших партнерів <span
+                                            class="accent">VS Print</span>
+                                    </p>
                                 </li>
                             </ul>
                             <div class="course-price__cost">
@@ -879,7 +1041,8 @@
                                 <span class="course-price__cost-item">
                                     Вартість курсу
                                     <span class="accent-bright">з 14 вересня:</span>
-                                    <span class="course-price__cost-value">24 900 грн</span>
+                                    <span class="course-price__cost-value course-price__cost-value--not">24 900
+                                        грн</span>
                                 </span>
                             </div>
                             <button class="course-price__button button" type="button">
@@ -954,13 +1117,35 @@
                                     Можливість участі в NFT колекціях MYPH вже під час навчання
                                 </li>
                                 <li class="course-price__details-item">
-                                    MYPH-assistance ASSISTANCE (тут виділити цю фразу і типу у вспливаючому вікні наче
-                                    пояснення що це таке (як з Мариною Бродовською ми робили) - "Професійна відправка
-                                    заявок ваших проектів на міжнародні конкурси протягом 2-х місяців"
+                                    <p>
+                                        Добірка з 9 сучасних книжок по фотографії від партнеру нашої школи - магазину
+                                        <span class="accent">
+                                            Fotoplenka.in.ua
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="course-price__details-item">
+                                    <p>
+                                        Друк та оформлення фотографій розміром 90x60 см від наших партнерів <span
+                                            class="accent">VS Print</span>
+                                    </p>
                                 </li>
                                 <li class="course-price__details-item">
                                     Публікація каталогу
                                 </li>
+                                <li class="course-price__details-item">
+                                    <button class="course-price__assist-btn accent animate-pulsed" type="button">
+                                        MYPH-Assistance
+                                        <svg class="animate-pulsed__icon" width="25" height="25">
+                                            <use xlink:href="images/sprite.svg#icon-details"></use>
+                                        </svg>
+                                    </button>
+                                    <span class="course-price__assist-info">
+                                        MYPH-Assistance - Професійна відправка заявок ваших проектів на міжнародні
+                                        конкурси протягом 2-х місяців.
+                                    </span>
+                                </li>
+
                             </ul>
                             <div class="course-price__cost">
                                 <span class="course-price__cost-item">
@@ -971,7 +1156,8 @@
                                 <span class="course-price__cost-item">
                                     Вартість курсу
                                     <span class="accent-bright">з 14 вересня:</span>
-                                    <span class="course-price__cost-value">34 900 грн</span>
+                                    <span class="course-price__cost-value course-price__cost-value--not">34 900
+                                        грн</span>
                                 </span>
                             </div>
                             <button class="course-price__button button" type="button">
@@ -1042,7 +1228,7 @@
                         </div>
                     </div>
                     <div class="course-additional__booking">
-                        <div class="course-additional__booking-text">
+                        <div class="course-additional__booking-text course-additional__booking-text--last">
                             <p>
                                 <span class="mark">Бонус для тих, хто сплатить всю сумму відразу до старту курсу</span>
                             </p>

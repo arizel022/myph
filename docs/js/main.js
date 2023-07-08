@@ -126,10 +126,12 @@ $(function () {
             // Image in popup will be scaled down by this number.
             // Option can also be a function which should return a number (in case you support multiple ratios). For example:
             // ratio: function() { return window.devicePixelRatio === 1.5 ? 1.5 : 2  }
-        
-        
-            replaceSrc: function(item, ratio) {
-                return item.src.replace(/\.\w+$/, function(m) { return '-2x' + m; });
+
+
+            replaceSrc: function (item, ratio) {
+                return item.src.replace(/\.\w+$/, function (m) {
+                    return '-2x' + m;
+                });
             } // function that changes image source
         },
         zoom: {
@@ -146,15 +148,15 @@ $(function () {
 });
 
 $(function () {
-	$('.popup-youtube').magnificPopup({
-		disableOn: 700,
-		type: 'iframe',
-		mainClass: 'mfp-fade',
-		removalDelay: 160,
-		preloader: false,
+    $('.popup-youtube').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
 
-		fixedContentPos: false
-	});
+        fixedContentPos: false
+    });
 });
 
 //слайдеры на главной странице
@@ -271,12 +273,53 @@ $(function () {
 
 //При клике на сабавтора на странице курса появляется popup об этом авторе
 $(function () {
-    $('.course-plan__module-subauthor-btn').click(function () {
+
+    $('.course-plan__module-subauthor-btn--maryna').click(function () {
+        $('.subauthor-card--maryna').addClass('open');
         $(this).addClass('open');
-        $('.subauthor-card').addClass('open');
         $('.backdrop').addClass('open');
         $('body').addClass('lock');
     });
+
+    $('.course-plan__module-subauthor-btn--stanislav').click(function () {
+        $('.subauthor-card--stanislav').addClass('open');
+        $(this).addClass('open');
+        $('.backdrop').addClass('open');
+        $('body').addClass('lock');
+    });
+
+    $('.course-plan__module-subauthor-btn--katya').click(function () {
+        $('.subauthor-card--katya').addClass('open');
+        $(this).addClass('open');
+        $('.backdrop').addClass('open');
+        $('body').addClass('lock');
+    });
+
+    $('.course-plan__module-subauthor-btn--roman').click(function () {
+        $('.subauthor-card--roman').addClass('open');
+        $(this).addClass('open');
+        $('.backdrop').addClass('open');
+        $('body').addClass('lock');
+    });
+
+    $('.course-plan__module-subauthor-btn--taras').click(function () {
+        $('.subauthor-card--taras').addClass('open');
+        $(this).addClass('open');
+        $('.backdrop').addClass('open');
+        $('body').addClass('lock');
+    });
+
+    $('.course-plan__module-subauthor-btn--oleksandra').click(function () {
+        $('.subauthor-card--oleksandra').addClass('open');
+        $(this).addClass('open');
+        $('.backdrop').addClass('open');
+        $('body').addClass('lock');
+    });
+
+
+
+
+
     $(document).mouseup(function (e) { // отслеживаем клик
         var block = $(".subauthor-card"); //кнопка, меню В ней
         if (!block.is(e.target) && block.has(e.target).length === 0) { //если клик не по кнопке/меню/чайлдам
