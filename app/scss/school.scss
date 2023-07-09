@@ -3,6 +3,31 @@
 .all-courses {
     padding-top: 70px;
 
+    &__text {
+        margin-bottom: 40px;
+
+        p {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 8px;
+                left: -25px;
+                width: 10px;
+                height: 10px;
+                background-image: url('../images/icons/spinner.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
     &__inner {
         display: flex;
         align-items: flex-start;
@@ -224,7 +249,7 @@
     flex-wrap: wrap;
     background-color: $l-l;
     padding-bottom: 25px;
-    border-bottom-right-radius: 85px;
+    border-bottom-right-radius: 60px;
     box-shadow: 3px 3px 12px $d-l;
 
     @media (max-width: 576px) {

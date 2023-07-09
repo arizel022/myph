@@ -1,3 +1,9 @@
+
+
+
+
+
+
 // плавный скролл на Партнеры на главной, с других страниц - перенаправление
 
 // Ожидаем полной загрузки DOM, чтобы начать работу скрипта
@@ -100,7 +106,10 @@ $(function () {
         autoplay: true,
         arrows: false
     });
+
 });
+
+
 
 
 
@@ -171,7 +180,7 @@ $(function () {
         dots: false,
         infinite: true,
         arrows: false,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 3500,
         autoplay: true,
         fade: true
     });
@@ -216,6 +225,8 @@ $(function () {
         arrows: true
     });
     // }
+
+
 });
 
 //активное состояние кнопки call-to-action
@@ -316,7 +327,27 @@ $(function () {
         $('body').addClass('lock');
     });
 
+    $('.course-plan__module-subauthor-btn--illia').click(function () {
+        $('.subauthor-card--illia').addClass('open');
+        $(this).addClass('open');
+        $('.backdrop').addClass('open');
+        $('body').addClass('lock');
+    });
 
+    $('.course-plan__module-subauthor-btn--yana').click(function () {
+        $('.subauthor-card--yana').addClass('open');
+        $(this).addClass('open');
+        $('.backdrop').addClass('open');
+        $('body').addClass('lock');
+    });
+
+    $('.course-reviews__inner').slick({
+        dots: false,
+        infinite: true,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
 
 
 

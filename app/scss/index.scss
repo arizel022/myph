@@ -528,15 +528,5 @@
             font-size: 18px;
         }
     }
-
-    &__status {
-        font-size: 16px;
-        display: block;
-        color: $d;
-
-        @media (max-width: 576px) {
-            font-size: 14px;
-        }
-    }
 }
 
