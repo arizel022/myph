@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     @@include('../../lego/header.html')
     <main>
         <div class="wrapper">
@@ -23,7 +22,6 @@
                         <h1 class="book__title book__title--mark">
                             MYPH / Молода Миколаївська Фотографія
                         </h1>
-
                         <ul class="book__details">
                             <li class="book__details-item">
                                 <span class="book__details-label">Укладачі:</span>
@@ -47,7 +45,30 @@
                             </li>
                         </ul>
 
-                        @@include('../../lego/buy-book-button.html')
+                        <div class="book__inner">
+                            @@include('../../lego/buy-book-button.html')
+                            <div class="book__price">
+                                <div class="book__price-item">
+                                    Українська версія - 
+                                    <span class="book__cost">
+                                        800 
+                                        <span class="currency">
+                                            грн
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="book__price-item">
+                                    Англійська версія - 
+                                    <span class="book__cost">
+                                        900 
+                                        <span class="currency">
+                                            грн
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
 
 
 

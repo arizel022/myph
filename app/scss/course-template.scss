@@ -48,7 +48,6 @@
         justify-content: center;
         align-items: center;
         height: 80vh;
-        position: relative;
     }
 
     &__content {
@@ -65,18 +64,9 @@
         }
     }
 
-    &__banner {
-        position: fixed;
-        background-color: $d;
-        color: $s-l;
-        text-transform: uppercase;
-        padding: 15px 35px 15px 10px;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        top: 30%;
-        left: 0;
-        max-width: 130px;
-        text-align: left;
+    &__promo-text {
+        top: 20%;
+        right: 0;
     }
 
     &__subtitle-small {
@@ -147,6 +137,7 @@
         border-radius: 40px;
         position: relative;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         z-index: 2;
@@ -165,7 +156,11 @@
             box-shadow: inset 5px 5px 10px #92918e,
                 inset -5px -5px 10px #ffffff;
         }
+    }
 
+    &__start-time-info {
+        font-size: 10px;
+        margin-top: 8px;
     }
 }
 
@@ -543,42 +538,42 @@
     }
 }
 
-.animate-pulsed {
-    animation: pulsate-fwd 1.5s ease-in-out infinite;
+// .animate-pulsed {
+//     animation: pulsate-fwd 1.5s ease-in-out infinite;
 
-    &__icon {
-        stroke: $a-d;
-        margin-left: 15px;
-        transform: rotate(0);
-        transition: transform 1s;
-    }
+//     &__icon {
+//         stroke: $a-d;
+//         margin-left: 15px;
+//         transform: rotate(0);
+//         transition: transform 1s;
+//     }
 
-    &.open {
-        animation: none;
-        pointer-events: none;
+//     &.open {
+//         animation: none;
+//         pointer-events: none;
 
-        .animate-pulsed__icon {
-            transform: rotate(-90deg);
-        }
-    }
-}
+//         .animate-pulsed__icon {
+//             transform: rotate(-90deg);
+//         }
+//     }
+// }
 
-@keyframes pulsate-fwd {
-    0% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
+// @keyframes pulsate-fwd {
+//     0% {
+//         -webkit-transform: scale(1);
+//         transform: scale(1);
+//     }
 
-    50% {
-        -webkit-transform: scale(1.05);
-        transform: scale(1.05);
-    }
+//     50% {
+//         -webkit-transform: scale(1.05);
+//         transform: scale(1.05);
+//     }
 
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-}
+//     100% {
+//         -webkit-transform: scale(1);
+//         transform: scale(1);
+//     }
+// }
 
 .backdrop {
     position: fixed;
@@ -752,6 +747,7 @@
 .course-price {
     padding-top: 0;
     text-align: center;
+    position: relative;
 
     &__top {
         justify-content: center;
@@ -990,6 +986,13 @@
         outline: 1px solid $s;
         text-transform: uppercase;
         font-size: 18px;
+    }
+
+    &__info-desc {
+        font-size: 10px;
+        margin-top: 8px;
+        display: block;
+        text-align: center;
     }
 
     &__booking {

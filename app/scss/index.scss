@@ -98,7 +98,6 @@
 
     &__pictures {
         margin-right: 90px;
-        background-color: rgb(202, 0, 0);
         max-width: 600px;
         width: 100%;
         max-height: 500px;
@@ -170,6 +169,7 @@
 
     &__picture-wrap {
         display: block!important;
+        overflow: hidden;
     }
 
     &__img {

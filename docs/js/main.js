@@ -341,6 +341,13 @@ $(function () {
         $('body').addClass('lock');
     });
 
+    $('.course-plan__module-subauthor-btn--iryna').click(function () {
+        $('.subauthor-card--iryna').addClass('open');
+        $(this).addClass('open');
+        $('.backdrop').addClass('open');
+        $('body').addClass('lock');
+    });
+
     $('.course-reviews__inner').slick({
         dots: false,
         infinite: true,

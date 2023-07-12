@@ -1,0 +1,2427 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <base href="/myph/" />
+    <title>"Нові MYPhології" - виставка Myph</title>
+    <link rel="stylesheet" href="css/exhibitions.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container container--big">
+            <nav class="menu">
+                <a class="logo" href="./index.html">
+                    <img class="logo__img" src="./images/logo-black.svg" alt="логотип Міф" width="90" height="45">
+                </a>
+                <button class="button burger-button" type="button">
+                    <span class="burger-button__line"></span>
+                </button>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="./school.html">Школа</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./authors.html">Студенти</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./exhibitions.html">Виставки</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./bookstore.html">Книгарня</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./news.html">Новини</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#partners-main-section">Партнери</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./contact.html">Контакти</a>
+                    </li>
+                </ul>
+                <div class="mobile-menu">
+                    <ul class="mobile-menu__list">
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link" href="./school.html">Школа</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link" href="./authors.html">Автори</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link" href="./exhibitions.html">Виставки</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link" href="./gallery.html">Галерея</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link" href="./bookstore.html">Книгарня</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link" href="./news.html">Новини</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link" href="#partners-main-section">Партнери</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link" href="./contact.html">Контакти</a>
+                        </li>
+                    </ul>
+                    <ul class="social mobile-menu__social">
+                        <li class="social__item">
+                            <a class="social__link social__link--light" href="">
+                                <svg class="social__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" viewBox="0 0 32 32">
+                                    <path
+                                        d="M32 6v20c0 1.133-0.867 2-2 2h-2v-18.151l-12 8.617-12-8.617v18.151h-2c-1.135 0-2-0.867-2-2v-20c0-0.567 0.216-1.067 0.575-1.424 0.359-0.363 0.86-0.576 1.425-0.576h0.667l13.333 9.667 13.333-9.667h0.667c0.567 0 1.067 0.216 1.425 0.576 0.36 0.357 0.575 0.857 0.575 1.424z">
+                                    </path>
+                                </svg>
+
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link--light" href="">
+                                <svg class="social__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" viewBox="0 0 32 32">
+                                    <path
+                                        d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z">
+                                    </path>
+                                </svg>
+
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link--light" href="">
+                                <svg class="social__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" viewBox="0 0 32 32">
+                                    <path
+                                        d="M31.88 5.053l-4.813 22.733c-0.333 1.613-1.307 2-2.667 1.253l-7.333-5.427-3.547 3.427c-0.4 0.4-0.733 0.747-1.467 0.747-0.96 0-0.8-0.36-1.12-1.267l-2.533-8.253-7.267-2.267c-1.573-0.467-1.587-1.547 0.347-2.333l28.347-10.933c1.293-0.573 2.533 0.32 2.053 2.32z">
+                                    </path>
+                                </svg>
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section exh">
+            <div class="container">
+                <div class="section__top">
+                    <h1 class="section__title">
+                        "Нові MYPhології"
+                    </h1>
+                </div>
+                <div class="exh__content">
+                    <ul class="exh__info-list">
+                        <li class="exh__info-item">
+                            Єрмілов Центр
+                        </li>
+                        <li class="exh__info-item">
+                            Харків, Україна
+                        </li>
+                        <li class="exh__info-item">
+                            01.06.23 – 15.07.23
+                        </li>
+                        <li class="exh__info-item">
+                            Кураторка виставки: Ірина Антонець
+                        </li>
+                        <li class="exh__info-item">
+                            Координатори виставки: Сергій Мельниченко, Наталія Іванова
+                        </li>
+                        <li class="exh__info-item exh__info-item--link">
+                            <a class="exh__info-link"
+                                href="https://vogue.ua/article/culture/art/v-harkovi-vidkrivayetsya-vistavka-suchasnoji-fotografiji-novi-myphologiji-52451.html"
+                                target="_blank">VOGUE Ukraine</a>
+                        </li>
+                        <li class="exh__info-item exh__info-item--link">
+                            <a class="exh__info-link"
+                                href="https://donttakefake.com/mykolayivska-moloda-fotografiya-organizuye-seriyu-vystavok-na-chest-p-yatyrichchya/"
+                                target="_blank">Don’t Take Fake</a>
+                        </li>
+                        <li class="exh__info-item exh__info-item--link">
+                            <a class="exh__info-link"
+                                href="https://zaborona.com/shkola-suchasnoyi-konczeptualnoyi-fotografiyi-myph-svyatkuye-5-richchya/"
+                                target="_blank">ZABORONA</a>
+                        </li>
+                        <li class="exh__info-item exh__info-item--link">
+                            <a class="exh__info-link" href="https://lyuk.media/news/kharkiv-school-of-art-photography/"
+                                target="_blank">ЛЮК</a>
+                        </li>
+                        <li class="exh__info-item exh__info-item--link">
+                            <a class="exh__info-link"
+                                href="https://nakipelo.ua/novi-mypholohii-svity-iaki-zhyvut-za-vlasnymy-pravylamy-foto"
+                                target="_blank">Накипіло</a>
+                        </li>
+                        <li class="exh__info-item exh__info-item--link">
+                            <a class="exh__info-link"
+                                href="https://intent.press/amp/0/vistavku-mikolayivskogo-fotografa-prezentuvali-u-harkovi/"
+                                target="_blank">Інтент</a>
+                        </li>
+                    </ul>
+                    <div class="exh__info-text">
+                        <p>
+                            1 червня 2023 року школа концептуальної та арт фотографії Сергія Мельниченка “MYPH” і центр
+                            сучасного мистецтва «ЄрміловЦентр» відкрили виставковий проєкт.
+                            <br>
+                            «Нові MYPhології» з циклу ювілейних подій до 5-річчя заснування школи.
+                        </p>
+                        <p>
+                            Реалізація ідеї колективного проєкту «Нові MYPhології» пройшла довгий шлях, адже виставка
+                            мала відкритися ще в травні 2022 року, але повномасштабне вторгнення росії в Україну змінило
+                            життя мільйонів українців, а разом з ними долю проєкту та його учасників. Координатор
+                            проєкту та засновник Школи концептуальної та арт фотографії «MYPH» Сергій Мельниченко
+                            зазначає: “Від перших днів ми допомагаємо ЗСУ, волонтерам та народові України. Через деякий
+                            час всупереч війні Школа продовжила освітню і виставкову діяльність та підготувала два
+                            потоки нових і перспективних випускників, які також взяли участь в конкурсі проєкту Нові
+                            MYPhології”.
+                        </p>
+                        <a href="https://youtu.be/GkENidWtiDA" class="exh__video video popup-youtube"
+                            style="background-image: url('images/exhibitions/2023/15-new-myphologii/53.jpg');"></a>
+                        <p>
+                            Відібрані в результаті опенколу роботи 28 авторок та авторів сформували експозицію виставки.
+                            Акцент саме на мистецькому аспекті в Школі MYPH спонукає студентів до розширення меж
+                            фотографічного медіуму, тому до експозиції, окрім фотографії, увійшли також артоб‘єкти,
+                            інсталяції, відеоарт.
+                        </p>
+                        <p>
+                            “Сьогодні вже не потрібно нікому доводити важливість роботи культурних інституцій під час
+                            війни. А комунікація між арт-інституціями в Україні — вимога часу. Вкрай необхідно виходити
+                            за межі своїх «бульбашок», створювати нові зв'язки, робити спільні проєкти, подорожувати
+                            Україною. Не евакуюватись, а подорожувати. Це надає поштовх розвитку, саме так виникають
+                            нові ідеї, створюються нові можливості для майбутніх проєктів. Є величезна потреба у
+                            спілкуванні, фаховій взаємодії не лише в онлайн форматі, а ось так — наживо. І глядач
+                            сьогодні спраглий до сенсів, тож маємо транслювати їх мовою сучасного мистецтва. Наразі MYPH
+                            у Харкові, сподіваюсь, найближчим часом зробимо проєкт і у Миколаєві”, — коментує
+                            координаторка проєкту та директорка ЄрміловЦентру Наталія Іванова.
+                        </p>
+                        <p>
+                            Назва «Нові MYPhології» — це гра слів, що поєднує абревіатуру школи з темою міфотворчості.
+                            Міфологічний тип мислення є засадничим в мистецтві, ця найдавніша форма сприйняття та
+                            розуміння світу звертається до чуттєвого, емоційного осмислення реальності та його образного
+                            вираження. За словами кураторки проєкту Ірини Антонець, митці природно створюють свої світи
+                            і знакові системи, трактуючи реалії сучасності за допомогою особистісного, інтуїтивного
+                            вираження, що часом приймає різноманітні та химерні форми.
+                        </p>
+                        <p>
+                            В центрі уваги проєкту постали сконструйовані персональні світи, що існують за власними
+                            правилами та населені сучасними богами і героями. А також нові легенди та міфи, котрі автори
+                            розповідають засобами фотографії та мистецтва нових медіа. В цьому проєкті автори також
+                            шукають відповіді на питання, наскільки кожен індивідуальний авторський міф є частиною
+                            ширшого наративу і яким чином він вкладається в систему колективної MYPhології.
+                        </p>
+                        <p>
+                            Автори та авторки, представлені на виставці:
+                            <br>
+                            Тетяна Мицик, Анастасія Антоненко, Володимир Демків, Оля Коваль, Наталі Агризкова, Лі
+                            Білецька , Діана Федоряка, Вероніка Моль, Ольга Лобазова, Ірина Кабиш, Ксенія Петровська,
+                            Катя Кравець, Антон Малиновський , Олена Лемберська, Олеся Саєнко, Аліна Лисак, Алеся Тищук,
+                            Milla Po, Єва Гольц, Олена Косович, Pasha Youz, Mary Jane, Яна Григоренко, Поліна Лаптій,
+                            Аліна Панасенко, Олександра В‘язінько, Артем Гумілевський, Savka
+                        </p>
+                    </div>
+                </div>
+                <ul class="exh__gallery zoom-gallery">
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/1.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/1-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/1-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/1-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/1-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/1-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/1-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/2.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/2-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/2-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/2-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/2-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/2-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/2-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/3.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/3-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/3-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/3-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/3-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/3-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/3-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/4.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/4-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/4-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/4-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/4-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/4-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/4-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/5.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/5-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/5-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/5-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/5-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/5-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/5-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/6.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/6-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/6-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/6-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/6-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/6-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/6-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/7.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/7-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/7-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/7-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/7-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/7-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/7-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/8.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/8-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/8-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/8-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/8-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/8-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/8-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/9.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/9-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/9-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/9-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/9-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/9-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/9-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/10.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/10-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/10-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/10-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/10-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/10-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/10-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/11.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/11-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/11-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/11-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/11-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/11-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/11-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/12.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/12-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/12-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/12-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/12-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/12-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/12-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/13.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/13-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/13-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/13-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/13-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/13-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/13-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/14.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/14-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/14-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/14-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/14-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/14-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/14-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/15.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/15-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/15-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/15-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/15-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/15-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/15-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/16.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/16-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/16-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/16-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/16-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/16-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/16-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/17.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/17-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/17-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/17-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/17-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/17-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/17-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/18.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/18-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/18-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/18-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/18-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/18-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/18-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/19.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/19-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/19-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/19-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/19-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/19-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/19-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/20.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/20-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/20-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/20-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/20-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/20-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/20-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/21.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/21-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/21-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/21-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/21-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/21-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/21-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/22.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/22-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/22-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/22-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/22-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/22-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/22-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/23.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/23-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/23-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/23-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/23-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/23-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/23-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/24.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/24-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/24-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/24-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/24-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/24-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/24-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/25.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/25-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/25-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/25-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/25-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/25-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/25-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/26.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/26-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/26-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/26-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/26-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/26-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/26-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/27.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/27-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/27-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/27-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/27-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/27-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/27-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/28.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/28-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/28-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/28-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/28-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/28-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/28-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/29.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/29-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/29-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/29-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/29-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/29-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/29-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/30.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/30-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/30-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/30-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/30-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/30-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/30-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/31.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/31-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/31-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/31-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/31-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/31-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/31-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/32.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/32-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/32-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/32-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/32-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/32-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/32-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/33.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/33-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/33-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/33-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/33-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/33-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/33-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/34.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/34-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/34-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/34-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/34-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/34-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/34-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/35.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/35-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/35-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/35-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/35-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/35-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/35-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/36.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/36-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/36-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/36-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/36-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/36-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/36-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/37.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/37-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/37-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/37-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/37-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/37-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/37-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/38.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/38-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/38-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/38-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/38-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/38-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/38-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/39.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/39-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/39-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/39-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/39-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/39-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/39-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/40.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/40-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/40-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/40-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/40-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/40-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/40-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/41.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/41-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/41-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/41-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/41-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/41-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/41-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/42.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/42-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/42-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/42-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/42-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/42-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/42-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/43.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/43-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/43-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/43-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/43-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/43-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/43-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/44.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/44-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/44-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/44-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/44-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/44-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/44-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/45.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/45-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/45-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/45-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/45-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/45-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/45-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/46.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/46-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/46-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/46-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/46-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/46-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/46-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/47.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/47-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/47-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/47-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/47-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/47-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/47-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/48.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/48-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/48-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/48-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/48-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/48-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/48-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/49.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/49-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/49-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/49-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/49-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/49-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/49-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/50.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/50-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/50-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/50-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/50-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/50-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/50-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/51.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/51-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/51-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/51-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/51-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/51-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/51-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/52.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/52-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/52-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/52-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/52-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/52-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/52-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/53.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/53-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/53-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/53-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/53-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/53-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/53-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/54.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/54-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/54-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/54-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/54-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/54-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/54-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/55.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/55-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/55-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/55-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/55-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/55-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/55-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/56.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/56-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/56-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/56-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/56-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/56-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/56-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/57.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/57-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/57-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/57-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/57-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/57-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/57-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="exh__item">
+                        <a class="exh__link" href="images/exhibitions/2023/15-new-myphologii/58.jpg"
+                            title="виставка Нові MYPhології">
+                            <picture>
+                                <source srcset="images/exhibitions/2023/15-new-myphologii/58-mob-2x.jpg"
+                                    media="(min-width:992px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/58-mob.jpg 1x, images/exhibitions/2023/15-new-myphologii/58-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                <source
+                                    srcset="images/exhibitions/2023/15-new-myphologii/58-mob.webp 1x, images/exhibitions/2023/15-new-myphologii/58-mob-2x.webp 2x"
+                                    type="image/webp" media="(min-width:320px)">
+                                <img class="exh__img" src="images/exhibitions/2023/15-new-myphologii/58-mob-2x.jpg"
+                                    alt="виставкasd asd аfaf ds Нові MYPhології" width="400" height="224">
+                            </picture>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+
+
+
+
+
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <a class="logo logo--dark footer__logo" href="index.html">
+                <img class="logo__img" src="images/logo-white.svg" alt="логотип Міф" width="90" height="45">
+            </a>
+
+            <p class="footer__text">
+                © 2023 Myph.All rights reserved
+            </p>
+
+            <ul class="social footer__social">
+                <li class="social__item">
+                    <a class="social__link" href="https://mail.google.com/mail/?view=cm&fs=1&to=myph.projects@gmail.com"
+                        target="_blank">
+                        <svg class="social__icon" width="20" height="20">
+                            <use href="images/sprite.svg#icon-mail"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="https://www.facebook.com/myphart" target="_blank">
+                        <svg class="social__icon" width="20" height="20">
+                            <use href="images/sprite.svg#icon-fb"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="https://t.me/myphschool" target="_blank">
+                        <svg class="social__icon" width="20" height="20">
+                            <use href="images/sprite.svg#icon-tg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="https://www.instagram.com/myph.art/" target="_blank">
+                        <svg class="social__icon" width="20" height="20">
+                            <use href="images/sprite.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="https://www.instagram.com/myph.art/" target="_blank">
+                        <svg class="social__icon" width="20" height="20">
+                            <use href="images/sprite.svg#icon-threads"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="https://twitter.com/myphschool" target="_blank">
+                        <svg class="social__icon" width="20" height="20">
+                            <use href="images/sprite.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="https://www.youtube.com/@myphart4768" target="_blank">
+                        <svg class="social__icon" width="20" height="20">
+                            <use href="images/sprite.svg#icon-youtube"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </footer>
+
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

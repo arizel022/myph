@@ -483,3 +483,16 @@ img {
     font-size: 18px;
     font-weight: 600;
 }
+
+.promo-text {
+    position: absolute;
+    background-color: $d;
+    color: $s-l;
+    text-transform: uppercase;
+    padding: 15px 35px 15px 10px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    max-width: 130px;
+    text-align: right;
+    font-size: 14px;
+}

@@ -131,8 +131,6 @@
     }
 }
 
-
-
 .book {
     &__container {
         display: flex;
@@ -195,13 +193,6 @@
         }
     }
 
-
-
-
-
-
-
-
     &__text {
         &:not(:last-child) {
             margin-bottom: 30px;
@@ -244,6 +235,35 @@
         text-transform: capitalize;
         font-weight: 400;
 
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__price {
+        margin-bottom: 40px;
+        background-color: $d;
+        border-radius: 5px;
+        padding: 5px 15px;
+        width: fit-content;
+    }
+
+    &__price-item {
+        color: $s-l;
+        font-size: 18px;
+        
+        &:not(:last-child) {
+            margin-bottom: 7px;
+        }
+    }
+
+    &__cost {
+        text-transform: uppercase;
+        font-size: 24px;
     }
 
     &__gallery {
