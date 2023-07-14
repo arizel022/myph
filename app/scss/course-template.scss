@@ -1,6 +1,9 @@
 @import 'global/global';
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 
+
+
+
 .course-hero {
     padding-top: 70px;
     background-repeat: no-repeat;
@@ -28,7 +31,7 @@
 
     &--sergij {
         &:before {
-            backdrop-filter: blur(3px);
+            backdrop-filter: blur(1px);
         }
     }
 
@@ -65,8 +68,13 @@
     }
 
     &__promo-text {
-        top: 20%;
-        right: 0;
+        max-width: 70%;
+        color: $s-l;
+
+        &:before {
+            background-color: $d;
+            opacity: 0.8;
+        }
     }
 
     &__subtitle-small {
@@ -78,9 +86,12 @@
         }
     }
 
+    &__promo-text {
+        margin-bottom: 40px;
+    }
+
     &__text {
-        font-size: 24px;
-        color: $s-d;
+        font-size: 20px;
         max-width: 70%;
         margin: 0 auto 40px;
 
@@ -129,6 +140,7 @@
         }
     }
 
+    // сделал компонентом - проверить везде и выкинуть
     &__start-time {
         font-size: 18px;
         text-transform: uppercase;
@@ -320,7 +332,7 @@
     }
 
     &__text {
-        font-size: 14px;
+        font-size: 15px;
 
         &:not(:last-child) {
             margin-bottom: 20px;
@@ -538,42 +550,19 @@
     }
 }
 
-// .animate-pulsed {
-//     animation: pulsate-fwd 1.5s ease-in-out infinite;
+.course-banner {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    position: relative;
 
-//     &__icon {
-//         stroke: $a-d;
-//         margin-left: 15px;
-//         transform: rotate(0);
-//         transition: transform 1s;
-//     }
-
-//     &.open {
-//         animation: none;
-//         pointer-events: none;
-
-//         .animate-pulsed__icon {
-//             transform: rotate(-90deg);
-//         }
-//     }
-// }
-
-// @keyframes pulsate-fwd {
-//     0% {
-//         -webkit-transform: scale(1);
-//         transform: scale(1);
-//     }
-
-//     50% {
-//         -webkit-transform: scale(1.05);
-//         transform: scale(1.05);
-//     }
-
-//     100% {
-//         -webkit-transform: scale(1);
-//         transform: scale(1);
-//     }
-// }
+    .promo-text {
+        position: absolute;
+        top: 40%;
+        left: 25%;
+    }
+}
 
 .backdrop {
     position: fixed;
@@ -592,7 +581,6 @@
         opacity: 1;
     }
 }
-
 
 .subauthor-card {
     max-width: 450px;
@@ -745,7 +733,6 @@
 }
 
 .course-price {
-    padding-top: 0;
     text-align: center;
     position: relative;
 
@@ -756,7 +743,6 @@
     &__list {
         display: flex;
         gap: 45px;
-        ;
 
         @media (max-width: 992px) {
             flex-wrap: wrap;
@@ -842,6 +828,12 @@
             background-size: cover;
             margin-right: 15px;
         }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+        gap: 45px;
     }
 
     &__subtitle {
@@ -1073,17 +1065,17 @@
             transition: box-shadow 0.3s;
 
             @media (max-width: 768px) {
-                display: none!important;
+                display: none !important;
             }
 
             &:hover {
                 box-shadow: 5px 5px 10px $l-d, -5px -5px 10px $l-l;
             }
-    
+
             &:active {
                 box-shadow: inset 5px 5px 10px $l-d, inset -5px -5px 10px $l-l;
             }
-    
+
             &:before {
                 content: '';
                 display: block;
@@ -1114,17 +1106,13 @@
 
     }
 
-    &__item {
-
-    }
+    &__item {}
 
     &__content {
         padding: 15px;
     }
 
-    &__img {
-
-    }
+    &__img {}
 
 }
 
@@ -1207,3 +1195,60 @@
         }
     }
 }
+
+// для регулировки якорных ссылок
+.anchor {
+    position: absolute;
+    top: 170px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .animate-pulsed {
+//     animation: pulsate-fwd 1.5s ease-in-out infinite;
+
+//     &__icon {
+//         stroke: $a-d;
+//         margin-left: 15px;
+//         transform: rotate(0);
+//         transition: transform 1s;
+//     }
+
+//     &.open {
+//         animation: none;
+//         pointer-events: none;
+
+//         .animate-pulsed__icon {
+//             transform: rotate(-90deg);
+//         }
+//     }
+// }
+
+// @keyframes pulsate-fwd {
+//     0% {
+//         -webkit-transform: scale(1);
+//         transform: scale(1);
+//     }
+
+//     50% {
+//         -webkit-transform: scale(1.05);
+//         transform: scale(1.05);
+//     }
+
+//     100% {
+//         -webkit-transform: scale(1);
+//         transform: scale(1);
+//     }
+// }

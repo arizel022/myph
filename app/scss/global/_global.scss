@@ -485,14 +485,67 @@ img {
 }
 
 .promo-text {
-    position: absolute;
-    background-color: $d;
+    font-size: 20px;
     color: $s-l;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 45px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    &:before {
+        content: '';
+        position: absolute;
+        background-color: $d;
+        height: 100%;
+        width: 100vw;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    &--big {
+        font-size: 36px;
+    }
+
+    &--marker {
+        max-width: fit-content;
+        &:before {
+            width: 100%;
+            border-radius: 25px;
+        }
+    }
+}
+
+.concave {
+    font-size: 18px;
     text-transform: uppercase;
-    padding: 15px 35px 15px 10px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    max-width: 130px;
-    text-align: right;
-    font-size: 14px;
+    line-height: 1;
+    padding: 0 25px;
+    border-radius: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: calc(100% + 25px);
+        height: calc(100% + 25px);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -2;
+        border-radius: 40px;
+        background: #f0ede8;
+        box-shadow: inset 5px 5px 10px #92918e,
+            inset -5px -5px 10px #ffffff;
+    }
 }
