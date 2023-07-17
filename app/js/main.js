@@ -179,9 +179,9 @@ $(function () {
     $('.hero__slider').slick({
         dots: false,
         infinite: true,
-        arrows: false,
+        arrows: true,
         autoplaySpeed: 3500,
-        autoplay: true,
+        // autoplay: true,
         fade: true
     });
 
