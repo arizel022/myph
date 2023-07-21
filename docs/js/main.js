@@ -180,9 +180,9 @@ $(function () {
         dots: false,
         infinite: true,
         arrows: true,
-        autoplaySpeed: 3500,
+        autoplaySpeed: 3500
         // autoplay: true,
-        fade: true
+        // fade: true
     });
 
     $('.about__pictures').slick({

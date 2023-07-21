@@ -82,7 +82,7 @@ function htmlIncludeBlog() {
             basepath: '@file'
         }))
         .pipe(rename({dirname: ''})) // Оставляем только имя файла без пути
-        .pipe(flatten({ includeParents: 1 })) // Перемещаем в папку blog
+        .pipe(flatten({ includeParents: 1 })) // Перемещаем в папку articles
         .pipe(dest('app/articles'))
         .pipe(browserSync.stream());
 }

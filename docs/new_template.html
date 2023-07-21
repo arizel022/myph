@@ -4,9 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
@@ -18,10 +15,8 @@
     <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
-
     <base href="/myph/" />
-    <title>ШАБЛОН сторінки новини</title>
+    <title></title>
     <link rel="stylesheet" href="css/news.min.css">
 </head>
 
@@ -129,9 +124,11 @@
         <div class="wrapper">
             <article class="new">
                 <div class="container">
+
                     <h1 class="new__title">
                         Заголовок новини
                     </h1>
+
                     <div class="new__top">
                         <span class="new__author">
                             автор чи щось ше
@@ -139,80 +136,36 @@
                         <span class="new__date">
                             12.02.2023
                         </span>
-
                     </div>
+
                     <p class="new__pre-text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, soluta tempore perspiciatis
-                        doloremque
-                        dolorem maiores modi aliquid porro, veritatis, voluptates voluptatem repellendus placeat
-                        deserunt eveniet
-                        sed quod eligendi consequuntur enim?
+                        вступительный текст если есть
                     </p>
+
                     <section class="new__section">
-                        <div class="new__inner">
-                            <div class="new__content">
-                                <h2 class="new__subtitle">Підзаголовок якщо треба</h2>
-                                <p class="new__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa deserunt consequuntur
-                                    explicabo
-                                    dignissimos obcaecati? Dicta iure reprehenderit nisi consequatur quasi repudiandae
-                                    corporis cum.
-                                    Quibusdam, quidem. Facere neque officia cupiditate incidunt?
-                                    Distinctio quod sit rem, ipsam fugiat deserunt unde nesciunt perferendis asperiores
-                                    optio voluptates
-                                    commodi saepe provident suscipit placeat corporis possimus? Sed dicta earum vel quae
-                                    minima quis
-                                    maiores officiis commodi!
-                                </p>
-                                <p class="new__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa deserunt consequuntur
-                                    explicabo
-                                    dignissimos obcaecati? Dicta iure reprehenderit nisi consequatur quasi repudiandae
-                                    corporis cum.
-                                    Quibusdam, quidem. Facere neque officia cupiditate incidunt?
-                                    Distinctio quod sit rem, ipsam fugiat deserunt unde nesciunt perferendis asperiores
-                                    optio voluptates
-                                    commodi saepe provident suscipit placeat corporis possimus? Sed dicta earum vel quae
-                                    minima quis
-                                    maiores officiis commodi!
-                                </p>
-                            </div>
-                            <img class="new__img" src="images/news/2.jpg" alt="" width="300">
+
+                        <h2 class="new__subtitle">Підзаголовок</h2>
+                        <div class="new__text">
+                            <p>
+
+                            </p>
+
+                        </div>
+
+                        <!-- нужен, если нет галереи -->
+                        <div class="new__img-wrapper">
+                            <picture>
+                                <source
+                                    srcset="images/news/07-2023/10-olya-koval-at-fresh-eyes/1.jpg 1x, images/news/07-2023/10-olya-koval-at-fresh-eyes/1-2x.jpg 2x">
+                                <img class="new__img" src="images/news/07-2023/10-olya-koval-at-fresh-eyes/1.jpg" alt=""
+                                    width="770">
+                            </picture>
                         </div>
 
 
                     </section>
 
-                    <section class="new__section">
-                        <div class="new__content">
-                            <h2 class="new__subtitle">Підзаголовок якщо треба</h2>
-                            <p class="new__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa deserunt consequuntur
-                                explicabo
-                                dignissimos obcaecati? Dicta iure reprehenderit nisi consequatur quasi repudiandae
-                                corporis cum.
-                                Quibusdam, quidem. Facere neque officia cupiditate incidunt?
-                                Distinctio quod sit rem, ipsam fugiat deserunt unde nesciunt perferendis asperiores
-                                optio voluptates
-                                commodi saepe provident suscipit placeat corporis possimus? Sed dicta earum vel quae
-                                minima quis maiores
-                                officiis commodi!
-                            </p>
-                            <p class="new__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa deserunt consequuntur
-                                explicabo
-                                dignissimos obcaecati? Dicta iure reprehenderit nisi consequatur quasi repudiandae
-                                corporis cum.
-                                Quibusdam, quidem. Facere neque officia cupiditate incidunt?
-                                Distinctio quod sit rem, ipsam fugiat deserunt unde nesciunt perferendis asperiores
-                                optio voluptates
-                                commodi saepe provident suscipit placeat corporis possimus? Sed dicta earum vel quae
-                                minima quis maiores
-                                officiis commodi!
-                            </p>
-                        </div>
-
-                    </section>
+                    <!-- тут галерея, если нужна -->
 
                 </div>
             </article>

@@ -125,6 +125,12 @@
         @media (max-width: 576px) {
             height: 40vh;
         }
+
+        .promo-text {
+            position: absolute;
+            top: 32%;
+            left: 21%;
+        }
     }
 
     &__slider-content {

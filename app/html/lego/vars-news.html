@@ -1,0 +1,362 @@
+<!-- 
+-----------------------------------------------------------------------------------------------
+instrucions for news-gallery-work.html
+
+@@newsFolder - частина шляху до фотки із назвою папки новини
+@@fileName - номер файлу фотки
+@@newsAlt - назва новини
+-->
+
+<!-- -------------------------------1. When in the news-page a lot of pictures and we need a gallery -->
+
+
+<!-- сюди додавати останню лішку для копіювання шляхів і данних у шаблон -->
+
+
+
+<!-- шаблон - вписати змінні, скопіювати на сторінку, видалити зайві -->
+
+<a class="basic-gallery__link" href="images/news/@@newsFolder/@@fileName.jpg" title="@@newsAlt">
+    <picture>
+        <source srcset="images/news/@@newsFolder/@@fileName-mob-2x.jpg" media="(min-width:992px)">
+        <source
+            srcset="images/news/@@newsFolder/@@fileName-mob.jpg 1x, images/news/@@newsFolder/@@fileName-mob-2x.jpg 2x" media="(min-width:320px)">
+        <img class="basic-gallery__img" src="images/news/@@newsFolder/@@fileName-mob-2x.jpg"
+            alt="@@newsAlt" width="370" height="300">
+    </picture>
+</a>
+
+<div class="basic-gallery zoom-gallery new__basic-gallery">
+    <div class="basic-gallery__list">
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "1",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "2",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "3",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "4",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "5",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "6",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "7",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "8",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "9",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "10",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "11",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "12",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "13",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "14",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "15",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "16",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "17",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "18",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "19",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "20",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "21",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "22",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "23",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "24",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "25",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "26",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "27",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "28",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "29",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "30",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "31",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "32",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "33",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "34",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "35",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "36",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "37",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "38",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "39",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "40",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "41",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "42",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "43",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "44",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "45",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "46",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "47",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "48",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "49",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "50",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "51",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "52",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "53",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "54",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "55",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "56",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "57",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+        @@include('../../lego/news-gallery-work.html', {
+        "newsFolder": "07-2023/16-the-body-is-in-the-space-of-well-being",
+        "fileName": "58",
+        "newsAlt": "Авторки MYPH взяли участь у резиденціях Тіло в просторі благополуччя в Нюрнберзі"
+        })
+    </div>
+</div>
+
+
+
+
+
+<!-- -------------------------------2. When in the news-page 1-2 pictures and we do NOT need a gallery -->
+
+<!-- without include, copypast only -->
+
+<div class="new__img-wrapper">
+    <picture>
+        <source
+            srcset="images/news/07-2023/10-olya-koval-at-fresh-eyes/1.jpg 1x, images/news/07-2023/10-olya-koval-at-fresh-eyes/1-2x.jpg 2x">
+        <img class="new__img" src="images/news/07-2023/10-olya-koval-at-fresh-eyes/1.jpg" alt="" width="770">
+    </picture>
+</div>
+
+images/news/07-2023/10-olya-koval-at-fresh-eyes/1.jpg
+images/news/07-2023/10-olya-koval-at-fresh-eyes/1-2x.jpg
+
+
+07-2023-10-olya-koval-at-fresh-eyes.html
+07-2023-15-blurring-the-lines.html

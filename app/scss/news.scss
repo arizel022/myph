@@ -1,7 +1,7 @@
 
 
 @import '../../node_modules/slick-carousel/slick/slick.scss';
-// @import '../../node_modules/magnific-popup/src/css/main.scss';
+@import '../../node_modules/magnific-popup/src/css/main.scss';
 @import 'global/global';
 @import 'lego/prev-courses';
 
@@ -43,7 +43,7 @@
 
     &__img {
         flex-shrink: 0;
-        object-position: top;
+        object-position: center;
         // @media (max-width: 992px) {
         //     max-width: 200px;
         //     height: 150px;
@@ -142,11 +142,26 @@
     &__top {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-bottom: 30px;
     }
 
-    &__author {
+    &__external-link {
         font-weight: 700;
+        background-color: $s;
+        color: $l;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 6px 20px;
+        transition: box-shadow 0.3s, opacity 0.3s;
+
+        &:hover {
+            box-shadow: 4px 4px 8px rgba($d-l, 0.5);
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
     }
 
     &__date {
@@ -163,7 +178,7 @@
         margin-bottom: 30px;
     }
 
-    &__inner {
+    &__row {
         display: flex;
         align-items: center;
         gap: 30px;
@@ -182,11 +197,19 @@
         &:not(:last-child) {
             margin-bottom: 20px;
         }
+        
+        p {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__img-wrapper {
+        padding: 30px 0;
     }
 
     &__img {
-        @media (max-width: 992px) {
-            margin: 0 auto;
-        }
+        margin: 0 auto;
     }
 }
