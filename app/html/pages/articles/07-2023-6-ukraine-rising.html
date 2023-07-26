@@ -9,22 +9,20 @@
     @@include('../../lego/tech-head.html')
     <title>Роботи Сергія Мельниченко та Артема Гумілевського увійшли до книги “Ukraine Rising. Contemporary Creative
         Culture from Ukraine від Німецького видавництва “Gestalten”</title>
+    <base href="/" />
     <link rel="stylesheet" href="css/news.min.css">
 </head>
 
 <body>
-
     @@include('../../lego/header.html')
     <main>
         <div class="wrapper">
             <article class="new">
                 <div class="container">
-
                     <h1 class="new__title">
                         Роботи Сергія Мельниченко та Артема Гумілевського увійшли до книги "Ukraine Rising. Contemporary
                         Creative Culture from Ukraine від Німецького видавництва Gestalten
                     </h1>
-
                     <div class="new__top">
                         <a class="new__external-link"
                             href="https://gestalten.com/collections/inspired/products/ukraine-rising" target="_blank">
@@ -61,8 +59,16 @@
                             </p>
                         </div>
                     </section>
+
                     <div class="basic-gallery zoom-gallery new__basic-gallery">
                         <div class="basic-gallery__list">
+
+                            @@include('../../lego/news-gallery-work.html', {
+                            "newsFolder": "07-2023/6-ukraine-rising",
+                            "fileName": "1",
+                            "newsAlt": "Роботи Мельниченко та Гумілевського у Ukraine Rising Contemporary Creative
+                            Culture from Ukraine"
+                            })
                             @@include('../../lego/news-gallery-work.html', {
                             "newsFolder": "07-2023/6-ukraine-rising",
                             "fileName": "1",
@@ -95,6 +101,7 @@
                             })
                         </div>
                     </div>
+
                 </div>
             </article>
         </div>
@@ -102,8 +109,7 @@
     </main>
     @@include('../../lego/footer.html')
 
-
-    <script src="js/main.min.js"></script>
+    <script src="js/main.min.js"></script> -->
 </body>
 
 </html>
