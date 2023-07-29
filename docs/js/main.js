@@ -189,7 +189,8 @@ $(function () {
         dots: false,
         infinite: true,
         autoplaySpeed: 4000,
-        autoplay: true,
+        
+        // autoplay: true,
         arrows: true
     });
 
@@ -222,6 +223,8 @@ $(function () {
     //слик-слайдер отзывов на главной странице
     $('.reviews__inner').slick({
         dots: true,
+        autoHeight: true,
+        adaptiveHeight: true,
         arrows: true
     });
     // }

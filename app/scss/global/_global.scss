@@ -164,6 +164,7 @@ img {
     position: fixed;
     left: 0;
     top: 80%;
+    z-index: 999;
     transform: translateX(-65%);
     transition: transform 0.5s;
 
@@ -483,6 +484,10 @@ img {
     width: fit-content;
     font-size: 18px;
     font-weight: 600;
+
+    @media (max-width: 992px) {
+        font-size: 14px;
+    }
 }
 
 .promo-text {
@@ -496,6 +501,17 @@ img {
     position: relative;
     z-index: 1;
     text-align: center;
+
+    @media (max-width: 1200px) {
+        font-size: 16px;
+        padding: 10px 25px;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 576px) {
+        padding: 7px 25px;
+        font-size: 14px;
+    }
 
     &:before {
         content: '';
@@ -511,6 +527,10 @@ img {
 
     &--big {
         font-size: 36px;
+
+        @media (max-width: 1200px) {
+            font-size: 18px;
+        }
     }
 
     &--marker {

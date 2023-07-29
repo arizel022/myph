@@ -1,10 +1,9 @@
 .social {
     display: flex;
+    gap: 25px;
 
-    &__item {
-        &:not(:last-child) {
-            margin-right: 25px;
-        }
+    @media (max-width: 576px) {
+        flex-wrap: wrap;
     }
 
     &__link {
