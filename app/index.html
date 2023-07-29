@@ -31,6 +31,12 @@
 
   <title>Myph - тестова версія сайту</title>
   <base href="/" />
+
+
+  <link rel="preload" href="images/main-title-small.svg" as="image">
+  <link rel="preload" href="images/main-title.svg" as="image">
+  <!-- <link rel="preload" as="video" type="video/mp4" href="images/video/hero.mp4" /> -->
+
   <link rel="stylesheet" href="css/index.min.css">
 </head>
 
@@ -141,7 +147,8 @@
     <section class="section hero">
       <div class="container">
         <div class="hero__content">
-          <h1 class="hero__main-title">
+          <h1 class="hero__main-title"
+            style="background-image: url('images/main-title-small.svg'); width: 450px; height: 90px;">
             <span class="sr-only">Міф - Миколаївська школа фотографії</span>
           </h1>
           <div class="hero__text">
@@ -163,6 +170,10 @@
 
       <h2 class="sr-only">Популярні роботи школи Міф</h2>
       <div class="hero__slider">
+
+        <div class="hero__slider-item">
+          <video class="hero__video" src="images/video/hero.mp4" poster="images/video/video-poster.jpg" autoplay loop preload></video>
+        </div>
 
         <div class="hero__slider-item">
           <div class="hero__slider-content"
@@ -393,134 +404,124 @@
           <div class="about__pictures">
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/1.jpg 1x, ./images/index/about-slider/1-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/1-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/1.webp 1x ./images/index/about-slider/1-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/1-mob.jpg 1x, ./images/index/about-slider/1-mob-2x.jpg 2x"
                   media="(min-width:320px)">
                 <source srcset="./images/index/about-slider/1-mob.webp 1x, ./images/index/about-slider/1-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/1.jpg"
+                <img class="about__img" src="images/index/about-slider/1-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/2.jpg 1x, ./images/index/about-slider/2-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/2-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/2.webp 1x ./images/index/about-slider/2-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/2-mob.jpg 1x, ./images/index/about-slider/2-mob-2x.jpg 2x"
                   media="(min-width:320px)">
                 <source srcset="./images/index/about-slider/2-mob.webp 1x, ./images/index/about-slider/2-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/2.jpg"
+                <img class="about__img" src="images/index/about-slider/2-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/3.jpg 1x, ./images/index/about-slider/3-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/3-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/3.webp 1x ./images/index/about-slider/3-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/3-mob.jpg 1x, ./images/index/about-slider/3-mob-2x.jpg 2x"
                   media="(min-width:320px)">
                 <source srcset="./images/index/about-slider/3-mob.webp 1x, ./images/index/about-slider/3-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/3.jpg"
+                <img class="about__img" src="images/index/about-slider/3-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/4.jpg 1x, ./images/index/about-slider/4-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/4-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/4.webp 1x ./images/index/about-slider/4-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/4-mob.jpg 1x, ./images/index/about-slider/4-mob-2x.jpg 2x"
                   media="(min-width:320px)">
                 <source srcset="./images/index/about-slider/4-mob.webp 1x, ./images/index/about-slider/4-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/4.jpg"
+                <img class="about__img" src="images/index/about-slider/4-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/5.jpg 1x, ./images/index/about-slider/5-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/5-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/5.webp 1x ./images/index/about-slider/5-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/5-mob.jpg 1x, ./images/index/about-slider/5-mob-2x.jpg 2x"
                   media="(min-width:320px)">
                 <source srcset="./images/index/about-slider/5-mob.webp 1x, ./images/index/about-slider/5-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/5.jpg"
+                <img class="about__img" src="images/index/about-slider/5-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/6.jpg 1x, ./images/index/about-slider/6-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/6-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/6.webp 1x ./images/index/about-slider/6-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/6-mob.jpg 1x, ./images/index/about-slider/6-mob-2x.jpg 2x"
                   media="(min-width:320px)">
                 <source srcset="./images/index/about-slider/6-mob.webp 1x, ./images/index/about-slider/6-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/6.jpg"
+                <img class="about__img" src="images/index/about-slider/6-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/7.jpg 1x, ./images/index/about-slider/7-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/7-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/7.webp 1x ./images/index/about-slider/7-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/7-mob.jpg 1x, ./images/index/about-slider/7-mob-2x.jpg 2x"
                   media="(min-width:320px)">
                 <source srcset="./images/index/about-slider/7-mob.webp 1x, ./images/index/about-slider/7-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/7.jpg"
+                <img class="about__img" src="images/index/about-slider/7-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/8.jpg 1x, ./images/index/about-slider/8-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/8-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/8.webp 1x ./images/index/about-slider/8-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/8-mob.jpg 1x, ./images/index/about-slider/8-mob-2x.jpg 2x"
                   media="(min-width:320px)">
                 <source srcset="./images/index/about-slider/8-mob.webp 1x, ./images/index/about-slider/8-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/8.jpg"
+                <img class="about__img" src="images/index/about-slider/8-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/9.jpg 1x, ./images/index/about-slider/9-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/9-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/9.webp 1x ./images/index/about-slider/9-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/9-mob.jpg 1x, ./images/index/about-slider/9-mob-2x.jpg 2x"
                   media="(min-width:320px)">
                 <source srcset="./images/index/about-slider/9-mob.webp 1x, ./images/index/about-slider/9-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/9.jpg"
+                <img class="about__img" src="images/index/about-slider/9-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/10.jpg 1x, ./images/index/about-slider/10-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/10-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/10.webp 1x ./images/index/about-slider/10-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/10-mob.jpg 1x, ./images/index/about-slider/10-mob-2x.jpg 2x"
@@ -528,14 +529,13 @@
                 <source
                   srcset="./images/index/about-slider/10-mob.webp 1x, ./images/index/about-slider/10-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/10.jpg"
+                <img class="about__img" src="images/index/about-slider/10-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/11.jpg 1x, ./images/index/about-slider/11-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/11-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/11.webp 1x ./images/index/about-slider/11-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/11-mob.jpg 1x, ./images/index/about-slider/11-mob-2x.jpg 2x"
@@ -543,14 +543,13 @@
                 <source
                   srcset="./images/index/about-slider/11-mob.webp 1x, ./images/index/about-slider/11-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/11.jpg"
+                <img class="about__img" src="images/index/about-slider/11-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/12.jpg 1x, ./images/index/about-slider/12-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/12-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/12.webp 1x ./images/index/about-slider/12-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/12-mob.jpg 1x, ./images/index/about-slider/12-mob-2x.jpg 2x"
@@ -558,14 +557,13 @@
                 <source
                   srcset="./images/index/about-slider/12-mob.webp 1x, ./images/index/about-slider/12-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/12.jpg"
+                <img class="about__img" src="images/index/about-slider/12-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/13.jpg 1x, ./images/index/about-slider/13-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/13-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/13.webp 1x ./images/index/about-slider/13-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/13-mob.jpg 1x, ./images/index/about-slider/13-mob-2x.jpg 2x"
@@ -573,15 +571,14 @@
                 <source
                   srcset="./images/index/about-slider/13-mob.webp 1x, ./images/index/about-slider/13-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                  <!-- D:\front-projects\_2023\myph\app\images\index\about-slider\13.jpg -->
-                <img class="about__img" src="images/index/about-slider/13.jpg"
+                <!-- D:\front-projects\_2023\myph\app\images\index\about-slider\13.jpg -->
+                <img class="about__img" src="images/index/about-slider/13-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/14.jpg 1x, ./images/index/about-slider/14-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/14-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/14.webp 1x ./images/index/about-slider/14-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/14-mob.jpg 1x, ./images/index/about-slider/14-mob-2x.jpg 2x"
@@ -589,14 +586,13 @@
                 <source
                   srcset="./images/index/about-slider/14-mob.webp 1x, ./images/index/about-slider/14-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/14.jpg"
+                <img class="about__img" src="images/index/about-slider/14-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/15.jpg 1x, ./images/index/about-slider/15-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/15-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/15.webp 1x ./images/index/about-slider/15-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/15-mob.jpg 1x, ./images/index/about-slider/15-mob-2x.jpg 2x"
@@ -604,14 +600,13 @@
                 <source
                   srcset="./images/index/about-slider/15-mob.webp 1x, ./images/index/about-slider/15-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/15.jpg"
+                <img class="about__img" src="images/index/about-slider/15-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/16.jpg 1x, ./images/index/about-slider/16-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/16-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/16.webp 1x ./images/index/about-slider/16-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/16-mob.jpg 1x, ./images/index/about-slider/16-mob-2x.jpg 2x"
@@ -619,14 +614,13 @@
                 <source
                   srcset="./images/index/about-slider/16-mob.webp 1x, ./images/index/about-slider/16-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/16.jpg"
+                <img class="about__img" src="images/index/about-slider/16-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/17.jpg 1x, ./images/index/about-slider/17-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/17-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/17.webp 1x ./images/index/about-slider/17-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/17-mob.jpg 1x, ./images/index/about-slider/17-mob-2x.jpg 2x"
@@ -634,14 +628,13 @@
                 <source
                   srcset="./images/index/about-slider/17-mob.webp 1x, ./images/index/about-slider/17-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/17.jpg"
+                <img class="about__img" src="images/index/about-slider/17-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
             <div class="about__picture-wrap">
               <picture>
-                <source srcset="./images/index/about-slider/18.jpg 1x, ./images/index/about-slider/18-2x.jpg 2x"
-                  media="(min-width:768px)">
+                <source srcset="images/index/about-slider/18-2x.jpg" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/18.webp 1x ./images/index/about-slider/18-2x.webp 2x"
                   type="image/webp" media="(min-width:768px)">
                 <source srcset="./images/index/about-slider/18-mob.jpg 1x, ./images/index/about-slider/18-mob-2x.jpg 2x"
@@ -649,7 +642,7 @@
                 <source
                   srcset="./images/index/about-slider/18-mob.webp 1x, ./images/index/about-slider/18-mob-2x.webp 2x"
                   type="image/webp" media="(min-width:320px)">
-                <img class="about__img" src="images/index/about-slider/18.jpg"
+                <img class="about__img" src="images/index/about-slider/18-2x.jpg"
                   alt="Лектори, ментори та студенти школи Myph" width="600" height="500">
               </picture>
             </div>
@@ -755,9 +748,11 @@
         <div class="anonses__inner">
           <div class="anonses__main">
             <a class="anonses__link" href="articles/07-2023-1-melnychenko-artist-talk-in-nuremberg.html">
-              <img class="anonses__img" src="images/news/07-2023/1-melnychenko-artist-talk-in-nuremberg/9.jpg" alt="Сергій Мельниченко провів artist talk в Нюрнберзі" width="600" height="600">
+              <img class="anonses__img" src="images/news/07-2023/1-melnychenko-artist-talk-in-nuremberg/9.jpg"
+                alt="Сергій Мельниченко провів artist talk в Нюрнберзі" width="600" height="600">
               <div class="anonses__content">
-                <h3 class="anonses__subtitle anonses__subtitle--big">Сергій Мельниченко провів artist talk в Нюрнберзі в рамках виставки Харківської школи фотографії</h3>
+                <h3 class="anonses__subtitle anonses__subtitle--big">Сергій Мельниченко провів artist talk в Нюрнберзі в
+                  рамках виставки Харківської школи фотографії</h3>
                 <!-- <p class="anonses__text">Короткий опис новини</p> -->
                 <span class="anonses__details">Детальніше</span>
               </div>
@@ -766,9 +761,12 @@
           <ul class="anonses__list">
             <li class="anonses__item">
               <a class="anonses__link" href="articles/07-2023-2-melnychenko-in-tutsek-stiftung.html">
-                <img class="anonses__img" src="images/news/07-2023/2-melnychenko-in-tutsek-stiftung/1.jpg" alt="Роботи Мельниченка у колекції фонду Alexander-Tutsek Stiftung" width="300" height="300">
+                <img class="anonses__img" src="images/news/07-2023/2-melnychenko-in-tutsek-stiftung/1.jpg"
+                  alt="Роботи Мельниченка у колекції фонду Alexander-Tutsek Stiftung" width="300" height="300"
+                  loading="lazy">
                 <div class="anonses__content">
-                  <h3 class="anonses__subtitle">Роботи Сергія Мельниченка стали частиною престижної колекції фонду “Alexander-Tutsek Stiftung”</h3>
+                  <h3 class="anonses__subtitle">Роботи Сергія Мельниченка стали частиною престижної колекції фонду
+                    “Alexander-Tutsek Stiftung”</h3>
                   <!-- <p class="anonses__text">Короткий опис новини</p> -->
                   <span class="anonses__details">Детальніше</span>
                 </div>
@@ -776,7 +774,8 @@
             </li>
             <li class="anonses__item">
               <a class="anonses__link" href="articles/07-2023-3-myph-in-assortment-room.html">
-                <img class="anonses__img" src="images/news/07-2023/3-myph-in-assortment-room/1.jpg" alt="" width="300" height="300">
+                <img class="anonses__img" src="images/news/07-2023/3-myph-in-assortment-room/1.jpg" alt="" width="300"
+                  height="300" loading="lazy">
                 <div class="anonses__content">
                   <h3 class="anonses__subtitle">Відкрилась виставка MYPH "Якщо ти довго дивишся в пустóти"</h3>
                   <!-- <p class="anonses__text">Короткий опис новини</p> -->
@@ -786,9 +785,11 @@
             </li>
             <li class="anonses__item">
               <a class="anonses__link" href="articles/07-2023-5-artbuk-zaytsia-ordered-chaos.html">
-                <img class="anonses__img" src="images/news/07-2023/5-artbuk-zaytsia-ordered-chaos/1.jpg" alt="" width="300" height="300">
+                <img class="anonses__img" src="images/news/07-2023/5-artbuk-zaytsia-ordered-chaos/1.jpg" alt=""
+                  width="300" height="300" loading="lazy">
                 <div class="anonses__content">
-                  <h3 class="anonses__subtitle">Вийшов артбук студента MYPH Євгена Зайця "Ordered Chaos / Упорядкований хаос"</h3>
+                  <h3 class="anonses__subtitle">Вийшов артбук студента MYPH Євгена Зайця "Ordered Chaos / Упорядкований
+                    хаос"</h3>
                   <!-- <p class="anonses__text">Короткий опис новини</p> -->
                   <span class="anonses__details">Детальніше</span>
                 </div>
@@ -796,9 +797,11 @@
             </li>
             <li class="anonses__item">
               <a class="anonses__link" href="articles/07-2023-6-ukraine-rising.html">
-                <img class="anonses__img" src="images/news/07-2023/6-ukraine-rising/1-mob-2x.jpg" alt="" width="300" height="300">
+                <img class="anonses__img" src="images/news/07-2023/6-ukraine-rising/1-mob-2x.jpg" alt="" width="300"
+                  height="300" loading="lazy">
                 <div class="anonses__content">
-                  <h3 class="anonses__subtitle">Роботи Мельниченко та Гумілевського у Ukraine Rising. Contemporary C Culture from Ukraine</h3>
+                  <h3 class="anonses__subtitle">Роботи Мельниченко та Гумілевського у Ukraine Rising. Contemporary C
+                    Culture from Ukraine</h3>
                   <span class="anonses__details">Детальніше</span>
                 </div>
               </a>
@@ -817,52 +820,55 @@
         <div class="partners__list">
           <div class="partners__item">
             <a class="partners__link" href="https://photokyivfair.com/en/" target="_blank">
-              <img class="partners__img" src="images/partners/1.png" alt="Логотип PhotoKyivFair" width="140">
+              <img class="partners__img" src="images/partners/1.png" alt="Логотип PhotoKyivFair" width="140"
+                loading="lazy">
             </a>
           </div>
           <div class="partners__item">
             <a class="partners__link" href="https://mitec.ua/" target="_blank">
-              <img class="partners__img" src="images/partners/2.png" alt="Логотип Mitec" width="140">
+              <img class="partners__img" src="images/partners/2.png" alt="Логотип Mitec" width="140" loading="lazy">
             </a>
           </div>
           <div class="partners__item">
             <a class="partners__link" href="https://tuasho.com/main-ua" target="_blank">
-              <img class="partners__img" src="images/partners/3.png" alt="Логотип Tuasho" width="140">
+              <img class="partners__img" src="images/partners/3.png" alt="Логотип Tuasho" width="140" loading="lazy">
             </a>
           </div>
           <div class="partners__item">
             <a class="partners__link" href="https://moksop.org/" target="_blank">
-              <img class="partners__img" src="images/partners/4.png" alt="Логотип Moksop" width="140">
+              <img class="partners__img" src="images/partners/4.png" alt="Логотип Moksop" width="140" loading="lazy">
             </a>
           </div>
           <div class="partners__item">
             <a class="partners__link" href="https://www.redzet.net/index.php/uk/" target="_blank">
-              <img class="partners__img" src="images/partners/5.png" alt="Логотип Redzet" width="140">
+              <img class="partners__img" src="images/partners/5.png" alt="Логотип Redzet" width="140" loading="lazy">
             </a>
           </div>
           <div class="partners__item">
             <a class="partners__link" href="https://rodovid.net/" target="_blank">
-              <img class="partners__img" src="images/partners/6.png" alt="Логотип Rodovid" width="140">
+              <img class="partners__img" src="images/partners/6.png" alt="Логотип Rodovid" width="140" loading="lazy">
             </a>
           </div>
           <div class="partners__item">
             <a class="partners__link" href="https://ugallery.com.ua/" target="_blank">
-              <img class="partners__img" src="images/partners/7.png" alt="Логотип UGALLERY" width="140">
+              <img class="partners__img" src="images/partners/7.png" alt="Логотип UGALLERY" width="140" loading="lazy">
             </a>
           </div>
           <div class="partners__item">
             <a class="partners__link" href="https://thebaroque.app/" target="_blank">
-              <img class="partners__img" src="images/partners/8.png" alt="Логотип BaroqueApp" width="140">
+              <img class="partners__img" src="images/partners/8.png" alt="Логотип BaroqueApp" width="140"
+                loading="lazy">
             </a>
           </div>
           <div class="partners__item">
             <a class="partners__link" href="http://vs-print.com.ua/" target="_blank">
-              <img class="partners__img" src="images/partners/9.png" alt="Логотип VS-Print" width="140">
+              <img class="partners__img" src="images/partners/9.png" alt="Логотип VS-Print" width="140" loading="lazy">
             </a>
           </div>
           <div class="partners__item">
             <a class="partners__link" href="https://asortymentna-kimnata.space/" target="_blank">
-              <img class="partners__img" src="images/partners/10.png" alt="Логотип Асортиментна кімната" width="140">
+              <img class="partners__img" src="images/partners/10.png" alt="Логотип Асортиментна кімната" width="140"
+                loading="lazy">
             </a>
           </div>
         </div>
@@ -879,7 +885,8 @@
 
           <div class="reviews__item">
             <blockquote class="reviews__blockquote">
-              <img class="reviews__img" src="images/index/reviews/1.jpg" alt="Яна Григоренко" width="300" height="300">
+              <img class="reviews__img" src="images/index/reviews/1.jpg" alt="Яна Григоренко" width="300" height="300"
+                loading="lazy">
               <div class="reviews__content">
                 <p class="reviews__text">
                   MYPH – це любов. Аби любов ширилась, розкрила крила і заповнила простір своїм невимовно красивим та
@@ -897,7 +904,7 @@
           <div class="reviews__item">
             <blockquote class="reviews__blockquote">
               <img class="reviews__img" src="images/index/reviews/2.jpg" alt="Ксенія Петровська" width="300"
-                height="300">
+                height="300" loading="lazy">
               <div class="reviews__content">
                 <p class="reviews__text">
                   Я вірю в неймовірну силу фотографії. Вона змінює світ на краще! Дякую школі MYPH та особисто Сергію
@@ -914,7 +921,8 @@
 
           <div class="reviews__item">
             <blockquote class="reviews__blockquote">
-              <img class="reviews__img" src="images/index/reviews/3.jpg" alt="Кріс Войтків" width="300" height="300">
+              <img class="reviews__img" src="images/index/reviews/3.jpg" alt="Кріс Войтків" width="300" height="300"
+                loading="lazy">
               <div class="reviews__content">
                 <p class="reviews__text">
                   Школа MYPH дала мені багато знань, які допомогли мені подивитись на фотографію з більш професійного
@@ -931,7 +939,8 @@
 
           <div class="reviews__item">
             <blockquote class="reviews__blockquote">
-              <img class="reviews__img" src="images/index/reviews/4.jpg" alt="Оля Коваль" width="300" height="300">
+              <img class="reviews__img" src="images/index/reviews/4.jpg" alt="Оля Коваль" width="300" height="300"
+                loading="lazy">
               <div class="reviews__content">
                 <p class="reviews__text">
                   Для себе школу MYPH я відкрила в 2019 році, в цей час був набір на 3-й курс школи MYPH з гібридним
@@ -951,7 +960,8 @@
 
           <div class="reviews__item">
             <blockquote class="reviews__blockquote">
-              <img class="reviews__img" src="images/index/reviews/5.jpg" alt="Лі Білецька" width="300" height="300">
+              <img class="reviews__img" src="images/index/reviews/5.jpg" alt="Лі Білецька" width="300" height="300"
+                loading="lazy">
               <div class="reviews__content">
                 <p class="reviews__text">
                   Як тільки дізналась, що Мельниченко запускає курс, одразу знала, що піду запишусь на нього. Репутація
@@ -972,7 +982,7 @@
           <div class="reviews__item">
             <blockquote class="reviews__blockquote">
               <img class="reviews__img" src="images/index/reviews/6.jpg" alt="Анастасія Антоненко" width="300"
-                height="300">
+                height="300" loading="lazy">
               <div class="reviews__content">
                 <p class="reviews__text">
                   Одне з найважливіших речей, яку я отримала від цього курсу, - це можливість виходити за рамки своїх
@@ -999,10 +1009,21 @@
 
           <div class="reviews__item">
             <blockquote class="reviews__blockquote">
-              <img class="reviews__img" src="images/index/reviews/7.jpg" alt="SAVKA" width="300" height="300">
+              <img class="reviews__img" src="images/index/reviews/7.jpg" alt="SAVKA" width="300" height="300"
+                loading="lazy">
               <div class="reviews__content">
                 <p class="reviews__text">
-                  До початку курсу, деякий час я вже був підписаний на Сергія, спостерігав за його роботами та діяльністю. Сказати чесно, досить скептично ставився до сучасної фотографії, бо не розумів до кінця цей напрямок, так як працював більше з графікою. Також бачив роботи Артема Гумілевського, і з того моменту почав більше цікавитись сучасною фотографією. Якраз паралельно відкрився новий набір на курс. То вирішив спробувати. Протягом курсу це був абсолютно свіжий ковток натхнення. Матеріал на лекціях, приклади проєктів, автори та їх історії все більше цікавили та захоплювали мою увагу. Загальна атмосфера між студентами та викладачами дуже гармонійна, активно підтримуємо один одного  це теж дає сили та віру у свою справу.Завдяки лекціям по НФТ, як результат, за короткий час я вже мав перші продажі своїх робіт. Після офіційного завершення курсу, творче життя в школі MYPH продовжується. Мене найбільше вразило який трамплін можливостей та підтримки дає школа MYPH, Сергій Мельниченко, для своїх студентів. Це розйоб, без перебільшень.
+                  До початку курсу, деякий час я вже був підписаний на Сергія, спостерігав за його роботами та
+                  діяльністю. Сказати чесно, досить скептично ставився до сучасної фотографії, бо не розумів до кінця
+                  цей напрямок, так як працював більше з графікою. Також бачив роботи Артема Гумілевського, і з того
+                  моменту почав більше цікавитись сучасною фотографією. Якраз паралельно відкрився новий набір на курс.
+                  То вирішив спробувати. Протягом курсу це був абсолютно свіжий ковток натхнення. Матеріал на лекціях,
+                  приклади проєктів, автори та їх історії все більше цікавили та захоплювали мою увагу. Загальна
+                  атмосфера між студентами та викладачами дуже гармонійна, активно підтримуємо один одного це теж дає
+                  сили та віру у свою справу.Завдяки лекціям по НФТ, як результат, за короткий час я вже мав перші
+                  продажі своїх робіт. Після офіційного завершення курсу, творче життя в школі MYPH продовжується. Мене
+                  найбільше вразило який трамплін можливостей та підтримки дає школа MYPH, Сергій Мельниченко, для своїх
+                  студентів. Це розйоб, без перебільшень.
                 </p>
                 <cite class="reviews__author">
                   SAVKA
@@ -1013,7 +1034,8 @@
 
           <div class="reviews__item">
             <blockquote class="reviews__blockquote">
-              <img class="reviews__img" src="images/index/reviews/8.jpg" alt="Ольга Лобазова" width="300" height="300">
+              <img class="reviews__img" src="images/index/reviews/8.jpg" alt="Ольга Лобазова" width="300" height="300"
+                loading="lazy">
               <div class="reviews__content">
                 <p class="reviews__text">
                   Я захоплювалась фотографією багато років, колекціонуючи фотокниги, знімаючи на плівку, але це
@@ -1034,7 +1056,7 @@
           <div class="reviews__item">
             <blockquote class="reviews__blockquote">
               <img class="reviews__img" src="images/index/reviews/9.jpg" alt="Артем Гумілевський" width="300"
-                height="300">
+                height="300" loading="lazy">
               <div class="reviews__content">
                 <p class="reviews__text">
                   Курс, який змінив все. Я все життя перебував у творчому пошуку і в один момент прийшов до комерційної
@@ -1059,7 +1081,8 @@
 
           <div class="reviews__item">
             <blockquote class="reviews__blockquote">
-              <img class="reviews__img" src="images/index/reviews/10.jpg" alt="Поліна Лаптій" width="300" height="300">
+              <img class="reviews__img" src="images/index/reviews/10.jpg" alt="Поліна Лаптій" width="300" height="300"
+                loading="lazy">
               <div class="reviews__content">
                 <p class="reviews__text">
                   Моє ім’я Поліна Лаптій і наприкінці 2022 року я потрапила у школу концептуальної та арт фотографії до
