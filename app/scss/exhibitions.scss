@@ -228,6 +228,10 @@
             }
         }
 
+        &.hideYear:before {
+            content: none;
+        }
+
     }
 
 
@@ -300,6 +304,10 @@
         gap: 10px;
         transform: translateY(50px);
         transition: transform 0.4s;
+
+        @media (max-width: 576px) {
+            transform: translateY(35px);
+        }
     }
 
     &__title {

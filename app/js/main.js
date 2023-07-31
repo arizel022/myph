@@ -97,17 +97,17 @@ $(function () {
 });
 
 
-$(function () {
-    $('.gallery__slider').slick({
-        dots: true,
-        slidesToShow: 1,
-        infinite: true,
-        autoplaySpeed: 5000,
-        autoplay: true,
-        arrows: false
-    });
+// $(function () {
+//     $('.gallery__slider').slick({
+//         dots: true,
+//         slidesToShow: 1,
+//         infinite: true,
+//         autoplaySpeed: 5000,
+//         autoplay: true,
+//         arrows: false
+//     });
 
-});
+// });
 
 
 
@@ -180,8 +180,8 @@ $(function () {
         dots: false,
         infinite: true,
         arrows: true,
-        autoplaySpeed: 3500
-        // autoplay: true,
+        autoplaySpeed: 3500,
+        autoplay: true
         // fade: true
     });
 
@@ -389,3 +389,11 @@ $('.exhibitions .filter__button').click(function () {
     // Удаляем текущее фоновое изображение и добавляем новое, соответствующее нажатой кнопке
     $('.exhibitions__grid').removeClass('bg-ukr bg-de bg-neth bg-norv bg-usa bg-aust bg-hung bg-geor bg-fr bg-it bg-pl').addClass('bg-' + $(this).data('filter').substr(1));
 });
+
+$(".dataYear").on("click", function() {
+    $(".exhibitions__grid-item").addClass("hideYear");
+  });
+  
+  $("[data-filter=\"all\"]").on("click", function() {
+    $(".exhibitions__grid-item").removeClass("hideYear");
+  });

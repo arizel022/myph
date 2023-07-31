@@ -9,6 +9,10 @@
         p {
             position: relative;
 
+            @media (max-width: 576px) {
+                padding-left: 25px;
+            }
+
             &:before {
                 content: '';
                 position: absolute;
@@ -20,6 +24,10 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
+
+                @media (max-width: 576px) {
+                    left: 0;
+                }
             }
 
             &:not(:last-child) {
