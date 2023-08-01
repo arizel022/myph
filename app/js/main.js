@@ -188,7 +188,7 @@ $(function () {
     $('.about__pictures').slick({
         dots: false,
         infinite: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 3000,
         
         // autoplay: true,
         arrows: true
