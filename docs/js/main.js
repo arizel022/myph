@@ -189,8 +189,8 @@ $(function () {
         dots: false,
         infinite: true,
         autoplaySpeed: 3000,
-        autoplay: true,
-        arrows: true
+        arrows: true,
+        autoplay: true
     });
 
     //слик-слайдер партнеров на главной странице
