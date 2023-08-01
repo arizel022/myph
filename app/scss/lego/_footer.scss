@@ -37,6 +37,11 @@
     }
 
     &__social {
+
+        @media (max-width: 992px) {
+            margin: 0 auto;
+        }
+
         @media (max-width: 768px) {
             order: 1;
         }
@@ -44,6 +49,25 @@
         @media (max-width: 576px) {
             width: 100%;
             justify-content: center;
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+        text-align: right;
+
+        @media (max-width: 768px) {
+            order: 3;
+            text-align: center;
+        }
+    }
+
+    &__link {
+        color: $l-d;
+        transition: color 0.4s;
+
+        &:hover {
+            color: $s-l;
         }
     }
 }

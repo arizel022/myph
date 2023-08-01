@@ -189,8 +189,7 @@ $(function () {
         dots: false,
         infinite: true,
         autoplaySpeed: 3000,
-        
-        // autoplay: true,
+        autoplay: true,
         arrows: true
     });
 
